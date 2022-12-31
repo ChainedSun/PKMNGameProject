@@ -1,0 +1,2676 @@
+:root {
+    --normal: #aa9;
+    --fire: #f42;
+    --water: #39f;
+    --electric: #fc3;
+    --grass: #7c5;
+    --ice: #6cf;
+    --fighting: #b54;
+    --poison: #a59;
+    --ground: #db5;
+    --flying: #89f;
+    --psychic: #f59;
+    --bug: #ab2;
+    --rock: #ba6;
+    --ghost: #66b;
+    --dragon: #76e;
+    --dark: #754;
+    --steel: #aab;
+    --fairy: #e9e;
+    --grad-rotation: 0deg;
+    --card-height: 224px;
+    --active-background: rgb(140, 220, 252);
+    --scroll-thumb-color: gold;
+    --scroll-thumb-color-hover: rgb(255, 255, 100);
+    --scroll-bg-color: gray;
+    --super-effective: rgb(0, 124, 0);
+    --double-super-effective: rgb(0, 255, 0);
+    --normal-effective: white;
+    --not-very-effective: darkred;
+    --double-not-very-effective: rgb(105, 1, 1);
+    --no-effect: rgb(50, 50, 50);
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--scroll-bg-color);
+    width: 16px;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    margin: 4px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-thumb-color-hover);
+}
+
+header {
+    background-color: rgb(117, 26, 20);
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    font-size: 64px;
+}
+
+p {
+    font-size: 16px;
+}
+
+body {
+    background-color: black;
+    background-image: url("../images/main-menu/background/BG.png");
+}
+
+#ListContainer {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    padding: 0px;
+    background-color: rgb(214, 38, 38);
+    border-top: 2px solid rgb(51, 8, 8);
+    border-radius: 0 0 8px 8px;
+    max-height: 100vh;
+}
+
+#pokemonListContainer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+}
+
+.hrTest {
+    width: 100%;
+}
+
+#searchField {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2px;
+}
+
+
+#searchInput {
+    height: 24px;
+    width: 100%;
+    border-radius: 8px;
+    color: black;
+    border: 0;
+    text-align: center;
+    background-color: rgb(226, 226, 226);
+    margin: 0px;
+}
+
+#searchInput:focus {
+    background-color: white;
+    
+}
+
+#filterHeader {
+    text-align: center;
+}
+
+
+
+.end {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+.cardName {
+    color: black;
+}
+
+#pokemonList {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    grid-template-columns: repeat(auto-fill, 160px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-right: 8px;
+}
+
+
+
+
+
+#filterMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+#typeListContainer {
+    max-height: 320px;
+    width: 100%;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(9, 64px);
+    justify-content: center;
+    gap: 8px;
+}
+
+#pokedexIndex {
+    color: black;
+}
+
+.filter {
+    user-select: none;
+    min-height: 32px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid rgb(255, 255, 255);
+    color: black;
+}
+
+.filterInsideLabel {
+    color: black;
+    margin: auto;
+}
+
+.selected {
+    color:rgb(0, 255, 0);
+    border: 1px solid rgb(0, 255, 0);
+}
+
+
+
+.entryType,
+.entryTypeLeft,
+.entryTypeRight {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding: 2px;
+    margin: 0px;
+    height: auto;
+    border-radius:0 0 8px 8px;
+
+}
+
+#a1,
+#a2 {
+    color:rgb(0, 38, 255) !important;
+}
+
+#ha {
+    color: blueviolet !important;
+}
+
+
+.entryTypeLeft {
+    border-radius:0 0 0 8px;
+}
+
+.entryTypeRight {
+    border-radius:0 0 8px 0;
+}
+
+#searchMenu {
+    border-radius: 16px 0 0 16px;
+    height: auto;
+    width: 100%;
+    padding: 0px;
+}
+#searchMenu p {
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(0, 255, 255, 0.747);
+    margin: 0px;
+}
+
+.notOwned {
+    filter: grayscale(1);
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#pokemonEntry {
+    position: relative;
+    width: auto;
+    height: var(--card-height);
+    margin: 16px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    transition: border 0.2s, box-shadow 0.2s, margin 0.2s, height 0.2s, transform 0.2s;
+    box-shadow: 4px 4px 5px 0px rgba(37, 37, 37, 0.767);
+    animation: fadeIn 0.2s linear 0s 1 normal forwards;
+
+}
+
+
+
+
+#pokemonEntry:hover:not(.notOwned) {
+    border: 2px solid yellow;
+    margin: 8px;
+    height: calc(var(--card-height) + 16px);
+}
+
+
+#pokemonEntry.entrySelected:not(.notOwned) {
+    border: 2px solid yellow;
+    box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.767);
+    margin: 0px;
+    padding-bottom: 0px;
+    height: calc(var(--card-height) + 16px);
+}
+
+#pokemonEntry > .entryTypeContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: -1px;
+    transition: bottom 0.2s, position 0.2s;
+    transition-delay: 0.2s;
+    bottom: 0;
+    
+}
+
+
+
+
+#pokemonEntry:hover > .entryTypeContainer:not(.notOwned) {
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+
+#pokemonImage {
+    height: 92px;
+    width: 92px;
+    display: inline-block;
+    max-width: none;
+    vertical-align: middle;
+    background-size: auto;
+}
+
+#filterParameters {
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+#detailsImage {
+    max-width: 320px;
+    max-height: 320px;
+    width: 320px;
+    height: 320px;
+    object-fit: contain;
+    flex-grow: 1;
+}
+
+#detailsImage:not([src]):empty,
+#detailsImage[src=""] {
+    opacity: 0;
+}
+
+
+
+#detailsWindow {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    padding: 8px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+#screenAndControls {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    /* background-color: rgb(204, 204, 204);
+    margin: 4px;
+    margin-bottom: 0px; */
+}
+
+.pokedexScreenFrame {
+    position: relative;
+    width: auto;
+    border: 2px solid black;
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+    /* margin: auto;
+    margin-top: 8px; */
+    max-width: 90%;
+    height: auto;
+    padding: 24px;
+}
+
+/*Shiny Container Div*/
+.sBTC {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: -20px;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+.shinyButton {
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/main-menu/pokedex/Shiny.png");
+    background-size: cover;
+    filter:brightness(50%) saturate(100%);
+    border: 0;
+    background-color: transparent;
+}
+
+.shinyActive {
+    filter: brightness(200%) saturate(200%);
+}
+
+.pokedexScreen.active {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: var(--active-background);
+}
+
+.pokedexScreen {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(0, 28, 56);
+    transition: background-color 0.2s;
+}
+
+#detailsButtonContainer {
+    min-height: 32px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: -4px;
+    background-color: rgb(204, 204, 204);
+    border: 2px solid black;
+    border-radius: 8px 0 0 8px;
+    border-right: 0px;
+}
+
+#detailsTypeButtonContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#detailsType {
+    min-height: 32px;
+    width: 100%;
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: -1px;
+    border-radius: 6px;
+    color: black;
+    transition: background-color 0.2s;
+}
+
+#detailsType:hover {
+    background-color: gold;
+}
+
+#detailsType:active,
+#detailsType.activeTab {
+    background-color: rgb(165, 140, 0);
+}
+
+.resetSelection {
+    width: 48px;
+    height: 24px;
+    margin: 8px;
+    align-self: center;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid rgb(126, 126, 126);
+    color: rgb(117, 114, 114);
+}
+
+.resetSelection:hover:not(:active) {
+    background-color: rgb(208, 255, 0);
+}
+
+.resetSelection:active {
+    background-color: rgb(43, 43, 43);
+    color: rgb(107, 0, 0);
+}
+
+#detailsValueContainer.active {
+    background-color: var(--active-background);
+}
+
+#detailsValueContainer {
+    border: 1px solid black;
+    margin-top: 8px;
+    border-radius: 8px;
+    font-size: larger;
+    text-justify: distribute-all-lines;
+    min-height: 128px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 28, 56);
+    padding: 8px;
+    transition: background-color 0.2s;
+}
+
+#detailsValueContainer.active * {
+    color: black;
+}
+
+#detailsValueContainer * {
+    transition: color 0.2s;
+}
+
+.pokemonDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 16px;
+}
+
+.pokemonName {
+    color: black;
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+    min-height: 48px;
+    border: 2px solid black;
+    border-radius: 24px 0 24px 0;
+    display: flex;
+    background-color: rgb(65, 60, 36);
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.pokemonName.active {
+    background-color: gold;
+}
+
+.pokemonName > .nameP {
+    width: 100%;
+    font-size: 24px;
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: black;
+}
+
+
+
+.pokedexLightIndicator {
+    height: 32px;
+    width: 32px;
+    position: relative;
+    background-color: #39f;
+    border: 1px solid black;
+    border-radius: 50px;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 8px;
+    z-index: 2;
+}
+
+.pokedexLightIndicator::before {
+    content: "";
+    position: relative;
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+#normalAbility,
+#hiddenAbility {
+    text-align: left;
+    display: flex;
+    gap: 16px;
+    padding-left: 8px;
+}
+
+#abilityContainer {
+    display: flex;
+    gap: 8px;
+}
+
+#a1,
+#a2,
+#ha {
+    user-select: none;
+    padding: 1px;
+    text-decoration: underline;
+}
+
+
+#typeChart {
+    display: grid;
+    grid-template-columns: repeat(9, 36px);
+    /* grid-template-rows: repeat(2, 72px); */
+    justify-content: center;
+    column-gap: 8px ;
+}
+
+#typeEntry {
+    display: grid;
+    margin: 6px;
+    height: 68px;
+    width: 42px;
+    justify-content: center;
+}
+
+#typeBox,
+#effectValue{
+    font-size: 16px;
+    color: black;
+    width: 36px;
+    height: 32px;
+    padding: 0%;
+    border: 1px solid black;
+    display: flex;
+    border-radius: 4px;
+    text-align: center;
+    justify-content: center;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+#type1,
+#type2 {
+    display: flex;
+    font-size: 16px;
+    width: 80px;
+    height: 32px;
+    color: black;
+    border-radius: 4px;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+#typeName {
+    margin: auto;
+    color: black;
+}
+
+.typeContainer {
+    display: flex;
+    justify-content: center;
+    min-height: 40px;
+
+}
+
+#effectValue {
+    margin-top: -1px;
+    background-color: white;
+}
+
+#text {
+    color: black;
+    margin: auto;
+    user-select: none;
+    transition: color 0.2s;
+}
+
+#typeText {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    user-select: none;
+}
+
+
+
+hr {
+    border: 1px solid black;
+}
+
+.noEffect {
+    background-color: var(--no-effect) !important;
+}
+
+.superEffective {
+    background-color: var(--super-effective) !important;
+}
+
+.doubleSuperEffective {
+    background-color: var(--double-super-effective) !important;
+}
+
+.notVeryEffective {
+    background-color: var(--not-very-effective) !important;
+}
+
+.doubleNotVeryEffective {
+    background-color: var(--double-not-very-effective) !important;
+}
+
+.hasValue {
+    color: white !important;
+}
+
+
+.blink {
+   animation: blinkOn 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s  infinite alternate none;
+   /*animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);*/
+}
+
+@keyframes blinkOn {
+    from{
+        box-shadow: 0 0 24px 24px rgb(91, 203, 255);
+        background-color: rgb(255, 255, 255);
+    }
+
+    to{
+        box-shadow: 0 0 0 0 rgb(91, 203, 255);
+        background-color: #39f;
+    }
+}
+
+/* Mono Types */
+
+.normal{
+    background-color:#aa9
+}
+
+.fire{
+    background-color:#f42
+}
+.water{
+    background-color:#39f
+}
+.electric{
+    background-color:#fc3
+}
+.grass{
+    background-color:#7c5
+}
+.ice{
+    background-color:#6cf
+}
+.fighting{
+    background-color:#b54
+}
+.poison{
+    background-color:#a59
+}
+.ground{
+    background-color:#db5
+}
+.flying{
+    background-color:#89f
+}
+.psychic{
+    background-color:#f59
+}
+.bug{
+    background-color:#ab2
+}
+.rock{
+    background-color:#ba6
+}
+.ghost{
+    background-color:#66b
+}
+.dragon{
+    background-color:#76e
+}
+.dark{
+    background-color:#754
+}
+.steel{
+    background-color:#aab
+}
+.fairy{
+    background-color:#e9e
+}
+
+/*dual types*/
+
+/*Normal*/
+
+.normal.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--flying)
+    );
+}
+.normal.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--fighting)
+    );
+}
+.normal.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--poison)
+    );
+}
+.normal.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--ground)
+    );
+}
+.normal.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--rock)
+    );
+}
+.normal.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--bug)
+    );
+}
+.normal.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--ghost)
+    );
+}
+.normal.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--steel)
+    );
+}
+.normal.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--fire)
+    );
+}
+.normal.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--water)
+    );
+}
+.normal.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--grass)
+    );
+}
+.normal.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--electric)
+    );
+}
+.normal.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--psychic)
+    );
+}
+.normal.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--ice)
+    );
+}
+.normal.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--dragon)
+    );
+}
+.normal.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--dark)
+    );
+}
+.normal.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--normal), var(--fairy)
+    );
+}
+
+/*Fighting*/
+
+.fighting.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--flying)
+    );
+}
+.fighting.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--normal)
+    );
+}
+.fighting.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--poison)
+    );
+}
+.fighting.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--ground)
+    );
+}
+.fighting.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--rock)
+    );
+}
+.fighting.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--bug)
+    );
+}
+.fighting.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--ghost)
+    );
+}
+.fighting.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--steel)
+    );
+}
+.fighting.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--fire)
+    );
+}
+.fighting.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--water)
+    );
+}
+.fighting.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--grass)
+    );
+}
+.fighting.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--electric)
+    );
+}
+.fighting.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--psychic)
+    );
+}
+.fighting.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--ice)
+    );
+}
+.fighting.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--dragon)
+    );
+}
+.fighting.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--dark)
+    );
+}
+.fighting.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fighting), var(--fairy)
+    );
+}
+
+/*Flying*/
+
+.flying.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--fighting)
+    );
+}
+.flying.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--normal)
+    );
+}
+.flying.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--poison)
+    );
+}
+.flying.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--ground)
+    );
+}
+.flying.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--rock)
+    );
+}
+.flying.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--bug)
+    );
+}
+.flying.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--ghost)
+    );
+}
+.flying.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--steel)
+    );
+}
+.flying.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--fire)
+    );
+}
+.flying.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--water)
+    );
+}
+.flying.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--grass)
+    );
+}
+.flying.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--electric)
+    );
+}
+.flying.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--psychic)
+    );
+}
+.flying.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--ice)
+    );
+}
+.flying.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--dragon)
+    );
+}
+.flying.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--dark)
+    );
+}
+.flying.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--flying), var(--fairy)
+    );
+}
+/*Poison*/
+
+.poison.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--fighting)
+    );
+}
+.poison.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--normal)
+    );
+}
+.poison.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--flying)
+    );
+}
+.poison.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--ground)
+    );
+}
+.poison.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--rock)
+    );
+}
+.poison.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--bug)
+    );
+}
+.poison.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--ghost)
+    );
+}
+.poison.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--steel)
+    );
+}
+.poison.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--fire)
+    );
+}
+.poison.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--water)
+    );
+}
+.poison.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--grass)
+    );
+}
+.poison.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--electric)
+    );
+}
+.poison.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--psychic)
+    );
+}
+.poison.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--ice)
+    );
+}
+.poison.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--dragon)
+    );
+}
+.poison.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--dark)
+    );
+}
+.poison.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--poison), var(--fairy)
+    );
+}
+/*Ground*/
+
+.ground.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--fighting)
+    );
+}
+.ground.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--normal)
+    );
+}
+.ground.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--flying)
+    );
+}
+.ground.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--poison)
+    );
+}
+.ground.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--rock)
+    );
+}
+.ground.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--bug)
+    );
+}
+.ground.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--ghost)
+    );
+}
+.ground.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--steel)
+    );
+}
+.ground.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--fire)
+    );
+}
+.ground.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--water)
+    );
+}
+.ground.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--grass)
+    );
+}
+.ground.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--electric)
+    );
+}
+.ground.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--psychic)
+    );
+}
+.ground.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--ice)
+    );
+}
+.ground.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--dragon)
+    );
+}
+.ground.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--dark)
+    );
+}
+.ground.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ground), var(--fairy)
+    );
+}
+/*Rock*/
+
+.rock.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--fighting)
+    );
+}
+.rock.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--normal)
+    );
+}
+.rock.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--flying)
+    );
+}
+.rock.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--poison)
+    );
+}
+.rock.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--ground)
+    );
+}
+.rock.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--bug)
+    );
+}
+.rock.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--ghost)
+    );
+}
+.rock.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--steel)
+    );
+}
+.rock.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--fire)
+    );
+}
+.rock.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--water)
+    );
+}
+.rock.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--grass)
+    );
+}
+.rock.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--electric)
+    );
+}
+.rock.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--psychic)
+    );
+}
+.rock.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--ice)
+    );
+}
+.rock.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--dragon)
+    );
+}
+.rock.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--dark)
+    );
+}
+.rock.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--rock), var(--fairy)
+    );
+}
+/*Bug*/
+
+.bug.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--fighting)
+    );
+}
+.bug.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--normal)
+    );
+}
+.bug.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--flying)
+    );
+}
+.bug.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--poison)
+    );
+}
+.bug.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--ground)
+    );
+}
+.bug.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--rock)
+    );
+}
+.bug.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--ghost)
+    );
+}
+.bug.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--steel)
+    );
+}
+.bug.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--fire)
+    );
+}
+.bug.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--water)
+    );
+}
+.bug.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--grass)
+    );
+}
+.bug.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--electric)
+    );
+}
+.bug.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--psychic)
+    );
+}
+.bug.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--ice)
+    );
+}
+.bug.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--dragon)
+    );
+}
+.bug.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--dark)
+    );
+}
+.bug.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--bug), var(--fairy)
+    );
+}
+/*Ghost*/
+
+.ghost.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--fighting)
+    );
+}
+.ghost.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--normal)
+    );
+}
+.ghost.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--flying)
+    );
+}
+.ghost.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--poison)
+    );
+}
+.ghost.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--ground)
+    );
+}
+.ghost.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--rock)
+    );
+}
+.ghost.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--bug)
+    );
+}
+.ghost.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--steel)
+    );
+}
+.ghost.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--fire)
+    );
+}
+.ghost.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--water)
+    );
+}
+.ghost.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--grass)
+    );
+}
+.ghost.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--electric)
+    );
+}
+.ghost.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--psychic)
+    );
+}
+.ghost.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--ice)
+    );
+}
+.ghost.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--dragon)
+    );
+}
+.ghost.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--dark)
+    );
+}
+.ghost.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ghost), var(--fairy)
+    );
+}
+/*Steel*/
+
+.steel.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--fighting)
+    );
+}
+.steel.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--normal)
+    );
+}
+.steel.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--flying)
+    );
+}
+.steel.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--poison)
+    );
+}
+.steel.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--ground)
+    );
+}
+.steel.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--rock)
+    );
+}
+.steel.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--bug)
+    );
+}
+.steel.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--ghost)
+    );
+}
+.steel.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--fire)
+    );
+}
+.steel.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--water)
+    );
+}
+.steel.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--grass)
+    );
+}
+.steel.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--electric)
+    );
+}
+.steel.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--psychic)
+    );
+}
+.steel.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--ice)
+    );
+}
+.steel.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--dragon)
+    );
+}
+.steel.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--dark)
+    );
+}
+.steel.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--steel), var(--fairy)
+    );
+}
+/*Fire*/
+
+.fire.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--fighting)
+    );
+}
+.fire.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--normal)
+    );
+}
+.fire.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--flying)
+    );
+}
+.fire.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--poison)
+    );
+}
+.fire.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--ground)
+    );
+}
+.fire.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--rock)
+    );
+}
+.fire.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--bug)
+    );
+}
+.fire.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--ghost)
+    );
+}
+.fire.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--steel)
+    );
+}
+.fire.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--water)
+    );
+}
+.fire.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--grass)
+    );
+}
+.fire.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--electric)
+    );
+}
+.fire.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--psychic)
+    );
+}
+.fire.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--ice)
+    );
+}
+.fire.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--dragon)
+    );
+}
+.fire.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--dark)
+    );
+}
+.fire.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fire), var(--fairy)
+    );
+}
+/*Water*/
+
+.water.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--fighting)
+    );
+}
+.water.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--normal)
+    );
+}
+.water.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--flying)
+    );
+}
+.water.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--poison)
+    );
+}
+.water.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--ground)
+    );
+}
+.water.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--rock)
+    );
+}
+.water.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--bug)
+    );
+}
+.water.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--ghost)
+    );
+}
+.water.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--steel)
+    );
+}
+.water.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--fire)
+    );
+}
+.water.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--grass)
+    );
+}
+.water.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--electric)
+    );
+}
+.water.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--psychic)
+    );
+}
+.water.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--ice)
+    );
+}
+.water.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--dragon)
+    );
+}
+.water.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--dark)
+    );
+}
+.water.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--water), var(--fairy)
+    );
+}
+/*Grass*/
+
+.grass.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--fighting)
+    );
+}
+.grass.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--normal)
+    );
+}
+.grass.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--flying)
+    );
+}
+.grass.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--poison)
+    );
+}
+.grass.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--ground)
+    );
+}
+.grass.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--rock)
+    );
+}
+.grass.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--bug)
+    );
+}
+.grass.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--ghost)
+    );
+}
+.grass.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--steel)
+    );
+}
+.grass.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--fire)
+    );
+}
+.grass.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--water)
+    );
+}
+.grass.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--electric)
+    );
+}
+.grass.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--psychic)
+    );
+}
+.grass.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--ice)
+    );
+}
+.grass.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--dragon)
+    );
+}
+.grass.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--dark)
+    );
+}
+.grass.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--grass), var(--fairy)
+    );
+}
+/*Electric*/
+
+.electric.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--fighting)
+    );
+}
+.electric.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--normal)
+    );
+}
+.electric.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--flying)
+    );
+}
+.electric.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--poison)
+    );
+}
+.electric.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--ground)
+    );
+}
+.electric.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--rock)
+    );
+}
+.electric.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--bug)
+    );
+}
+.electric.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--ghost)
+    );
+}
+.electric.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--steel)
+    );
+}
+.electric.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--fire)
+    );
+}
+.electric.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--water)
+    );
+}
+.electric.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--grass)
+    );
+}
+.electric.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--psychic)
+    );
+}
+.electric.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--ice)
+    );
+}
+.electric.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--dragon)
+    );
+}
+.electric.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--dark)
+    );
+}
+.electric.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--electric), var(--fairy)
+    );
+}
+/*Psychic*/
+
+.psychic.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--fighting)
+    );
+}
+.psychic.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--normal)
+    );
+}
+.psychic.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--flying)
+    );
+}
+.psychic.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--poison)
+    );
+}
+.psychic.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--ground)
+    );
+}
+.psychic.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--rock)
+    );
+}
+.psychic.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--bug)
+    );
+}
+.psychic.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--ghost)
+    );
+}
+.psychic.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--steel)
+    );
+}
+.psychic.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--fire)
+    );
+}
+.psychic.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--water)
+    );
+}
+.psychic.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--grass)
+    );
+}
+.psychic.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--electric)
+    );
+}
+.psychic.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--ice)
+    );
+}
+.psychic.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--dragon)
+    );
+}
+.psychic.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--dark)
+    );
+}
+.psychic.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--psychic), var(--fairy)
+    );
+}
+/*Ice*/
+
+.ice.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--fighting)
+    );
+}
+.ice.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--normal)
+    );
+}
+.ice.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--flying)
+    );
+}
+.ice.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--poison)
+    );
+}
+.ice.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--ground)
+    );
+}
+.ice.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--rock)
+    );
+}
+.ice.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--bug)
+    );
+}
+.ice.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--ghost)
+    );
+}
+.ice.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--steel)
+    );
+}
+.ice.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--fire)
+    );
+}
+.ice.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--water)
+    );
+}
+.ice.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--grass)
+    );
+}
+.ice.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--electric)
+    );
+}
+.ice.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--psychic)
+    );
+}
+.ice.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--dragon)
+    );
+}
+.ice.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--dark)
+    );
+}
+.ice.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--ice), var(--fairy)
+    );
+}
+/*Dragon*/
+
+.dragon.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--fighting)
+    );
+}
+.dragon.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--normal)
+    );
+}
+.dragon.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--flying)
+    );
+}
+.dragon.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--poison)
+    );
+}
+.dragon.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--ground)
+    );
+}
+.dragon.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--rock)
+    );
+}
+.dragon.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--bug)
+    );
+}
+.dragon.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--ghost)
+    );
+}
+.dragon.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--steel)
+    );
+}
+.dragon.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--fire)
+    );
+}
+.dragon.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--water)
+    );
+}
+.dragon.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--grass)
+    );
+}
+.dragon.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--electric)
+    );
+}
+.dragon.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--psychic)
+    );
+}
+.dragon.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--ice)
+    );
+}
+.dragon.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--dark)
+    );
+}
+.dragon.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dragon), var(--fairy)
+    );
+}
+/*Dark*/
+
+.dark.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--fighting)
+    );
+}
+.dark.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--normal)
+    );
+}
+.dark.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--flying)
+    );
+}
+.dark.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--poison)
+    );
+}
+.dark.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--ground)
+    );
+}
+.dark.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--rock)
+    );
+}
+.dark.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--bug)
+    );
+}
+.dark.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--ghost)
+    );
+}
+.dark.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--steel)
+    );
+}
+.dark.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--fire)
+    );
+}
+.dark.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--water)
+    );
+}
+.dark.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--grass)
+    );
+}
+.dark.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--electric)
+    );
+}
+.dark.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--psychic)
+    );
+}
+.dark.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--ice)
+    );
+}
+.dark.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--dragon)
+    );
+}
+.dark.fairy {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--dark), var(--fairy)
+    );
+}
+/*Fairy*/
+
+.fairy.fighting {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--fighting)
+    );
+}
+.fairy.normal {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--normal)
+    );
+}
+.fairy.flying {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--flying)
+    );
+}
+.fairy.poison {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--poison)
+    );
+}
+.fairy.ground {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--ground)
+    );
+}
+.fairy.rock {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--rock)
+    );
+}
+.fairy.bug {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--bug)
+    );
+}
+.fairy.ghost {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--ghost)
+    );
+}
+.fairy.steel {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--steel)
+    );
+}
+.fairy.fire {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--fire)
+    );
+}
+.fairy.water {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--water)
+    );
+}
+.fairy.grass {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--grass)
+    );
+}
+.fairy.electric {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--electric)
+    );
+}
+.fairy.psychic {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--psychic)
+    );
+}
+.fairy.ice {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--ice)
+    );
+}
+.fairy.dragon {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--dragon)
+    );
+}
+.fairy.dark {
+    background-color: transparent;
+    background: linear-gradient(
+        var(--grad-rotation), var(--fairy), var(--dark)
+    );
+}
+
+.typeHidden {
+    display: none !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.searchHidden {
+    display: none !important;
+}
+
+#pokemonListContainer,
+#detailsWindow {
+    flex-basis: 50%;
+}

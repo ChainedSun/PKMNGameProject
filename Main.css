@@ -1,0 +1,171 @@
+
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    font-size: 64px;
+    background-color:  rgba(51, 51, 51, 0.527);
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+body {
+    user-select: none;
+    background-color: black;
+    color: white;
+    background-image: url("/images/main-menu/background/BG.png");
+    
+    
+}
+
+
+
+p {
+    user-select: none;
+    color: white;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    border: solid 2px currentColor;
+}
+
+.mainMenuChoiseButton img {
+    height: 134px;
+    width: 134px;
+    
+}
+/*
+.mainMenuChoiseButton {
+    border: 3px solid black;
+}
+*/
+
+#messageContainer {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+.message {
+    display: none;
+}
+
+.message.show {
+    display: inherit;
+}
+
+#pokedex, #poketeam {
+    text-align: center;
+}
+
+.mainMenu {
+    background-color: rgba(red, green, blue, alpha);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: center;
+    justify-items: center;
+}
+
+.mainMenuContainer {
+    padding-top: 20px;
+    background-color: rgba(221, 162, 0, 0.452);
+    width: auto;
+    height: auto;
+}
+
+.pokeball {
+    height: 128px;
+    width: 128px;
+    margin: auto;
+    border: solid 3px black;
+    position: relative;
+    border-radius: 100%;
+    background-image: linear-gradient(
+        red 64px,
+        white 64px
+    );
+    animation-name: pokeballOut;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+}
+
+.mainMenuChoiseButton:hover > .pokeball {
+    -webkit-animation-name: pokeballIn,pokeballTilt, pokeballWobble;
+    -webkit-animation-duration: 0.2s,0.3s, 1s;
+    -webkit-animation-iteration-count: 1, 1, infinite;
+    -webkit-animation-fill-mode: forwards, none, none;
+    -webkit-animation-direction: normal, normal, alternate;
+    -webkit-animation-timing-function: linear, ease-out, ease-in-out;
+    -webkit-animation-delay: 0s, 0s, 0.3s;
+}
+
+.pokeball::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 128px;
+    background-color: #000;
+    margin-top: 45%;
+}
+
+.pokeball::after {
+    position: absolute;
+    content: "";
+    margin: auto;
+    height: 42px;
+    width: 42px;
+    background-image: radial-gradient(
+        white 0px, white 5px,
+        rgb(150, 150, 150) 5px, rgb(150, 150, 150) 10px,
+        white 10px, white 16px,
+        black 16px
+    );
+    border-radius: 100%;
+    margin: 43px;
+    
+}
+
+
+
+@keyframes pokeballTilt {
+    0% {rotate: 0deg}
+    100% {rotate: -45deg}
+}
+
+@keyframes pokeballWobble {
+    0% {rotate: -45deg}
+    100% {rotate: 45deg}
+}
+
+@keyframes pokeballIn {
+    from {scale: 100%;}
+    to {scale: 125%;}
+}
+
+@keyframes pokeballOut {
+    from {scale: 125%;}
+    to {scale: 100%;}
+    
+}
+
+
+
+
+
+

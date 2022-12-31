@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pokedex</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="pokedex-style.css">
+    </head>
+    <body>
+        <script src="../setLocalStorage.js" type="module" async></script>
+        <header><center>Pokedex</center></header>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="ListContainer">
+            <div id="pokemonListContainer">
+                <div id="searchMenu">
+                    <p>Search Menu</p>
+                    <div id="searchField">
+                        <input type="text" autocomplete="off" name="search" id="searchInput" placeholder="Search by ID or name. Search multiple pokemons using ';'. Ex. Bulbasaur;Charmander;3">
+                    </div>
+                </div>
+                <hr class="hrTest">
+                <div id="pokemonList">
+                </div>
+                <hr class="hrTest">
+                <div id="filterMenu">
+                    <div id="typeListContainer"></div>
+                    <div id="filterParameters">
+                        <label for="singleType">Single Type</label>
+                        <input type="checkbox" name="mono" id="singleType">
+                        <label for="dualType">Dual Type</label>
+                        <input type="checkbox" name="duo" id="dualType">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="detailsWindow">
+                <div class="pokemonName" id="nameDetailsContainer">
+                    <p class="nameP" id="nameDetails"></p>
+                    <div class="pokedexLightIndicator" id="pokedexLightIndicator"></div>
+                </div>
+                <div id="screenAndControls">
+                    <div class="pokedexScreenFrame" id="pokedexScreenFrame">
+                        <div class="sBTC">
+                            <button class="shinyButton hidden" id="shinyMode"></button>
+                        </div>
+                        <div class="pokedexScreen" id="pokedexScreen">
+                            <img id="detailsImage" data-custom-data="normal" class="" src="">
+                            <img id="detailsImage" data-custom-data="shiny" class="" src="">
+                            <img id="detailsImage" data-custom-data="normal-animated" class="" src="">
+                            <img id="detailsImage" data-custom-data="shiny-animated" class="" src="">
+                            <img id="detailsImage" data-custom-data="mega" class="" src="">
+                            <img id="detailsImage" data-custom-data="female" class="" src="">
+                        </div>
+                    </div>
+                    <div id="detailsButtonContainer">
+                        <div id="detailsTypeButtonContainer">
+                            <button id="detailsType" class="activeTab" data-custom-data="description-details">
+                                Description
+                            </button>
+                            <button id="detailsType" class="" data-custom-data="abilities-and-type-data">
+                                Ability/Type
+                            </button>
+                            <button id="detailsType" class="" data-custom-data="species-details">
+                                Species
+                            </button>
+                            <button id="detailsType" class="" data-custom-data="evolution-details">
+                                Evolution Details
+                            </button>
+                            <button id="detailsType" class="" data-custom-data="stats-details">
+                                Stats
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="detailsValueContainer">
+                    <div id="detailsValue" data-custom-data="description-details">
+                        <label>Description</label>
+                        <hr>
+                        <p id="textValue"></p>
+                    </div>
+                    <div id="detailsValue" data-custom-data="abilities-and-type-data">
+                        <label>Abilities</label>
+                        <hr>
+                        <div id="abilityTable">
+                            <div id="normalAbility">
+                                <p>Normal Aility:</p>
+                                <div id="abilityContainer">
+                                    <p id="a1"></p>
+                                    <p id="a2"></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div id="hiddenAbility">
+                                <p>Hidden Ability:</p>
+                                <p id="ha"></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- <label>Type Chart</label>
+                        <hr> -->
+                        <div id="pokemonType">
+                            <label>Pokemon Type</label>
+                            <div class="typeContainer" id="typeContainer">
+                                <div id="type1" class="">
+                                    <p id="typeText"></p>
+                                </div>
+                                <div id="type2" class="">
+                                    <p id="typeText"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="typeChart">
+                            <div id="typeEntry" data-type-data="normal">
+                                <div id="typeBox" class="normal">
+                                    <p id="typeName">NOR</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="fire">
+                                <div id="typeBox" class="fire">
+                                    <p id="typeName">FIR</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="water">
+                                <div id="typeBox" class="water">
+                                    <p id="typeName">WAT</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="electric">
+                                <div id="typeBox" class="electric">
+                                    <p id="typeName">ELE</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="grass">
+                                <div id="typeBox" class="grass">
+                                    <p id="typeName">GRA</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="ice">
+                                <div id="typeBox" class="ice">
+                                    <p id="typeName">ICE</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="fighting">
+                                <div id="typeBox" class="fighting">
+                                    <p id="typeName">FIG</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="poison">
+                                <div id="typeBox" class="poison">
+                                    <p id="typeName">POI</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="ground">
+                                <div id="typeBox" class="ground">
+                                    <p id="typeName">GRO</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="flying">
+                                <div id="typeBox" class="flying">
+                                    <p id="typeName">FLY</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="psychic">
+                                <div id="typeBox" class="psychic">
+                                    <p id="typeName">PSY</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="bug">
+                                <div id="typeBox" class="bug">
+                                    <p id="typeName">BUG</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="rock">
+                                <div id="typeBox" class="rock">
+                                    <p id="typeName">ROC</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="ghost">
+                                <div id="typeBox" class="ghost">
+                                    <p id="typeName">GHO</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="dragon">
+                                <div id="typeBox" class="dragon">
+                                    <p id="typeName">DRA</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="dark">
+                                <div id="typeBox" class="dark">
+                                    <p id="typeName">DAR</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="steel">
+                                <div id="typeBox" class="steel">
+                                    <p id="typeName">STE</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="fairy">
+                                <div id="typeBox" class="fairy">
+                                    <p id="typeName">FAI</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="detailsValue" data-custom-data="species-details">
+                        <label>Species Details</label>
+                        <div id="species"></div>
+                    </div>
+                    <div id="detailsValue" data-custom-data="evolution-details">
+                        <label>Evolution Chart</label>
+                        <p id="textValue"></p>
+                    </div>
+                    <div id="detailsValue" data-custom-data="stats-details">
+                        <label>Stats</label>
+                        <p id="textValue"></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script src="pokedex.js" type="module" async defer></script>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+.returnToMain {
+    padding: 10px;
+    border: solid 2px black;
+    border-radius: 8px;
+    
+}
+
+.arrowContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+
