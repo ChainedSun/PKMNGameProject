@@ -62,13 +62,13 @@
                     </div>
                     <div id="detailsButtonContainer">
                         <div id="detailsTypeButtonContainer">
-                            <button id="detailsType" class="activeTab" data-custom-data="description-details">
+                            <button id="detailsType" class="" data-custom-data="description-details">
                                 Description
                             </button>
                             <button id="detailsType" class="" data-custom-data="abilities-and-type-data">
                                 Ability/Type
                             </button>
-                            <button id="detailsType" class="" data-custom-data="species-details">
+                            <button id="detailsType" class="activeTab" data-custom-data="species-details">
                                 Species
                             </button>
                             <button id="detailsType" class="" data-custom-data="evolution-details">
@@ -83,8 +83,6 @@
                 
                 <div id="detailsValueContainer">
                     <div id="detailsValue" data-custom-data="description-details">
-                        <label>Description</label>
-                        <hr>
                         <p id="textValue"></p>
                     </div>
                     <div id="detailsValue" data-custom-data="abilities-and-type-data">
@@ -267,8 +265,13 @@
                         </div>
                     </div>
                     <div id="detailsValue" data-custom-data="species-details">
-                        <label>Species Details</label>
-                        <div id="species"></div>
+                        <div id="species">
+                            <p>Species:</p>
+                            <p id="speciesValue"></p>
+                        </div>
+                        <div id="profile">
+                            <table></table> <!--Check online for a table tutorial-->
+                        </div>
                     </div>
                     <div id="detailsValue" data-custom-data="evolution-details">
                         <label>Evolution Chart</label>

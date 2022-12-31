@@ -333,9 +333,7 @@ function searchPokemonEntries(textValue) {
     console.log(words, idNumbers)
     let newText = words.concat(idNumbers)
     //console.log(newText)
-    pokemonEntries.forEach(entry => {
-      checkPokemonEntriesForSearching(entry, newText)
-    })
+    checkPokemonEntriesForSearching(newText)
   }
   // if(text == "" && numbers == NaN) {
   //  makeSelectionVisible()
@@ -347,7 +345,7 @@ function searchPokemonEntries(textValue) {
   // }
 }
 
-function checkPokemonEntriesForSearching(pEntry, textToMatch) {
+function checkPokemonEntriesForSearching(textToMatch) {
   //ill make the search input take comma separated entries and search for all matching cardsif(child.classList.contains("cardName")) 
   // let pokeName = child.textContent.toLowerCase()
   // if(pokeName.includes(word.toLowerCase())) {
@@ -356,34 +354,52 @@ function checkPokemonEntriesForSearching(pEntry, textToMatch) {
   // } else {
   //   pEntry.classList.add("searchHidden")
   // }
-  let childList = [...pEntry.children]
-  let entryName = null
-  let entryId = null
-  childList.forEach(child=> {
-    if(child.id == "cardName") {
-      entryName = child
-    } else if(child.id == "pokedexIndex") {
-      entryId = child
-    }
-  })
-  entryName = entryName.textContent.toLowerCase()
-  entryId = parseInt(entryId.textContent.replace("#",""))
-  //console.log(entryName, entryId)
-  textToMatch.forEach(word=> {
-    if(Number.isNaN(word) == false) {
-      console.log("Not a Number!")
-      if(entryName.inculdes(word.toLowerCase())) {
-        if(pEntry.classList.contains("searchHidden")) {
-          pEntry.classList.remove("searchHidden")
-        }
-      } else {
-        pEntry.classList.add("searchHidden")
+  loop1:
+  pokemonEntries.forEach(entry => {
+    let childList = [...entry.children]
+    let matchFound = false
+    let entryName = null
+    let entryId = null
+    let cardList = []
+    childList.forEach(child=> {
+      if(child.id == "cardName") {
+        entryName = child
+      } else if(child.id == "pokedexIndex") {
+        entryId = child
       }
-    } else {
-
-    }
+    })
+    entryName = entryName.textContent.toLowerCase()
+    entryId = parseInt(entryId.textContent.replace("#",""))
+    //console.log(entryName, entryId)
+    textToMatch.forEach(word=> {
+      if(typeof(word) === "string") {
+        console.log("Not a Number!")
+        if(entryName.includes(word.toLowerCase())) {
+          entry.classList.remove("searchHidden")
+          matchFound = true
+          return
+        }
+          
+      } else {
+        if(typeof(word) === "number") {
+          console.log("is a Number!")
+          entryId = entryId.toString()
+          word = word.toString()
+          console.log(entryId, word)
+          if(entryId.includes(word)) {
+            entry.classList.remove("searchHidden")
+            matchFound = true
+            return
+          }
+        }       
+      }
+    })
+    if(!matchFound) {
+      entry.classList.add("searchHidden")
+    } 
+    
+    
   })
-      
     
   
 }
