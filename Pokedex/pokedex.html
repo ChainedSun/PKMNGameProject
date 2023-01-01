@@ -68,10 +68,10 @@
                             <button id="detailsType" class="" data-custom-data="abilities-and-type-data">
                                 Ability/Type
                             </button>
-                            <button id="detailsType" class="activeTab" data-custom-data="species-details">
+                            <button id="detailsType" class="" data-custom-data="species-details">
                                 Species
                             </button>
-                            <button id="detailsType" class="" data-custom-data="evolution-details">
+                            <button id="detailsType" class="activeTab" data-custom-data="evolution-details">
                                 Evolution Details
                             </button>
                             <button id="detailsType" class="" data-custom-data="stats-details">
@@ -103,15 +103,13 @@
                             </div>
                         </div>
                         <hr>
-                        <!-- <label>Type Chart</label>
-                        <hr> -->
                         <div id="pokemonType">
                             <label>Pokemon Type</label>
                             <div class="typeContainer" id="typeContainer">
-                                <div id="type1" class="">
+                                <div id="type1" class="hidden">
                                     <p id="typeText"></p>
                                 </div>
-                                <div id="type2" class="">
+                                <div id="type2" class="hidden">
                                     <p id="typeText"></p>
                                 </div>
                             </div>
@@ -265,17 +263,50 @@
                         </div>
                     </div>
                     <div id="detailsValue" data-custom-data="species-details">
-                        <div id="species">
-                            <p>Species:</p>
-                            <p id="speciesValue"></p>
-                        </div>
                         <div id="profile">
-                            <table></table> <!--Check online for a table tutorial-->
+                            <table>
+                                <tr>
+                                    <th>Species: </th>
+                                    <td id="speciesValue"></td>
+                                </tr>
+                                <tr>
+                                    <th>Height: </th>
+                                    <td id="heightValue"></td>
+                                </tr>
+                                <tr>
+                                    <th>Weight: </th>
+                                    <td id="weightValue"></td>
+                                </tr>
+                                <tr>
+                                    <th>Egg: </th>
+                                    <td id="eggValue"></td>
+                                </tr>
+                                <tr>
+                                    <th>Gender: </th>
+                                    <td id="genderValue">
+                                        <div id="maleImageContainer">
+                                            <img id="maleSymbol" src="../Pokedex/pokemon-data.json-master/images/pokedex/360_F_120103906_MNhlpXOPI3xKidkvnhAhMWc7MwfktVf6-removebg-preview.png" alt="" title="">
+                                            <span id="maleValue">50%</span>
+                                        </div>
+                                        <progress id="genderProgress" value="25" max="100">
+                                        </progress>
+                                        <div id="femaleImageContainer">
+                                            <img id="femaleSymbol" src="../Pokedex/pokemon-data.json-master/images/pokedex/360_F_137694239_ihbs4kHd2w3HC3KipODkBDfhltbjwwLV-removebg-preview.png" alt="" title="">
+                                            <span id="femaleValue">50%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                            </table> <!--Check online for a table tutorial-->
                         </div>
                     </div>
                     <div id="detailsValue" data-custom-data="evolution-details">
                         <label>Evolution Chart</label>
-                        <p id="textValue"></p>
+                        <div id="evolutionContainer">
+                            <div id="evolutionStage" data-stage="">
+
+                            </div>
+                        </div>
                     </div>
                     <div id="detailsValue" data-custom-data="stats-details">
                         <label>Stats</label>

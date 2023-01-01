@@ -470,6 +470,9 @@ function populateDetails(card) {
           setPokedexImage(e["name"]["english"], c.textContent.replace("#", ""))
           setDescription(e["description"])
           setAbilityandType(e["type"], e["profile"]["ability"])
+          let newProfile = e["profile"]
+          newProfile["species"] = e["species"]
+          setSpeciesDetails(newProfile)
           nameDetails.textContent = e["name"]["english"]
         }
       }
@@ -639,13 +642,40 @@ function setAbilityandType(textType = "", abilityList = []) {
   // console.log(typeEffChart)
 }
 
-function setSpeciesDetails(textVal = "") {
-  let descNode = getDetailsValueContainer("spec")
+function setSpeciesDetails(profile = "") {
+  //let descNode = getDetailsValueContainer("spec")
+  let speciesValue = document.getElementById("speciesValue")
+  let heightValue = document.getElementById("heightValue")
+  let weightValue = document.getElementById("weightValue")
+  let eggValue = document.getElementById("eggValue")
+  let genderBar = document.getElementById("genderProgress")
+  let maleValue = document.getElementById("maleValue")
+  let femaleValue = document.getElementById("femaleValue")
+  if(profile == "") {
+    speciesValue.textContent = ""
+    heightValue.textContent = ""
+    weightValue.textContent = ""
+    eggValue.textContent = ""
+    genderBar.value = 0
+    maleValue.textContent = "50%"
+    femaleValue.textContent = "50%"
+  } else {
+    speciesValue.textContent = profile["species"]
+    heightValue.textContent =  profile["height"]
+    weightValue.textContent =  profile["weight"]
+    profile["egg"].forEach(eggType => {
+      eggValue.textContent += " " + eggType
+    })
+    let newGenderValues = profile["gender"].split(":")
+    genderBar.value = parseFloat(newGenderValues[0])
+    maleValue.textContent = parseFloat(newGenderValues[0]) + "%"
+    femaleValue.textContent = parseFloat(newGenderValues[1]) + "%"
+  }
 
 }
 
 function setEvolutionInfo(textVal = "") {
-  let descNode = getDetailsValueContainer("evo")
+  //let descNode = getDetailsValueContainer("evo")
 
 }
 
