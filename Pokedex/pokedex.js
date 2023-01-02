@@ -17,6 +17,9 @@ const detailsValues = document.querySelectorAll("#detailsValue")
 const aOne = document.getElementById("a1")
 const aTwo = document.getElementById("a2")
 const hA = document.getElementById("ha")
+const evo2 = document.getElementById("evolutionStageContainer2")
+const evo1 = document.getElementById("evolutionStageContainer1")
+const evoNA = document.getElementById("evolutionStageContainer0")
 
 
 import { types } from "../setLocalStorage.js";
@@ -78,10 +81,10 @@ function initializeStart() {
       .then(response => {
         if(response.ok)
           //newImg.src = altImageFilePathLocal + pokeName + altImageFileExtension
-          newImg.src = imageFilePathLocal + fileName + idNum + imageFileExtension
+          newImg.src = imageFilePathLocal + idNum + imageFileExtension
         else{
           console.log(`Image was not found on path: ${localLink}`)
-          newImg.src = imageFilePathLocal + fileName + idNum + imageFileExtension
+          newImg.src = imageFilePathLocal  + idNum + imageFileExtension
         }
       })
 
@@ -327,10 +330,9 @@ function searchPokemonEntries(textValue) {
     
   })
   if(words.length <= 0 && idNumbers.length <= 0) {
-    console.log("AllVisible")
+    // console.log("AllVisible")
     makeSelectionVisible()
   } else {
-    console.log(words, idNumbers)
     let newText = words.concat(idNumbers)
     //console.log(newText)
     checkPokemonEntriesForSearching(newText)
@@ -354,7 +356,6 @@ function checkPokemonEntriesForSearching(textToMatch) {
   // } else {
   //   pEntry.classList.add("searchHidden")
   // }
-  loop1:
   pokemonEntries.forEach(entry => {
     let childList = [...entry.children]
     let matchFound = false
@@ -373,7 +374,7 @@ function checkPokemonEntriesForSearching(textToMatch) {
     //console.log(entryName, entryId)
     textToMatch.forEach(word=> {
       if(typeof(word) === "string") {
-        console.log("Not a Number!")
+        // console.log("Not a Number!")
         if(entryName.includes(word.toLowerCase())) {
           entry.classList.remove("searchHidden")
           matchFound = true
@@ -382,10 +383,10 @@ function checkPokemonEntriesForSearching(textToMatch) {
           
       } else {
         if(typeof(word) === "number") {
-          console.log("is a Number!")
+          // console.log("is a Number!")
           entryId = entryId.toString()
           word = word.toString()
-          console.log(entryId, word)
+          // console.log(entryId, word)
           if(entryId.includes(word)) {
             entry.classList.remove("searchHidden")
             matchFound = true
@@ -473,6 +474,7 @@ function populateDetails(card) {
           let newProfile = e["profile"]
           newProfile["species"] = e["species"]
           setSpeciesDetails(newProfile)
+          setEvolutionInfo(e["evolution"])
           nameDetails.textContent = e["name"]["english"]
         }
       }
@@ -656,9 +658,9 @@ function setSpeciesDetails(profile = "") {
     heightValue.textContent = ""
     weightValue.textContent = ""
     eggValue.textContent = ""
-    genderBar.value = 0
-    maleValue.textContent = "50%"
-    femaleValue.textContent = "50%"
+    genderBar.value = 50
+    maleValue.textContent = "NA"
+    femaleValue.textContent = "NA"
   } else {
     speciesValue.textContent = profile["species"]
     heightValue.textContent =  profile["height"]
@@ -666,18 +668,59 @@ function setSpeciesDetails(profile = "") {
     profile["egg"].forEach(eggType => {
       eggValue.textContent += " " + eggType
     })
-    let newGenderValues = profile["gender"].split(":")
-    genderBar.value = parseFloat(newGenderValues[0])
-    maleValue.textContent = parseFloat(newGenderValues[0]) + "%"
-    femaleValue.textContent = parseFloat(newGenderValues[1]) + "%"
+    if(profile["gender"] === "Genderless") {
+      genderBar.value = 50
+      maleValue.textContent = "NA"
+      femaleValue.textContent = "NA"
+    } else {
+      let newGenderValues = profile["gender"].split(":")
+      genderBar.value = parseFloat(newGenderValues[0])
+      maleValue.textContent = parseFloat(newGenderValues[0]) + "%"
+      femaleValue.textContent = parseFloat(newGenderValues[1]) + "%"
+    }
   }
 
 }
 
-function setEvolutionInfo(textVal = "") {
-  //let descNode = getDetailsValueContainer("evo")
+function track() {
+  const err = new Error();
+  Error.captureStackTrace(err, track)
+  console.log(err.stack)
+}
+
+function setEvolutionInfo(evoProfile = {}) {
+  //track()
+  let evoArr = Object.entries(evoProfile).map(([key, value]) => [key, value])
+  let indexArr = evoArr.map(([value]) => [value])
+  let levelArr = []
+  let type = 0
+  console.log(indexArr)
+  if(Object.keys(evoProfile).length === 0) {
+    //console.log("Empty")
+    type = 0
+  } else {
+    //console.log(evoArr)
+    // let newArr = Object.entries(evoProfile).map(([key, value]) => [key, value])
+    // for(let evImage of evolutionImages) {
+    //   if (evImage.getAttribute("data-stage") === "0") {
+    //     //evImage.src = imageFilePathLocal + fileName + newArr[0][0] + imageFileExtension
+    //     evImage.src = imageFilePathLocal + newArr[0][1][0] + imageFileExtension
+    //   }
+    // }
+  }
 
 }
+
+function requestEvolutionInformation(pokemonIndex) {
+  let newArr = {}
+  pokemons.forEach(pe => {
+    if(pe["id"] === pokemonIndex) {
+      newArr =  Object.entries(pe).map(([key, value]) => [key, value])
+    }
+  })
+  return newArr
+}
+
 
 function setBaseStatsDetails(textVal = "") {
   let descNode = getDetailsValueContainer("stats")

@@ -286,13 +286,13 @@
                                     <td id="genderValue">
                                         <div id="maleImageContainer">
                                             <img id="maleSymbol" src="../Pokedex/pokemon-data.json-master/images/pokedex/360_F_120103906_MNhlpXOPI3xKidkvnhAhMWc7MwfktVf6-removebg-preview.png" alt="" title="">
-                                            <span id="maleValue">50%</span>
+                                            <span id="maleValue">NA</span>
                                         </div>
-                                        <progress id="genderProgress" value="25" max="100">
+                                        <progress id="genderProgress" value="50" max="100">
                                         </progress>
                                         <div id="femaleImageContainer">
                                             <img id="femaleSymbol" src="../Pokedex/pokemon-data.json-master/images/pokedex/360_F_137694239_ihbs4kHd2w3HC3KipODkBDfhltbjwwLV-removebg-preview.png" alt="" title="">
-                                            <span id="femaleValue">50%</span>
+                                            <span id="femaleValue">NA</span>
                                         </div>
                                     </td>
                                 </tr>
@@ -301,15 +301,50 @@
                         </div>
                     </div>
                     <div id="detailsValue" data-custom-data="evolution-details">
-                        <label>Evolution Chart</label>
                         <div id="evolutionContainer">
-                            <div id="evolutionStage" data-stage="">
-
+                            <div id="evolutionStageContainer2" class="">
+                                <div id="evolutionStage" data-stage="0">
+                                    <img src="" alt="" id="evolutionImage" data-stage="0" data-name="">
+                                    <p>Method:</p>
+                                    <p id="evolutionLevel" data-stage="0"></p>
+                                    <p id="evolutionMethod" data-stage="0"></p>
+                                </div>
+                                <img class="arrowToRight" src="https://iconvulture.com/wp-content/uploads/2017/12/long-arrow-pointing-to-the-right.svg"></img>
+                                <div id="evolutionStage" data-stage="1">
+                                    <img src="" alt="" id="evolutionImage" data-stage="1" data-name="">
+                                    <p>Method:</p>
+                                    <p id="evolutionLevel" data-stage="1"></p>
+                                    <p id="evolutionMethod" data-stage="1"></p>
+                                </div>
+                                <img class="arrowToRight" src="https://iconvulture.com/wp-content/uploads/2017/12/long-arrow-pointing-to-the-right.svg"></img>
+                                <div id="evolutionStage" data-stage="2">
+                                    <img src="" alt="" id="evolutionImage" data-stage="2" data-name="">
+                                    <p>Method:</p>
+                                    <p id="evolutionLevel" data-stage="2"></p>
+                                    <p id="evolutionMethod" data-stage="2"></p>
+                                </div>
+                            </div>
+                            <div id="evolutionStageContainer1" class="hidden" >
+                                <div id="evolutionStage" data-stage="0">
+                                    <img src="" alt="" id="evolutionImage" data-stage="0" data-name="">
+                                    <p>Method:</p>
+                                    <p id="evolutionLevel" data-stage="0"></p>
+                                    <p id="evolutionMethod" data-stage="0"></p>
+                                </div>
+                                <img class="arrowToRight" src="https://iconvulture.com/wp-content/uploads/2017/12/long-arrow-pointing-to-the-right.svg"></img>
+                                <div id="evolutionStage" data-stage="1">
+                                    <img src="" alt="" id="evolutionImage" data-stage="1" data-name="">
+                                    <p>Method:</p>
+                                    <p id="evolutionLevel" data-stage="1"></p>
+                                    <p id="evolutionMethod" data-stage="1"></p>
+                                </div>
+                            </div>
+                            <div id="evolutionStageContainer0" class="hidden">
+                                <p class="huge">No Evolution</p>
                             </div>
                         </div>
                     </div>
                     <div id="detailsValue" data-custom-data="stats-details">
-                        <label>Stats</label>
                         <p id="textValue"></p>
                     </div>
                 </div>
