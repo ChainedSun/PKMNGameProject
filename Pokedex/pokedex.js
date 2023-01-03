@@ -1,6 +1,7 @@
 const filterContainer = document.getElementById("typeListContainer");
 const pokemonList = document.getElementById("pokemonList");
 const imageFilePathLocal = "../Pokedex/pokemon-data.json-master/images/pokedex/thumbnails/"
+const evoImageFilePathLocal = "../Pokedex/pokemon-data.json-master/images/pokedex/thumbnails/"
 const altImageFilePathLocal = "../Pokedex/pokemon-data.json-master/images/ShinyGifs/"
 const imageFileExtension = ".png"
 const altImageFileExtension = ".gif"
@@ -17,9 +18,12 @@ const detailsValues = document.querySelectorAll("#detailsValue")
 const aOne = document.getElementById("a1")
 const aTwo = document.getElementById("a2")
 const hA = document.getElementById("ha")
-const evo2 = document.getElementById("evolutionStageContainer2")
-const evo1 = document.getElementById("evolutionStageContainer1")
-const evoNA = document.getElementById("evolutionStageContainer0")
+const evoContainers = document.querySelectorAll("#evolutionStageContainer")
+
+const evo2 = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "2" || undefined)
+const evo1 = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "1" || undefined)
+const evoNA = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "0" || undefined)
+console.log(evo2,evo1,evoNA)
 
 
 import { types } from "../setLocalStorage.js";
@@ -460,25 +464,31 @@ function openDetails(card) {
 }
 
 function populateDetails(card) {
-  for(let c of card.children) {
-    if(c.classList.contains("pokemonId")) {
-      let idVal = parseInt(c.textContent.replace("#", ""))
-      for(let e of pokemons) {
-        if(e["id"] == idVal) {
-          /*let dImg = document.getElementById("detailsImage")
-          let source = "../Pokedex/pokemon-data.json-master/images/ShinyGifs/" + e["name"]["english"] + ".gif"
-          dImg.src = source*/
-          setPokedexImage(e["name"]["english"], c.textContent.replace("#", ""))
-          setDescription(e["description"])
-          setAbilityandType(e["type"], e["profile"]["ability"])
-          let newProfile = e["profile"]
-          newProfile["species"] = e["species"]
-          setSpeciesDetails(newProfile)
-          setEvolutionInfo(e["evolution"])
-          nameDetails.textContent = e["name"]["english"]
+  console.log(typeof(card))
+  if(typeof(card) === "object") {
+    for(let c of card.children) {
+      if(c.classList.contains("pokemonId")) {
+        let idVal = parseInt(c.textContent.replace("#", ""))
+        for(let e of pokemons) {
+          if(e["id"] === idVal) {
+            /*let dImg = document.getElementById("detailsImage")
+            let source = "../Pokedex/pokemon-data.json-master/images/ShinyGifs/" + e["name"]["english"] + ".gif"
+            dImg.src = source*/
+            setPokedexImage(e["name"]["english"], idVal)
+            setDescription(e["description"])
+            setAbilityandType(e["type"], e["profile"]["ability"])
+            let newProfile = e["profile"]
+            newProfile["species"] = e["species"]
+            setSpeciesDetails(newProfile)
+            setEvolutionInfo(idVal, e["evolution"])
+            nameDetails.textContent = e["name"]["english"]
+          }
         }
       }
     }
+  } else if(typeof(card) === "number" || typeof(card) === "string") {
+    let newIndex
+    if(typeof(card) === "string") newIndex = Number.parseInt(card); else newIndex = card
   }
   //fill details here with loops
   //use the dexID to find the pokemon in the database
@@ -506,28 +516,58 @@ function setAbilityandType(textType = "", abilityList = []) {
   let abilityOne = "";
   let abilityTwo = "";
   let hiddenAbility = "";
-
-  if(!(abilityList.length < 1)) {
-    aOne.textContent = abilityList[0][0]
-    if(abilityList.length > 1) {
-      if(abilityList[1][1] == "true") {
-        aTwo.textContent = ""
-        hA.textContent = abilityList[1][0]
-      } else {
-        aTwo.textContent = abilityList[1][0]
-        hA.textContent = abilityList[2][0]
-      }
+  //console.log(abilityList)
+  if(abilityList.length > 0) {
+    if(abilityList.some(Array.isArray)) {
+      abilityList.forEach(ability => {
+        if(ability[1] === "false" || ability[1] === false) {
+          if(abilityOne === "") {
+            abilityOne = ability[0]
+          } else {
+            abilityTwo = ability[0]
+          }
+        } else if(ability[1] === "true" || ability[1] === true) hiddenAbility = ability[0]
+      })
+      //console.log("Abilities are:", "Ability 1: ", abilityOne, "/ Ability 2: ",  abilityTwo, "/ Hidden Ability: ",  hiddenAbility)
     } else {
-      aTwo.textContent = ""
-      hA.textContent = ""
+      abilityOne = abilityList[0]
+      abilityTwo = ""
+      hiddenAbility = ""
+      //console.log("Abilities are:",abilityOne, abilityTwo, hiddenAbility)
     }
-    
   } else {
-    aOne.textContent = ""
-    aTwo.textContent = ""
-    hA.textContent = ""
+    abilityOne = ""
+    abilityTwo = ""
+    hiddenAbility = ""
   }
 
+  aOne.textContent = abilityOne
+  aTwo.textContent = abilityTwo
+  hA.textContent = hiddenAbility
+  // if(!abilityList.some(Array.isArray)) {
+  //   if(!(abilityList.length < 1)) {
+  //     aOne.textContent = abilityList[0][0]
+  //     if(abilityList.length > 1) {
+  //       if(abilityList[1][1] == "true") {
+  //         aTwo.textContent = "-"
+  //         hA.textContent = abilityList[1][0]
+  //       } else {
+  //         aTwo.textContent = abilityList[1][0]
+  //         hA.textContent = abilityList[2][0]
+  //       }
+  //     } else {
+  //       aTwo.textContent = "-"
+  //       hA.textContent = "-"
+  //     }
+      
+  //   } else {
+  //     aOne.textContent = "-"
+  //     aTwo.textContent = "-"
+  //     hA.textContent = "-"
+  //   }
+  // } else {
+  //   aOne.textContent = abilityList[0]
+  // }
   let descNode = getDetailsValueContainer("ability")
   let containerChildren = [...descNode.children]
   let typeEffChart = {}
@@ -688,17 +728,87 @@ function track() {
   console.log(err.stack)
 }
 
-function setEvolutionInfo(evoProfile = {}) {
-  //track()
-  let evoArr = Object.entries(evoProfile).map(([key, value]) => [key, value])
-  let indexArr = evoArr.map(([value]) => [value])
-  let levelArr = []
+function setEvolutionInfo(pokemonId, evoProfile = {}) {
+  // track()
+  let indexArr = []
+  // let levelArr = []
+  let imagesArr = []
   let type = 0
-  console.log(indexArr)
+  // console.log(evoProfile)
+  let firstEvo
+  let nextEvo
+  let lastEvo
   if(Object.keys(evoProfile).length === 0) {
     //console.log("Empty")
-    type = 0
-  } else {
+    // //type = 0
+    evoNA.classList.remove("hidden")
+    evo1.classList.add("hidden")
+    evo2.classList.add("hidden")
+    //console.log(typeof(evo2), typeof(evo1), typeof(evoNA))
+  } else if(Object.keys(evoProfile).length >= 1) {
+    //console.log("here")
+    if(true) {
+      if(evoProfile.hasOwnProperty("prev") && evoProfile.hasOwnProperty("next")) {
+        //console.log(evoProfile["prev"], evoProfile["next"])
+        evoNA.classList.add("hidden")
+        evo1.classList.add("hidden")
+        evo2.classList.remove("hidden")
+        nextEvo = evoProfile
+        firstEvo = requestEvolutionInformation(nextEvo["prev"][0])
+        lastEvo = requestEvolutionInformation(nextEvo["next"][0])
+        type = 2
+        indexArr.push(nextEvo["prev"][0], firstEvo["next"][0], nextEvo["next"][0])
+        // console.log(indexArr)
+      } 
+      
+      else if(evoProfile.hasOwnProperty("prev") && !evoProfile.hasOwnProperty("next")) {
+        lastEvo = evoProfile
+        nextEvo = requestEvolutionInformation(evoProfile["prev"][0])
+        if(Object.keys(nextEvo).length > 1) {
+          evoNA.classList.add("hidden")
+          evo1.classList.add("hidden")
+          evo2.classList.remove("hidden")
+          firstEvo = requestEvolutionInformation(nextEvo["prev"][0])
+          indexArr.push(nextEvo["prev"][0], firstEvo["next"][0], nextEvo["next"][0])
+          type = 2
+        } else {
+          evoNA.classList.add("hidden")
+          evo1.classList.remove("hidden")
+          evo2.classList.add("hidden")
+          firstEvo = nextEvo
+          indexArr.push(lastEvo["prev"][0], firstEvo["next"][0])
+          type = 1
+        }
+        // console.log(indexArr)
+      } 
+      
+      else if(!evoProfile.hasOwnProperty("prev") && evoProfile.hasOwnProperty("next")) {
+        firstEvo = evoProfile
+        nextEvo = requestEvolutionInformation(evoProfile["next"][0])
+        if(Object.keys(nextEvo).length > 1) {
+          evoNA.classList.add("hidden")
+          evo1.classList.add("hidden")
+          evo2.classList.remove("hidden")
+          lastEvo = requestEvolutionInformation(nextEvo["next"][0])
+          indexArr.push(nextEvo["prev"][0], firstEvo["next"][0], nextEvo["next"][0])
+          type = 2
+        } else {
+          evoNA.classList.add("hidden")
+          evo1.classList.remove("hidden")
+          evo2.classList.add("hidden")
+          lastEvo = requestEvolutionInformation(firstEvo["next"][0])
+          indexArr.push(lastEvo["prev"][0], firstEvo["next"][0])
+          type = 1
+        }
+        // console.log(indexArr)
+      }
+
+      
+
+
+    } else {
+      console.log("here")
+    }
     //console.log(evoArr)
     // let newArr = Object.entries(evoProfile).map(([key, value]) => [key, value])
     // for(let evImage of evolutionImages) {
@@ -709,17 +819,88 @@ function setEvolutionInfo(evoProfile = {}) {
     // }
   }
 
+  switch(type) {
+    case 0:
+      [...evo2.children].forEach(child => {
+        if(child.id == "evolutionStage") {
+          [...child.children].forEach(c => {
+            child.removeChild(c)
+          })
+        }
+      })
+      break;
+    case 1:
+      break;
+    case 2:
+      // let containerChildren = [...evo2.children]
+      // let newArr = []
+      // containerChildren.forEach(child => {
+      //   if(child.id == "evolutionStage") {
+      //     newArr.push(child)
+      //   }
+      // })
+      // for(let i = 0; i < newArr.length; i++) {
+      //   let childList = [...newArr[i].children]
+        
+      //   console.log(childList)
+      //   childList.forEach(child => {
+      //     if (child.tagName == "IMG") {
+      //       if(child.getAttribute("data-stage") == i) {
+      //         child.src = evoImageFilePathLocal + indexArr[i] + imageFileExtension
+      //       }
+      //     }
+      //   })
+      // }
+      let containerChildren = [...evo2.children]
+      let newArr = []
+      containerChildren.forEach(child => {
+        if(child.id == "evolutionStage") {
+          newArr.push(child)
+        }
+      })
+      for(let i = 0; i < newArr.length; i++) {
+        let newEntry = null
+        pokemonEntries.forEach(entry => {
+          if(newEntry === null) {
+            [...entry.children].forEach(child => {
+              if(child.id == "pokedexIndex") {
+                let newIndex = child.textContent
+                newIndex = newIndex.replace("#","")
+                newIndex = Number.parseInt(newIndex)
+                if(newIndex == indexArr[i]) {
+                  newEntry = entry.cloneNode(true)
+                  newEntry.classList.remove("entrySelected")
+                  newEntry.addEventListener("click", function(event) {
+                    pokemonCardSelected(event.target)
+                  })
+                  return
+                }
+              }
+            })
+          } else {
+            return
+          }
+        })
+        newArr[i].appendChild(newEntry)
+      }
+
+      break;
+  }
+  
+
 }
 
 function requestEvolutionInformation(pokemonIndex) {
-  let newArr = {}
+  let newObj = {}
   pokemons.forEach(pe => {
-    if(pe["id"] === pokemonIndex) {
-      newArr =  Object.entries(pe).map(([key, value]) => [key, value])
+    if(pe["id"] == pokemonIndex) {
+      newObj = pe["evolution"]
     }
   })
-  return newArr
+  return newObj
 }
+
+
 
 
 function setBaseStatsDetails(textVal = "") {
@@ -912,4 +1093,9 @@ function showDetails(value) {
 
 }
 
-//TODO: clean up the code IMPORTANT!!!!
+/*TODO: clean up the code IMPORTANT!!!
+clean up the evo cards, maybe create a whole new type for them
+expand the evolution to work for the 2 type evolution
+add method and level for evos
+*/
+

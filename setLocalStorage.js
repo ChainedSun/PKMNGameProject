@@ -174,7 +174,7 @@ export const pokemons = [
       },
       "species": "Seed Pokémon",
       "description": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun’s rays, the seed grows progressively larger.",
-      "evolution": { "next": [["2", "Level 16"]] },
+      "evolution": { "next": ["2", "Level 16"] },
       "profile": {
         "height": "0.7 m",
         "weight": "6.9 kg",
@@ -210,7 +210,7 @@ export const pokemons = [
       },
       "species": "Seed Pokémon",
       "description": "There is a bud on this Pokémon’s back. To support its weight, Ivysaur’s legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it’s a sign that the bud will bloom into a large flower soon.",
-      "evolution": { "prev": ["1", "Level 16"], "next": [["3", "Level 32"]] },
+      "evolution": { "prev": ["1", "Level 16"], "next": ["3", "Level 32"] },
       "profile": {
         "height": "1 m",
         "weight": "13 kg",
@@ -282,7 +282,7 @@ export const pokemons = [
       },
       "species": "Lizard Pokémon",
       "description": "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.",
-      "evolution": { "next": [["5", "Level 16"]] },
+      "evolution": { "next": ["5", "Level 16"] },
       "profile": {
         "height": "0.6 m",
         "weight": "8.5 kg",
@@ -318,7 +318,7 @@ export const pokemons = [
       },
       "species": "Flame Pokémon",
       "description": "Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.",
-      "evolution": { "prev": ["4", "Level 16"], "next": [["6", "Level 36"]] },
+      "evolution": { "prev": ["4", "Level 16"], "next": ["6", "Level 36"] },
       "profile": {
         "height": "1.1 m",
         "weight": "19 kg",
@@ -390,7 +390,7 @@ export const pokemons = [
       },
       "species": "Tiny Turtle Pokémon",
       "description": "Squirtle’s shell is not merely used for protection. The shell’s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.",
-      "evolution": { "next": [["8", "Level 16"]] },
+      "evolution": { "next": ["8", "Level 16"] },
       "profile": {
         "height": "0.5 m",
         "weight": "9 kg",
@@ -426,7 +426,7 @@ export const pokemons = [
       },
       "species": "Turtle Pokémon",
       "description": "Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon’s toughness as a battler.",
-      "evolution": { "prev": ["7", "Level 16"], "next": [["9", "Level 36"]] },
+      "evolution": { "prev": ["7", "Level 16"], "next": ["9", "Level 36"] },
       "profile": {
         "height": "1 m",
         "weight": "22.5 kg",
@@ -498,7 +498,7 @@ export const pokemons = [
       },
       "species": "Worm Pokémon",
       "description": "Its body is soft and weak. In nature, its perpetual fate is to be seen by others as food.",
-      "evolution": { "next": [["11", "Level 7"]] },
+      "evolution": { "next": ["11", "Level 7"] },
       "profile": {
         "height": "0.3 m",
         "weight": "2.9 kg",
@@ -534,12 +534,12 @@ export const pokemons = [
       },
       "species": "Cocoon Pokémon",
       "description": "Its hard shell doesn’t crack a bit even if Pikipek pecks at it, but it will tip over, spilling out its insides.",
-      "evolution": { "prev": ["10", "Level 7"], "next": [["12", "Level 10"]] },
+      "evolution": { "prev": ["10", "Level 7"], "next": ["12", "Level 10"] },
       "profile": {
         "height": "0.7 m",
         "weight": "9.9 kg",
         "egg": ["Bug"],
-        "ability": [["Shed Skin", "false"]],
+        "ability": ["Shed Skin", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -603,7 +603,7 @@ export const pokemons = [
       },
       "species": "Hairy Bug Pokémon",
       "description": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
-      "evolution": { "next": [["14", "Level 7"]] },
+      "evolution": { "next": ["14", "Level 7"] },
       "profile": {
         "height": "0.3 m",
         "weight": "3.2 kg",
@@ -639,12 +639,12 @@ export const pokemons = [
       },
       "species": "Cocoon Pokémon",
       "description": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
-      "evolution": { "prev": ["13", "Level 7"], "next": [["15", "Level 10"]] },
+      "evolution": { "prev": ["13", "Level 7"], "next": ["15", "Level 10"] },
       "profile": {
         "height": "0.6 m",
         "weight": "10 kg",
         "egg": ["Bug"],
-        "ability": [["Shed Skin", "false"]],
+        "ability": ["Shed Skin", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -708,7 +708,7 @@ export const pokemons = [
       },
       "species": "Tiny Bird Pokémon",
       "description": "Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings.",
-      "evolution": { "next": [["17", "Level 18"]] },
+      "evolution": { "next": ["17", "Level 18"] },
       "profile": {
         "height": "0.3 m",
         "weight": "1.8 kg",
@@ -745,7 +745,7 @@ export const pokemons = [
       },
       "species": "Bird Pokémon",
       "description": "Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.",
-      "evolution": { "prev": ["16", "Level 18"], "next": [["18", "Level 36"]] },
+      "evolution": { "prev": ["16", "Level 18"], "next": ["18", "Level 36"] },
       "profile": {
         "height": "1.1 m",
         "weight": "30 kg",
@@ -819,7 +819,7 @@ export const pokemons = [
       },
       "species": "Mouse Pokémon",
       "description": "This Pokémon is common but hazardous. Its sharp incisors can easily cut right through hard wood.",
-      "evolution": { "next": [["20", "Level 20"]] },
+      "evolution": { "next": ["20", "Level 20"] },
       "profile": {
         "height": "0.3 m",
         "weight": "3.5 kg",
@@ -893,7 +893,7 @@ export const pokemons = [
       },
       "species": "Tiny Bird Pokémon",
       "description": "Due to its short wings, it can’t fly long distances. It wanders about restlessly and pecks at bug Pokémon.",
-      "evolution": { "next": [["22", "Level 20"]] },
+      "evolution": { "next": ["22", "Level 20"] },
       "profile": {
         "height": "0.3 m",
         "weight": "2 kg",
@@ -965,7 +965,7 @@ export const pokemons = [
       },
       "species": "Snake Pokémon",
       "description": "The eggs of bird Pokémon are its favorite food. It swallows eggs whole, so sometimes an egg gets stuck, and Ekans faints.",
-      "evolution": { "next": [["24", "Level 22"]] },
+      "evolution": { "next": ["24", "Level 22"] },
       "profile": {
         "height": "2 m",
         "weight": "6.9 kg",
@@ -1041,7 +1041,7 @@ export const pokemons = [
       "description": "While sleeping, it generates electricity in the sacs in its cheeks. If it’s not getting enough sleep, it will be able to use only weak electricity.",
       "evolution": {
         "prev": ["172", "high Friendship"],
-        "next": [["26", "use Thunder Stone"]]
+        "next": ["26", "use Thunder Stone"]
       },
       "profile": {
         "height": "0.4 m",
@@ -1114,7 +1114,7 @@ export const pokemons = [
       },
       "species": "Mouse Pokémon",
       "description": "When its skin gets wrinkled from moisture, it heads for a volcano. It lies flat on a spot with a lot of geothermal heat and dries itself out.",
-      "evolution": { "next": [["28", "Level 22"]] },
+      "evolution": { "next": ["28", "Level 22"] },
       "profile": {
         "height": "0.6 m",
         "weight": "12 kg",
@@ -1186,7 +1186,7 @@ export const pokemons = [
       },
       "species": "Poison Pin Pokémon",
       "description": "Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.",
-      "evolution": { "next": [["30", "Level 16"]] },
+      "evolution": { "next": ["30", "Level 16"] },
       "profile": {
         "height": "0.4 m",
         "weight": "7 kg",
@@ -1225,7 +1225,7 @@ export const pokemons = [
       "description": "When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others.",
       "evolution": {
         "prev": ["29", "Level 16"],
-        "next": [["31", "use Moon Stone"]]
+        "next": ["31", "use Moon Stone"]
       },
       "profile": {
         "height": "0.8 m",
@@ -1300,7 +1300,7 @@ export const pokemons = [
       },
       "species": "Poison Pin Pokémon",
       "description": "Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon’s notice.",
-      "evolution": { "next": [["33", "Level 16"]] },
+      "evolution": { "next": ["33", "Level 16"] },
       "profile": {
         "height": "0.5 m",
         "weight": "9 kg",
@@ -1339,7 +1339,7 @@ export const pokemons = [
       "description": "Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.",
       "evolution": {
         "prev": ["32", "Level 16"],
-        "next": [["34", "use Moon Stone"]]
+        "next": ["34", "use Moon Stone"]
       },
       "profile": {
         "height": "0.9 m",
@@ -1416,7 +1416,7 @@ export const pokemons = [
       "description": "Bathed in moonlight, its wings glow faintly. Without even flapping, Clefairy rises into the air, where it dances around.",
       "evolution": {
         "prev": ["173", "high Friendship"],
-        "next": [["36", "use Moon Stone"]]
+        "next": ["36", "use Moon Stone"]
       },
       "profile": {
         "height": "0.6 m",
@@ -1491,7 +1491,7 @@ export const pokemons = [
       },
       "species": "Fox Pokémon",
       "description": "It manipulates balls of fire to catch its prey. If you raise one from when it’s young, it will grow close to you like a puppy Pokémon.",
-      "evolution": { "next": [["38", "use Fire Stone"]] },
+      "evolution": { "next": ["38", "use Fire Stone"] },
       "profile": {
         "height": "0.6 m",
         "weight": "9.9 kg",
@@ -1565,7 +1565,7 @@ export const pokemons = [
       "description": "The songs they sing are totally different depending on the region they live in. Some even sound like they’re shouting!",
       "evolution": {
         "prev": ["174", "high Friendship"],
-        "next": [["40", "use Moon Stone"]]
+        "next": ["40", "use Moon Stone"]
       },
       "profile": {
         "height": "0.5 m",
@@ -1640,7 +1640,7 @@ export const pokemons = [
       },
       "species": "Bat Pokémon",
       "description": "Their skin is so thin that they’ll be burned if sunlight hits them. When it gets cold out, they gather together to warm one another’s bodies.",
-      "evolution": { "next": [["42", "Level 22"]] },
+      "evolution": { "next": ["42", "Level 22"] },
       "profile": {
         "height": "0.8 m",
         "weight": "7.5 kg",
@@ -1678,7 +1678,7 @@ export const pokemons = [
       "description": "They can suck down over 10 ounces of blood in one go. They have been known to drink so much blood that they can no longer fly.",
       "evolution": {
         "prev": ["41", "Level 22"],
-        "next": [["169", "high Friendship"]]
+        "next": ["169", "high Friendship"]
       },
       "profile": {
         "height": "1.6 m",
@@ -1715,7 +1715,7 @@ export const pokemons = [
       },
       "species": "Weed Pokémon",
       "description": "Oddish searches for fertile, nutrient-rich soil, then plants itself. During the daytime, while it is planted, this Pokémon’s feet are thought to change shape and become similar to the roots of trees.",
-      "evolution": { "next": [["44", "Level 21"]] },
+      "evolution": { "next": ["44", "Level 21"] },
       "profile": {
         "height": "0.5 m",
         "weight": "5.4 kg",
@@ -1829,7 +1829,7 @@ export const pokemons = [
       },
       "species": "Mushroom Pokémon",
       "description": "The mushrooms, known as tochukaso, are controlling the bug. Even if the bug bugs the mushrooms, they tell it to bug off.",
-      "evolution": { "next": [["47", "Level 24"]] },
+      "evolution": { "next": ["47", "Level 24"] },
       "profile": {
         "height": "0.3 m",
         "weight": "5.4 kg",
@@ -1903,7 +1903,7 @@ export const pokemons = [
       },
       "species": "Insect Pokémon",
       "description": "Venonat is said to have evolved with a coat of thin, stiff hair that covers its entire body for protection. It possesses large eyes that never fail to spot even minuscule prey.",
-      "evolution": { "next": [["49", "Level 31"]] },
+      "evolution": { "next": ["49", "Level 31"] },
       "profile": {
         "height": "1 m",
         "weight": "30 kg",
@@ -1977,7 +1977,7 @@ export const pokemons = [
       },
       "species": "Mole Pokémon",
       "description": "Around their crops, farmers plant the kind of tree that Diglett like to eat as a way of getting Diglett to plow the fields for them.",
-      "evolution": { "next": [["51", "Level 26"]] },
+      "evolution": { "next": ["51", "Level 26"] },
       "profile": {
         "height": "0.2 m",
         "weight": "0.8 kg",
@@ -2051,7 +2051,7 @@ export const pokemons = [
       },
       "species": "Scratch Cat Pokémon",
       "description": "It loves coins, so if you give it one, you can make friends with Meowth easily. But it’s fickle, so you can’t count on that friendship lasting.",
-      "evolution": { "next": [["53", "Level 28"]] },
+      "evolution": { "next": ["53", "Level 28"] },
       "profile": {
         "height": "0.4 m",
         "weight": "4.2 kg",
@@ -2125,7 +2125,7 @@ export const pokemons = [
       },
       "species": "Duck Pokémon",
       "description": "It has been found that its brain cells are 10 times more active when Psyduck is experiencing a headache.",
-      "evolution": { "next": [["55", "Level 33"]] },
+      "evolution": { "next": ["55", "Level 33"] },
       "profile": {
         "height": "0.8 m",
         "weight": "19.6 kg",
@@ -2199,7 +2199,7 @@ export const pokemons = [
       },
       "species": "Pig Monkey Pokémon",
       "description": "If one gets angry, all the others around it will get angry, so silence is a rare visitor in a troop of Mankey.",
-      "evolution": { "next": [["57", "Level 28"]] },
+      "evolution": { "next": ["57", "Level 28"] },
       "profile": {
         "height": "0.5 m",
         "weight": "28 kg",
@@ -2273,7 +2273,7 @@ export const pokemons = [
       },
       "species": "Puppy Pokémon",
       "description": "It has lived alongside humans since ages ago. Its bones have been found in excavations of ruins from the Stone Age.",
-      "evolution": { "next": [["59", "use Fire Stone"]] },
+      "evolution": { "next": ["59", "use Fire Stone"] },
       "profile": {
         "height": "0.7 m",
         "weight": "19 kg",
@@ -2347,7 +2347,7 @@ export const pokemons = [
       },
       "species": "Tadpole Pokémon",
       "description": "The direction of the swirl on their stomachs differs depending on where they live. Poliwag aficionados can tell them apart at a glance.",
-      "evolution": { "next": [["61", "Level 25"]] },
+      "evolution": { "next": ["61", "Level 25"] },
       "profile": {
         "height": "0.6 m",
         "weight": "12.4 kg",
@@ -2464,7 +2464,7 @@ export const pokemons = [
       },
       "species": "Psi Pokémon",
       "description": "It can read others’ minds and will teleport away when danger approaches. You must clear your mind if you want to catch it.",
-      "evolution": { "next": [["64", "Level 16"]] },
+      "evolution": { "next": ["64", "Level 16"] },
       "profile": {
         "height": "0.9 m",
         "weight": "19.5 kg",
@@ -2501,7 +2501,7 @@ export const pokemons = [
       },
       "species": "Psi Pokémon",
       "description": "It possesses strong mental capabilities, but its psychic powers are halved when it’s not holding a silver spoon.",
-      "evolution": { "prev": ["63", "Level 16"], "next": [["65", "Trade"]] },
+      "evolution": { "prev": ["63", "Level 16"], "next": ["65", "Trade"] },
       "profile": {
         "height": "1.3 m",
         "weight": "56.5 kg",
@@ -2575,7 +2575,7 @@ export const pokemons = [
       },
       "species": "Superpower Pokémon",
       "description": "It likes food that’s highly nutritious because its instincts drive it to build muscle efficiently.",
-      "evolution": { "next": [["67", "Level 28"]] },
+      "evolution": { "next": ["67", "Level 28"] },
       "profile": {
         "height": "0.8 m",
         "weight": "19.5 kg",
@@ -2612,7 +2612,7 @@ export const pokemons = [
       },
       "species": "Superpower Pokémon",
       "description": "A popular motif for sculptures, its incredibly well-developed muscles have captured the imagination of many an artist.",
-      "evolution": { "prev": ["66", "Level 28"], "next": [["68", "Trade"]] },
+      "evolution": { "prev": ["66", "Level 28"], "next": ["68", "Trade"] },
       "profile": {
         "height": "1.5 m",
         "weight": "70.5 kg",
@@ -2686,7 +2686,7 @@ export const pokemons = [
       },
       "species": "Flower Pokémon",
       "description": "Bellsprout’s thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.",
-      "evolution": { "next": [["70", "Level 21"]] },
+      "evolution": { "next": ["70", "Level 21"] },
       "profile": {
         "height": "0.7 m",
         "weight": "4 kg",
@@ -2724,7 +2724,7 @@ export const pokemons = [
       "description": "Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground.",
       "evolution": {
         "prev": ["69", "Level 21"],
-        "next": [["71", "use Leaf Stone"]]
+        "next": ["71", "use Leaf Stone"]
       },
       "profile": {
         "height": "1 m",
@@ -2797,7 +2797,7 @@ export const pokemons = [
       },
       "species": "Jellyfish Pokémon",
       "description": "Its body is 99% water. The remaining 1% contains the organ that makes its poison.",
-      "evolution": { "next": [["73", "Level 30"]] },
+      "evolution": { "next": ["73", "Level 30"] },
       "profile": {
         "height": "0.9 m",
         "weight": "45.5 kg",
@@ -2871,7 +2871,7 @@ export const pokemons = [
       },
       "species": "Rock Pokémon",
       "description": "It uses both hands to climb precipitous cliffs. People who see it in action have been known to take up bouldering.",
-      "evolution": { "next": [["75", "Level 25"]] },
+      "evolution": { "next": ["75", "Level 25"] },
       "profile": {
         "height": "0.4 m",
         "weight": "20 kg",
@@ -2908,7 +2908,7 @@ export const pokemons = [
       },
       "species": "Rock Pokémon",
       "description": "It travels by rolling down cliffs. If it falls into a river, it will explode with its last gasp.",
-      "evolution": { "prev": ["74", "Level 25"], "next": [["76", "Trade"]] },
+      "evolution": { "prev": ["74", "Level 25"], "next": ["76", "Trade"] },
       "profile": {
         "height": "1 m",
         "weight": "105 kg",
@@ -2982,7 +2982,7 @@ export const pokemons = [
       },
       "species": "Fire Horse Pokémon",
       "description": "Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent.",
-      "evolution": { "next": [["78", "Level 40"]] },
+      "evolution": { "next": ["78", "Level 40"] },
       "profile": {
         "height": "1 m",
         "weight": "30 kg",
@@ -3135,7 +3135,7 @@ export const pokemons = [
       },
       "species": "Magnet Pokémon",
       "description": "Perhaps because electrical lines are often buried these days, the number of Magnemite attacks on power plants has increased.",
-      "evolution": { "next": [["82", "Level 30"]] },
+      "evolution": { "next": ["82", "Level 30"] },
       "profile": {
         "height": "0.3 m",
         "weight": "6 kg",
@@ -3174,7 +3174,7 @@ export const pokemons = [
       "description": "When rain clouds form, many Magneton gather in high places to wait for lightning to strike.",
       "evolution": {
         "prev": ["81", "Level 30"],
-        "next": [["462", "level up in a Magnetic Field area"]]
+        "next": ["462", "level up in a Magnetic Field area"]
       },
       "profile": {
         "height": "1 m",
@@ -3249,7 +3249,7 @@ export const pokemons = [
       },
       "species": "Twin Bird Pokémon",
       "description": "Doduo’s two heads contain completely identical brains. A scientific study reported that on rare occasions, there will be examples of this Pokémon possessing different sets of brains.",
-      "evolution": { "next": [["85", "Level 31"]] },
+      "evolution": { "next": ["85", "Level 31"] },
       "profile": {
         "height": "1.4 m",
         "weight": "39.2 kg",
@@ -3323,7 +3323,7 @@ export const pokemons = [
       },
       "species": "Sea Lion Pokémon",
       "description": "Thanks to its thick fat, cold seas don’t bother it at all, but it gets tired pretty easily in warm waters.",
-      "evolution": { "next": [["87", "Level 34"]] },
+      "evolution": { "next": ["87", "Level 34"] },
       "profile": {
         "height": "1.1 m",
         "weight": "90 kg",
@@ -3397,7 +3397,7 @@ export const pokemons = [
       },
       "species": "Sludge Pokémon",
       "description": "The wastewater coming from factories is clean these days, so Grimer have nothing to eat. They’re said to be on the verge of extinction.",
-      "evolution": { "next": [["89", "Level 38"]] },
+      "evolution": { "next": ["89", "Level 38"] },
       "profile": {
         "height": "0.9 m",
         "weight": "30 kg",
@@ -3471,7 +3471,7 @@ export const pokemons = [
       },
       "species": "Bivalve Pokémon",
       "description": "Even when its shell is closed, its tongue still hangs out. If you give its tongue a good yank, the shock will cause Shellder to open its shell.",
-      "evolution": { "next": [["91", "use Water Stone"]] },
+      "evolution": { "next": ["91", "use Water Stone"] },
       "profile": {
         "height": "0.3 m",
         "weight": "4 kg",
@@ -3545,12 +3545,12 @@ export const pokemons = [
       },
       "species": "Gas Pokémon",
       "description": "Poisonous gas comprises 95% of its body. It’s said that the remaining 5% is made up of the souls of those who died from the gas.",
-      "evolution": { "next": [["93", "Level 25"]] },
+      "evolution": { "next": ["93", "Level 25"] },
       "profile": {
         "height": "1.3 m",
         "weight": "0.1 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -3578,12 +3578,12 @@ export const pokemons = [
       },
       "species": "Gas Pokémon",
       "description": "It’s dangerous to go outside alone on nights when you’re feeling sad. Haunter will catch you, and you won’t be able to go back home.",
-      "evolution": { "prev": ["92", "Level 25"], "next": [["94", "Trade"]] },
+      "evolution": { "prev": ["92", "Level 25"], "next": ["94", "Trade"] },
       "profile": {
         "height": "1.6 m",
         "weight": "0.1 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -3616,7 +3616,7 @@ export const pokemons = [
         "height": "1.5 m",
         "weight": "40.5 kg",
         "egg": ["Amorphous"],
-        "ability": [["Cursed Body", "false"]],
+        "ability": ["Cursed Body", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -3644,7 +3644,7 @@ export const pokemons = [
       },
       "species": "Rock Snake Pokémon",
       "description": "Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother.",
-      "evolution": { "next": [["208", "trade holding Metal Coat"]] },
+      "evolution": { "next": ["208", "trade holding Metal Coat"] },
       "profile": {
         "height": "8.8 m",
         "weight": "210 kg",
@@ -3681,7 +3681,7 @@ export const pokemons = [
       },
       "species": "Hypnosis Pokémon",
       "description": "It puts its prey to sleep and devours their dreams. It seems that bad dreams taste sour, so Drowzee doesn’t particularly like eating them.",
-      "evolution": { "next": [["97", "Level 26"]] },
+      "evolution": { "next": ["97", "Level 26"] },
       "profile": {
         "height": "1 m",
         "weight": "32.4 kg",
@@ -3755,7 +3755,7 @@ export const pokemons = [
       },
       "species": "River Crab Pokémon",
       "description": "Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory.",
-      "evolution": { "next": [["99", "Level 28"]] },
+      "evolution": { "next": ["99", "Level 28"] },
       "profile": {
         "height": "0.4 m",
         "weight": "6.5 kg",
@@ -3829,7 +3829,7 @@ export const pokemons = [
       },
       "species": "Ball Pokémon",
       "description": "Voltorb is extremely sensitive—it explodes at the slightest of shocks. It is rumored that it was first created when a Poké Ball was exposed to a powerful pulse of energy.",
-      "evolution": { "next": [["101", "Level 30"]] },
+      "evolution": { "next": ["101", "Level 30"] },
       "profile": {
         "height": "0.5 m",
         "weight": "10.4 kg",
@@ -3903,7 +3903,7 @@ export const pokemons = [
       },
       "species": "Egg Pokémon",
       "description": "Although they are the same size as other Exeggcute, the ones produced in Alola are quite heavy. Their shells are packed full.",
-      "evolution": { "next": [["103", "use Leaf Stone"]] },
+      "evolution": { "next": ["103", "use Leaf Stone"] },
       "profile": {
         "height": "0.4 m",
         "weight": "2.5 kg",
@@ -3975,7 +3975,7 @@ export const pokemons = [
       },
       "species": "Lonely Pokémon",
       "description": "It wears its mother’s skull on its head, so no one knows what its bare face looks like. However, it’s clear that it’s always crying.",
-      "evolution": { "next": [["105", "Level 28"]] },
+      "evolution": { "next": ["105", "Level 28"] },
       "profile": {
         "height": "0.4 m",
         "weight": "6.5 kg",
@@ -4123,7 +4123,7 @@ export const pokemons = [
       },
       "species": "Licking Pokémon",
       "description": "It licks filth clean with its tongue. Whatever it licks always stinks afterward, so whether it’s really clean is...questionable.",
-      "evolution": { "next": [["463", "after Rollout learned"]] },
+      "evolution": { "next": ["463", "after Rollout learned"] },
       "profile": {
         "height": "1.2 m",
         "weight": "65.5 kg",
@@ -4160,12 +4160,12 @@ export const pokemons = [
       },
       "species": "Poison Gas Pokémon",
       "description": "Koffing embodies toxic substances. It mixes the toxins with raw garbage to set off a chemical reaction that results in a terribly powerful poison gas. The higher the temperature, the more gas is concocted by this Pokémon.",
-      "evolution": { "next": [["110", "Level 35"]] },
+      "evolution": { "next": ["110", "Level 35"] },
       "profile": {
         "height": "0.6 m",
         "weight": "1 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -4198,7 +4198,7 @@ export const pokemons = [
         "height": "1.2 m",
         "weight": "9.5 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -4226,7 +4226,7 @@ export const pokemons = [
       },
       "species": "Spikes Pokémon",
       "description": "Rhyhorn’s brain is very small. It is so dense, while on a run it forgets why it started running in the first place. It apparently remembers sometimes if it demolishes something.",
-      "evolution": { "next": [["112", "Level 42"]] },
+      "evolution": { "next": ["112", "Level 42"] },
       "profile": {
         "height": "1 m",
         "weight": "115 kg",
@@ -4265,7 +4265,7 @@ export const pokemons = [
       "description": "Rhydon has a horn that serves as a drill. It is used for destroying rocks and boulders. This Pokémon occasionally rams into streams of magma, but the armor-like hide prevents it from feeling the heat.",
       "evolution": {
         "prev": ["111", "Level 42"],
-        "next": [["464", "trade holding Protector"]]
+        "next": ["464", "trade holding Protector"]
       },
       "profile": {
         "height": "1.9 m",
@@ -4305,7 +4305,7 @@ export const pokemons = [
       "description": "Because the eggs on their bellies have been overharvested by people in the past, the Chansey population remains very small.",
       "evolution": {
         "prev": ["440", "hold Oval Stone, Daytime"],
-        "next": [["242", "high Friendship"]]
+        "next": ["242", "high Friendship"]
       },
       "profile": {
         "height": "1.1 m",
@@ -4343,7 +4343,7 @@ export const pokemons = [
       },
       "species": "Vine Pokémon",
       "description": "Tangela’s vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quick getaway. The lost vines are replaced by newly grown vines the very next day.",
-      "evolution": { "next": [["465", "after Ancient Power learned"]] },
+      "evolution": { "next": ["465", "after Ancient Power learned"] },
       "profile": {
         "height": "1 m",
         "weight": "35 kg",
@@ -4417,7 +4417,7 @@ export const pokemons = [
       },
       "species": "Dragon Pokémon",
       "description": "If Horsea senses danger, it will reflexively spray a dense black ink from its mouth and try to escape. This Pokémon swims by cleverly flapping the fin on its back.",
-      "evolution": { "next": [["117", "Level 32"]] },
+      "evolution": { "next": ["117", "Level 32"] },
       "profile": {
         "height": "0.4 m",
         "weight": "8 kg",
@@ -4456,7 +4456,7 @@ export const pokemons = [
       "description": "Seadra generates whirlpools by spinning its body. The whirlpools are strong enough to swallow even fishing boats. This Pokémon weakens prey with these currents, then swallows it whole.",
       "evolution": {
         "prev": ["116", "Level 32"],
-        "next": [["230", "trade holding Dragon Scale"]]
+        "next": ["230", "trade holding Dragon Scale"]
       },
       "profile": {
         "height": "1.2 m",
@@ -4494,7 +4494,7 @@ export const pokemons = [
       },
       "species": "Goldfish Pokémon",
       "description": "The way it swims along fluttering its dress-like fins has earned it the name “princess of the water.”",
-      "evolution": { "next": [["119", "Level 33"]] },
+      "evolution": { "next": ["119", "Level 33"] },
       "profile": {
         "height": "0.6 m",
         "weight": "15 kg",
@@ -4568,7 +4568,7 @@ export const pokemons = [
       },
       "species": "Star Shape Pokémon",
       "description": "No number of injuries can bother Staryu. Its amazing regenerative powers return it to its previous state in half a day!",
-      "evolution": { "next": [["121", "use Water Stone"]] },
+      "evolution": { "next": ["121", "use Water Stone"] },
       "profile": {
         "height": "0.8 m",
         "weight": "34.5 kg",
@@ -4679,7 +4679,7 @@ export const pokemons = [
       },
       "species": "Mantis Pokémon",
       "description": "Some call it a ninja. Its movements— imperceptibly quick—are sufficient to cleave the air in two. It’s very popular in Alola.",
-      "evolution": { "next": [["212", "trade holding Metal Coat"]] },
+      "evolution": { "next": ["212", "trade holding Metal Coat"] },
       "profile": {
         "height": "1.5 m",
         "weight": "56 kg",
@@ -4755,7 +4755,7 @@ export const pokemons = [
       "description": "While it’s often blamed for power outages, the truth is the cause of outages is more often an error on the part of the electric company.",
       "evolution": {
         "prev": ["239", "Level 30"],
-        "next": [["466", "trade holding Electirizer"]]
+        "next": ["466", "trade holding Electirizer"]
       },
       "profile": {
         "height": "1.1 m",
@@ -4794,7 +4794,7 @@ export const pokemons = [
       "description": "The hotter the place, the better they feel. Magmar in Alola are said to be hardier than those in other areas.",
       "evolution": {
         "prev": ["240", "Level 30"],
-        "next": [["467", "trade holding Magmarizer"]]
+        "next": ["467", "trade holding Magmarizer"]
       },
       "profile": {
         "height": "1.3 m",
@@ -4905,7 +4905,7 @@ export const pokemons = [
       },
       "species": "Fish Pokémon",
       "description": "Thanks to their strong hold on life, dirty water doesn’t bother them at all. They live in waters all over the world!",
-      "evolution": { "next": [["130", "Level 20"]] },
+      "evolution": { "next": ["130", "Level 20"] },
       "profile": {
         "height": "0.9 m",
         "weight": "10 kg",
@@ -5206,7 +5206,7 @@ export const pokemons = [
       },
       "species": "Virtual Pokémon",
       "description": "It was built 20 years ago by scientists who dreamed of exploring space. Their dreams have yet to come true.",
-      "evolution": { "next": [["233", "trade holding Upgrade"]] },
+      "evolution": { "next": ["233", "trade holding Upgrade"] },
       "profile": {
         "height": "0.8 m",
         "weight": "36.5 kg",
@@ -5243,7 +5243,7 @@ export const pokemons = [
       },
       "species": "Spiral Pokémon",
       "description": "It was restored from an ancient fossil. Those Helix Fossils are excavated from areas that were once oceans long, long ago.",
-      "evolution": { "next": [["139", "Level 40"]] },
+      "evolution": { "next": ["139", "Level 40"] },
       "profile": {
         "height": "0.4 m",
         "weight": "7.5 kg",
@@ -5317,7 +5317,7 @@ export const pokemons = [
       },
       "species": "Shellfish Pokémon",
       "description": "This Pokémon became extinct everywhere, except in a few areas. It protects itself with its hard shell.",
-      "evolution": { "next": [["141", "Level 40"]] },
+      "evolution": { "next": ["141", "Level 40"] },
       "profile": {
         "height": "0.5 m",
         "weight": "11.5 kg",
@@ -5573,7 +5573,7 @@ export const pokemons = [
       },
       "species": "Dragon Pokémon",
       "description": "It sheds its skin—almost on a daily basis—and grows larger. Its skin is soft just after it’s been shed.",
-      "evolution": { "next": [["148", "Level 30"]] },
+      "evolution": { "next": ["148", "Level 30"] },
       "profile": {
         "height": "1.8 m",
         "weight": "3.3 kg",
@@ -5609,7 +5609,7 @@ export const pokemons = [
       },
       "species": "Dragon Pokémon",
       "description": "Some say that if you see it at the start of the year, flying through the sky and twisting its body, you’ll be healthy all year long.",
-      "evolution": { "prev": ["147", "Level 30"], "next": [["149", "Level 55"]] },
+      "evolution": { "prev": ["147", "Level 30"], "next": ["149", "Level 55"] },
       "profile": {
         "height": "4 m",
         "weight": "16.5 kg",
@@ -5722,7 +5722,7 @@ export const pokemons = [
         "height": "0.4 m",
         "weight": "4 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Synchronize", "false"]],
+        "ability": ["Synchronize", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -5750,7 +5750,7 @@ export const pokemons = [
       },
       "species": "Leaf Pokémon",
       "description": "In battle, Chikorita waves its leaf around to keep the foe at bay. However, a sweet fragrance also wafts from the leaf, becalming the battling Pokémon and creating a cozy, friendly atmosphere all around.",
-      "evolution": { "next": [["153", "Level 16"]] },
+      "evolution": { "next": ["153", "Level 16"] },
       "profile": {
         "height": "0.9 m",
         "weight": "6.4 kg",
@@ -5786,7 +5786,7 @@ export const pokemons = [
       },
       "species": "Leaf Pokémon",
       "description": "Bayleef’s neck is ringed by curled-up leaves. Inside each tubular leaf is a small shoot of a tree. The fragrance of this shoot makes people peppy.",
-      "evolution": { "prev": ["152", "Level 16"], "next": [["154", "Level 32"]] },
+      "evolution": { "prev": ["152", "Level 16"], "next": ["154", "Level 32"] },
       "profile": {
         "height": "1.2 m",
         "weight": "15.8 kg",
@@ -5858,7 +5858,7 @@ export const pokemons = [
       },
       "species": "Fire Mouse Pokémon",
       "description": "Cyndaquil protects itself by flaring up the flames on its back. The flames are vigorous if the Pokémon is angry. However, if it is tired, the flames splutter fitfully with incomplete combustion.",
-      "evolution": { "next": [["156", "Level 14"]] },
+      "evolution": { "next": ["156", "Level 14"] },
       "profile": {
         "height": "0.5 m",
         "weight": "7.9 kg",
@@ -5894,7 +5894,7 @@ export const pokemons = [
       },
       "species": "Volcano Pokémon",
       "description": "Quilava keeps its foes at bay with the intensity of its flames and gusts of superheated air. This Pokémon applies its outstanding nimbleness to dodge attacks even while scorching the foe with flames.",
-      "evolution": { "prev": ["155", "Level 14"], "next": [["157", "Level 36"]] },
+      "evolution": { "prev": ["155", "Level 14"], "next": ["157", "Level 36"] },
       "profile": {
         "height": "0.9 m",
         "weight": "19 kg",
@@ -5966,7 +5966,7 @@ export const pokemons = [
       },
       "species": "Big Jaw Pokémon",
       "description": "Despite the smallness of its body, Totodile’s jaws are very powerful. While the Pokémon may think it is just playfully nipping, its bite has enough power to cause serious injury.",
-      "evolution": { "next": [["159", "Level 18"]] },
+      "evolution": { "next": ["159", "Level 18"] },
       "profile": {
         "height": "0.6 m",
         "weight": "9.5 kg",
@@ -6002,7 +6002,7 @@ export const pokemons = [
       },
       "species": "Big Jaw Pokémon",
       "description": "Once Croconaw has clamped its jaws on its foe, it will absolutely not let go. Because the tips of its fangs are forked back like barbed fishhooks, they become impossible to remove when they have sunk in.",
-      "evolution": { "prev": ["158", "Level 18"], "next": [["160", "Level 30"]] },
+      "evolution": { "prev": ["158", "Level 18"], "next": ["160", "Level 30"] },
       "profile": {
         "height": "1.1 m",
         "weight": "25 kg",
@@ -6074,7 +6074,7 @@ export const pokemons = [
       },
       "species": "Scout Pokémon",
       "description": "When Sentret sleeps, it does so while another stands guard. The sentry wakes the others at the first sign of danger. When this Pokémon becomes separated from its pack, it becomes incapable of sleep due to fear.",
-      "evolution": { "next": [["162", "Level 15"]] },
+      "evolution": { "next": ["162", "Level 15"] },
       "profile": {
         "height": "0.8 m",
         "weight": "6 kg",
@@ -6148,7 +6148,7 @@ export const pokemons = [
       },
       "species": "Owl Pokémon",
       "description": "It cries out at the same time every day. A long time ago, people cherished it and considered it a divine messenger sent to tell the time.",
-      "evolution": { "next": [["164", "Level 20"]] },
+      "evolution": { "next": ["164", "Level 20"] },
       "profile": {
         "height": "0.7 m",
         "weight": "21.2 kg",
@@ -6222,7 +6222,7 @@ export const pokemons = [
       },
       "species": "Five Star Pokémon",
       "description": "These very cowardly Pokémon join together and use Reflect to protect their nest.",
-      "evolution": { "next": [["166", "Level 18"]] },
+      "evolution": { "next": ["166", "Level 18"] },
       "profile": {
         "height": "1 m",
         "weight": "10.8 kg",
@@ -6296,7 +6296,7 @@ export const pokemons = [
       },
       "species": "String Spit Pokémon",
       "description": "Although the poison from its fangs isn’t that strong, it’s potent enough to weaken prey that gets caught in its web.",
-      "evolution": { "next": [["168", "Level 22"]] },
+      "evolution": { "next": ["168", "Level 22"] },
       "profile": {
         "height": "0.5 m",
         "weight": "8.5 kg",
@@ -6406,7 +6406,7 @@ export const pokemons = [
       },
       "species": "Angler Pokémon",
       "description": "Chinchou blink their shining antennae at one another to claim their respective turf.",
-      "evolution": { "next": [["171", "Level 27"]] },
+      "evolution": { "next": ["171", "Level 27"] },
       "profile": {
         "height": "0.5 m",
         "weight": "12 kg",
@@ -6480,7 +6480,7 @@ export const pokemons = [
       },
       "species": "Tiny Mouse Pokémon",
       "description": "It has electric sacs in its cheeks. When they’re fully charged, Pichu plays very energetically.",
-      "evolution": { "next": [["25", "high Friendship"]] },
+      "evolution": { "next": ["25", "high Friendship"] },
       "profile": {
         "height": "0.3 m",
         "weight": "2 kg",
@@ -6516,7 +6516,7 @@ export const pokemons = [
       },
       "species": "Star Shape Pokémon",
       "description": "Said to have ridden here on a shooting star, Cleffa seem to appear in places where meteorites have struck in the past.",
-      "evolution": { "next": [["35", "high Friendship"]] },
+      "evolution": { "next": ["35", "high Friendship"] },
       "profile": {
         "height": "0.3 m",
         "weight": "3 kg",
@@ -6553,7 +6553,7 @@ export const pokemons = [
       },
       "species": "Balloon Pokémon",
       "description": "Left to its own devices, it will constantly practice singing. You should make it take a break so it doesn’t hurt its throat.",
-      "evolution": { "next": [["39", "high Friendship"]] },
+      "evolution": { "next": ["39", "high Friendship"] },
       "profile": {
         "height": "0.3 m",
         "weight": "1 kg",
@@ -6590,7 +6590,7 @@ export const pokemons = [
       },
       "species": "Spike Ball Pokémon",
       "description": "As its energy, Togepi uses the positive emotions of compassion and pleasure exuded by people and Pokémon. This Pokémon stores up feelings of happiness inside its shell, then shares them with others.",
-      "evolution": { "next": [["176", "high Friendship"]] },
+      "evolution": { "next": ["176", "high Friendship"] },
       "profile": {
         "height": "0.3 m",
         "weight": "1.5 kg",
@@ -6629,7 +6629,7 @@ export const pokemons = [
       "description": "Togetic is said to be a Pokémon that brings good fortune. When the Pokémon spots someone who is pure of heart, it is said to appear and share its happiness with that person.",
       "evolution": {
         "prev": ["175", "high Friendship"],
-        "next": [["468", "use Shiny Stone"]]
+        "next": ["468", "use Shiny Stone"]
       },
       "profile": {
         "height": "0.6 m",
@@ -6667,7 +6667,7 @@ export const pokemons = [
       },
       "species": "Tiny Bird Pokémon",
       "description": "The look in its eyes gives the impression that it’s carefully observing you. If you approach it, Natu will hop away.",
-      "evolution": { "next": [["178", "Level 25"]] },
+      "evolution": { "next": ["178", "Level 25"] },
       "profile": {
         "height": "0.2 m",
         "weight": "2 kg",
@@ -6741,7 +6741,7 @@ export const pokemons = [
       },
       "species": "Wool Pokémon",
       "description": "Rubbing its fleece generates electricity. You’ll want to pet it because it’s cute, but if you use your bare hand, you’ll get a painful shock.",
-      "evolution": { "next": [["180", "Level 15"]] },
+      "evolution": { "next": ["180", "Level 15"] },
       "profile": {
         "height": "0.6 m",
         "weight": "7.8 kg",
@@ -6777,7 +6777,7 @@ export const pokemons = [
       },
       "species": "Wool Pokémon",
       "description": "It stores electricity in its fluffy fleece. If it stores up too much, it will start to go bald in those patches.",
-      "evolution": { "prev": ["179", "Level 15"], "next": [["181", "Level 30"]] },
+      "evolution": { "prev": ["179", "Level 15"], "next": ["181", "Level 30"] },
       "profile": {
         "height": "0.8 m",
         "weight": "13.3 kg",
@@ -6887,7 +6887,7 @@ export const pokemons = [
       "description": "When fishing for food at the edge of a fast-running stream, Marill wraps its tail around the trunk of a tree. This Pokémon’s tail is flexible and configured to stretch.",
       "evolution": {
         "prev": ["298", "high Friendship"],
-        "next": [["184", "Level 18"]]
+        "next": ["184", "Level 18"]
       },
       "profile": {
         "height": "0.4 m",
@@ -7036,7 +7036,7 @@ export const pokemons = [
       },
       "species": "Cottonweed Pokémon",
       "description": "This Pokémon drifts and floats with the wind. If it senses the approach of strong winds, Hoppip links its leaves with other Hoppip to prepare against being blown away.",
-      "evolution": { "next": [["188", "Level 18"]] },
+      "evolution": { "next": ["188", "Level 18"] },
       "profile": {
         "height": "0.4 m",
         "weight": "0.5 kg",
@@ -7073,7 +7073,7 @@ export const pokemons = [
       },
       "species": "Cottonweed Pokémon",
       "description": "Skiploom’s flower blossoms when the temperature rises above 64 degrees Fahrenheit. How much the flower opens depends on the temperature. For that reason, this Pokémon is sometimes used as a thermometer.",
-      "evolution": { "prev": ["187", "Level 18"], "next": [["189", "Level 27"]] },
+      "evolution": { "prev": ["187", "Level 18"], "next": ["189", "Level 27"] },
       "profile": {
         "height": "0.6 m",
         "weight": "1 kg",
@@ -7147,7 +7147,7 @@ export const pokemons = [
       },
       "species": "Long Tail Pokémon",
       "description": "It searches for prey from the tops of trees. When it spots its favorite food, Bounsweet, Aipom gets excited and pounces.",
-      "evolution": { "next": [["424", "after Double Hit learned"]] },
+      "evolution": { "next": ["424", "after Double Hit learned"] },
       "profile": {
         "height": "0.8 m",
         "weight": "11.5 kg",
@@ -7184,7 +7184,7 @@ export const pokemons = [
       },
       "species": "Seed Pokémon",
       "description": "Sunkern tries to move as little as it possibly can. It does so because it tries to conserve all the nutrients it has stored in its body for its evolution. It will not eat a thing, subsisting only on morning dew.",
-      "evolution": { "next": [["192", "use Sun Stone"]] },
+      "evolution": { "next": ["192", "use Sun Stone"] },
       "profile": {
         "height": "0.3 m",
         "weight": "1.8 kg",
@@ -7258,7 +7258,7 @@ export const pokemons = [
       },
       "species": "Clear Wing Pokémon",
       "description": "Yanma is capable of seeing 360 degrees without having to move its eyes. It is a great flier that is adept at making sudden stops and turning midair. This Pokémon uses its flying ability to quickly chase down targeted prey.",
-      "evolution": { "next": [["469", "after Ancient Power learned"]] },
+      "evolution": { "next": ["469", "after Ancient Power learned"] },
       "profile": {
         "height": "1.2 m",
         "weight": "38 kg",
@@ -7295,7 +7295,7 @@ export const pokemons = [
       },
       "species": "Water Fish Pokémon",
       "description": "Wooper usually lives in water. However, it occasionally comes out onto land in search of food. On land, it coats its body with a gooey, toxic film.",
-      "evolution": { "next": [["195", "Level 20"]] },
+      "evolution": { "next": ["195", "Level 20"] },
       "profile": {
         "height": "0.4 m",
         "weight": "8.5 kg",
@@ -7441,7 +7441,7 @@ export const pokemons = [
       },
       "species": "Darkness Pokémon",
       "description": "It searches for shiny things for its boss. Murkrow’s presence is said to be unlucky, so many people detest it.",
-      "evolution": { "next": [["430", "use Dusk Stone"]] },
+      "evolution": { "next": ["430", "use Dusk Stone"] },
       "profile": {
         "height": "0.5 m",
         "weight": "2.1 kg",
@@ -7515,12 +7515,12 @@ export const pokemons = [
       },
       "species": "Screech Pokémon",
       "description": "What makes it happy is imitating the voices of weeping people and scaring everyone. It doesn’t deal well with folks who aren’t easily frightened.",
-      "evolution": { "next": [["429", "use Dusk Stone"]] },
+      "evolution": { "next": ["429", "use Dusk Stone"] },
       "profile": {
         "height": "0.7 m",
         "weight": "1 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -7553,7 +7553,7 @@ export const pokemons = [
         "height": "0.5 m",
         "weight": "5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -7654,7 +7654,7 @@ export const pokemons = [
       },
       "species": "Bagworm Pokémon",
       "description": "It sticks tree bark to itself with its saliva, making itself thicker and larger. Elderly Pineco are ridiculously huge.",
-      "evolution": { "next": [["205", "Level 31"]] },
+      "evolution": { "next": ["205", "Level 31"] },
       "profile": {
         "height": "0.6 m",
         "weight": "7.2 kg",
@@ -7763,7 +7763,7 @@ export const pokemons = [
       },
       "species": "Fly Scorpion Pokémon",
       "description": "Gligar glides through the air without a sound as if it were sliding. This Pokémon hangs on to the face of its foe using its clawed hind legs and the large pincers on its forelegs, then injects the prey with its poison barb.",
-      "evolution": { "next": [["472", "hold Razor Fang, Nighttime"]] },
+      "evolution": { "next": ["472", "hold Razor Fang, Nighttime"] },
       "profile": {
         "height": "1.1 m",
         "weight": "64.8 kg",
@@ -7837,7 +7837,7 @@ export const pokemons = [
       },
       "species": "Fairy Pokémon",
       "description": "In contrast to its appearance, it’s quite timid. When playing with other puppy Pokémon, it sometimes gets bullied.",
-      "evolution": { "next": [["210", "Level 23"]] },
+      "evolution": { "next": ["210", "Level 23"] },
       "profile": {
         "height": "0.6 m",
         "weight": "7.8 kg",
@@ -8059,7 +8059,7 @@ export const pokemons = [
       },
       "species": "Sharp Claw Pokémon",
       "description": "It blends into the dark of night to ambush its prey. Sneasel will attack Sandshrew, but its hard skin can cause Sneasel’s claws to snap off.",
-      "evolution": { "next": [["461", "hold Razor Claw, Nighttime"]] },
+      "evolution": { "next": ["461", "hold Razor Claw, Nighttime"] },
       "profile": {
         "height": "0.9 m",
         "weight": "28 kg",
@@ -8096,7 +8096,7 @@ export const pokemons = [
       },
       "species": "Little Bear Pokémon",
       "description": "This Pokémon likes to lick its palms that are sweetened by being soaked in honey. Teddiursa concocts its own honey by blending fruits and pollen collected by Beedrill.",
-      "evolution": { "next": [["217", "Level 30"]] },
+      "evolution": { "next": ["217", "Level 30"] },
       "profile": {
         "height": "0.6 m",
         "weight": "8.8 kg",
@@ -8170,7 +8170,7 @@ export const pokemons = [
       },
       "species": "Lava Pokémon",
       "description": "Slugma does not have any blood in its body. Instead, intensely hot magma circulates throughout this Pokémon’s body, carrying essential nutrients and oxygen to its organs.",
-      "evolution": { "next": [["219", "Level 38"]] },
+      "evolution": { "next": ["219", "Level 38"] },
       "profile": {
         "height": "0.7 m",
         "weight": "35 kg",
@@ -8244,7 +8244,7 @@ export const pokemons = [
       },
       "species": "Pig Pokémon",
       "description": "Swinub roots for food by rubbing its snout against the ground. Its favorite food is a mushroom that grows under the cover of dead grass. This Pokémon occasionally roots out hot springs.",
-      "evolution": { "next": [["221", "Level 33"]] },
+      "evolution": { "next": ["221", "Level 33"] },
       "profile": {
         "height": "0.4 m",
         "weight": "6.5 kg",
@@ -8283,7 +8283,7 @@ export const pokemons = [
       "description": "Piloswine is covered by a thick coat of long hair that enables it to endure the freezing cold. This Pokémon uses its tusks to dig up food that has been buried under ice.",
       "evolution": {
         "prev": ["220", "Level 33"],
-        "next": [["473", "after Ancient Power learned"]]
+        "next": ["473", "after Ancient Power learned"]
       },
       "profile": {
         "height": "1.1 m",
@@ -8358,7 +8358,7 @@ export const pokemons = [
       },
       "species": "Jet Pokémon",
       "description": "Also known as the “sniper of the seas,” its water gun can hit prey without fail from over 300 feet away.",
-      "evolution": { "next": [["224", "Level 25"]] },
+      "evolution": { "next": ["224", "Level 25"] },
       "profile": {
         "height": "0.6 m",
         "weight": "12 kg",
@@ -8543,7 +8543,7 @@ export const pokemons = [
       },
       "species": "Dark Pokémon",
       "description": "They make repeated eerie howls before dawn to call attention to their pack.",
-      "evolution": { "next": [["229", "Level 24"]] },
+      "evolution": { "next": ["229", "Level 24"] },
       "profile": {
         "height": "0.6 m",
         "weight": "10.8 kg",
@@ -8654,7 +8654,7 @@ export const pokemons = [
       },
       "species": "Long Nose Pokémon",
       "description": "Phanpy uses its long nose to shower itself. When others gather around, they thoroughly douse each other with water. These Pokémon can be seen drying their soaking-wet bodies at the edge of water.",
-      "evolution": { "next": [["232", "Level 25"]] },
+      "evolution": { "next": ["232", "Level 25"] },
       "profile": {
         "height": "0.5 m",
         "weight": "33.5 kg",
@@ -8728,7 +8728,7 @@ export const pokemons = [
       "description": "Even though it doesn’t die in the vacuum of space, it can’t move around very well in zero gravity.",
       "evolution": {
         "prev": ["137", "trade holding Upgrade"],
-        "next": [["474", "trade holding Dubious Disc"]]
+        "next": ["474", "trade holding Dubious Disc"]
       },
       "profile": {
         "height": "0.6 m",
@@ -8920,7 +8920,7 @@ export const pokemons = [
       },
       "species": "Kiss Pokémon",
       "description": "Highly perceptive sensors, Smoochum’s lips are kept moist by its daily application of tree sap.",
-      "evolution": { "next": [["124", "Level 30"]] },
+      "evolution": { "next": ["124", "Level 30"] },
       "profile": {
         "height": "0.4 m",
         "weight": "6 kg",
@@ -8957,7 +8957,7 @@ export const pokemons = [
       },
       "species": "Electric Pokémon",
       "description": "When its horns shine a bluish white, that’s the sign it’s fully charged. You’ll get a shocking jolt if you touch it!",
-      "evolution": { "next": [["125", "Level 30"]] },
+      "evolution": { "next": ["125", "Level 30"] },
       "profile": {
         "height": "0.6 m",
         "weight": "23.5 kg",
@@ -8993,7 +8993,7 @@ export const pokemons = [
       },
       "species": "Live Coal Pokémon",
       "description": "Its body temperature is always around 1,100 degrees Fahrenheit. If Magby falls into a small- enough pond, the whole thing will dry up.",
-      "evolution": { "next": [["126", "Level 30"]] },
+      "evolution": { "next": ["126", "Level 30"] },
       "profile": {
         "height": "0.7 m",
         "weight": "21.4 kg",
@@ -9211,7 +9211,7 @@ export const pokemons = [
       },
       "species": "Rock Skin Pokémon",
       "description": "Raised on nutrients it finds in the dirt, it eats roughly a mountain’s worth of dirt before it becomes a pupa.",
-      "evolution": { "next": [["247", "Level 30"]] },
+      "evolution": { "next": ["247", "Level 30"] },
       "profile": {
         "height": "0.6 m",
         "weight": "72 kg",
@@ -9247,12 +9247,12 @@ export const pokemons = [
       },
       "species": "Hard Shell Pokémon",
       "description": "This dangerous pupa thrashes about. Its shell is as hard as bedrock, containing its gradually forming new body within.",
-      "evolution": { "prev": ["246", "Level 30"], "next": [["248", "Level 55"]] },
+      "evolution": { "prev": ["246", "Level 30"], "next": ["248", "Level 55"] },
       "profile": {
         "height": "1.2 m",
         "weight": "152 kg",
         "egg": ["Monster"],
-        "ability": [["Shed Skin", "false"]],
+        "ability": ["Shed Skin", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -9393,7 +9393,7 @@ export const pokemons = [
         "height": "0.6 m",
         "weight": "5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Natural Cure", "false"]],
+        "ability": ["Natural Cure", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -9421,7 +9421,7 @@ export const pokemons = [
       },
       "species": "Wood Gecko Pokémon",
       "description": "Treecko is cool, calm, and collected—it never panics under any situation. If a bigger foe were to glare at this Pokémon, it would glare right back without conceding an inch of ground.",
-      "evolution": { "next": [["253", "Level 16"]] },
+      "evolution": { "next": ["253", "Level 16"] },
       "profile": {
         "height": "0.5 m",
         "weight": "5 kg",
@@ -9457,7 +9457,7 @@ export const pokemons = [
       },
       "species": "Wood Gecko Pokémon",
       "description": "This Pokémon adeptly flies from branch to branch in trees. In a forest, no Pokémon can ever hope to catch a fleeing Grovyle however fast they may be.",
-      "evolution": { "prev": ["252", "Level 16"], "next": [["254", "Level 36"]] },
+      "evolution": { "prev": ["252", "Level 16"], "next": ["254", "Level 36"] },
       "profile": {
         "height": "0.9 m",
         "weight": "21.6 kg",
@@ -9529,7 +9529,7 @@ export const pokemons = [
       },
       "species": "Chick Pokémon",
       "description": "Torchic has a place inside its body where it keeps its flame. Give it a hug—it will be glowing with warmth. This Pokémon is covered all over by a fluffy coat of down.",
-      "evolution": { "next": [["256", "Level 16"]] },
+      "evolution": { "next": ["256", "Level 16"] },
       "profile": {
         "height": "0.4 m",
         "weight": "2.5 kg",
@@ -9565,7 +9565,7 @@ export const pokemons = [
       },
       "species": "Young Fowl Pokémon",
       "description": "Combusken battles with the intensely hot flames it spews from its beak and with outstandingly destructive kicks. This Pokémon’s cry is very loud and distracting.",
-      "evolution": { "prev": ["255", "Level 16"], "next": [["257", "Level 36"]] },
+      "evolution": { "prev": ["255", "Level 16"], "next": ["257", "Level 36"] },
       "profile": {
         "height": "0.9 m",
         "weight": "19.5 kg",
@@ -9637,7 +9637,7 @@ export const pokemons = [
       },
       "species": "Mud Fish Pokémon",
       "description": "In water, Mudkip breathes using the gills on its cheeks. If it is faced with a tight situation in battle, this Pokémon will unleash its amazing power—it can crush rocks bigger than itself.",
-      "evolution": { "next": [["259", "Level 16"]] },
+      "evolution": { "next": ["259", "Level 16"] },
       "profile": {
         "height": "0.4 m",
         "weight": "7.6 kg",
@@ -9673,7 +9673,7 @@ export const pokemons = [
       },
       "species": "Mud Fish Pokémon",
       "description": "Marshtomp is much faster at traveling through mud than it is at swimming. This Pokémon’s hindquarters exhibit obvious development, giving it the ability to walk on just its hind legs.",
-      "evolution": { "prev": ["258", "Level 16"], "next": [["260", "Level 36"]] },
+      "evolution": { "prev": ["258", "Level 16"], "next": ["260", "Level 36"] },
       "profile": {
         "height": "0.7 m",
         "weight": "28 kg",
@@ -9745,7 +9745,7 @@ export const pokemons = [
       },
       "species": "Bite Pokémon",
       "description": "Poochyena is an omnivore—it will eat anything. A distinguishing feature is how large its fangs are compared to its body. This Pokémon tries to intimidate its foes by making the hair on its tail bristle out.",
-      "evolution": { "next": [["262", "Level 18"]] },
+      "evolution": { "next": ["262", "Level 18"] },
       "profile": {
         "height": "0.5 m",
         "weight": "13.6 kg",
@@ -9819,7 +9819,7 @@ export const pokemons = [
       },
       "species": "Tiny Raccoon Pokémon",
       "description": "The hair on Zigzagoon’s back is bristly. It rubs the hard back hair against trees to leave its territorial markings. This Pokémon may play dead to fool foes in battle.",
-      "evolution": { "next": [["264", "Level 20"]] },
+      "evolution": { "next": ["264", "Level 20"] },
       "profile": {
         "height": "0.4 m",
         "weight": "17.5 kg",
@@ -9858,7 +9858,7 @@ export const pokemons = [
       "description": "When hunting, Linoone will make a beeline straight for the prey at a full run. While this Pokémon is capable of topping 60 mph, it has to come to a screeching halt before it can turn.",
       "evolution": {
         "prev": ["263", "Level 20"],
-        "next": [["862", "Level 35, Nighttime"]]
+        "next": ["862", "Level 35, Nighttime"]
       },
       "profile": {
         "height": "0.5 m",
@@ -9939,13 +9939,13 @@ export const pokemons = [
       "description": "Silcoon was thought to endure hunger and not consume anything before its evolution. However, it is now thought that this Pokémon slakes its thirst by drinking rainwater that collects on its silk.",
       "evolution": {
         "prev": ["265", "Level 7, random based on personality"],
-        "next": [["267", "Level 10"]]
+        "next": ["267", "Level 10"]
       },
       "profile": {
         "height": "0.6 m",
         "weight": "10 kg",
         "egg": ["Bug"],
-        "ability": [["Shed Skin", "false"]],
+        "ability": ["Shed Skin", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -10011,13 +10011,13 @@ export const pokemons = [
       "description": "If it is attacked, Cascoon remains motionless however badly it may be hurt. It does so because if it were to move, its body would be weak upon evolution. This Pokémon will also not forget the pain it endured.",
       "evolution": {
         "prev": ["265", "Level 7, random based on personality"],
-        "next": [["269", "Level 10"]]
+        "next": ["269", "Level 10"]
       },
       "profile": {
         "height": "0.7 m",
         "weight": "11.5 kg",
         "egg": ["Bug"],
-        "ability": [["Shed Skin", "false"]],
+        "ability": ["Shed Skin", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -10081,7 +10081,7 @@ export const pokemons = [
       },
       "species": "Water Weed Pokémon",
       "description": "Lotad is said to have dwelled on land before. However, this Pokémon is thought to have returned to water because the leaf on its head grew large and heavy. It now lives by floating atop the water.",
-      "evolution": { "next": [["271", "Level 14"]] },
+      "evolution": { "next": ["271", "Level 14"] },
       "profile": {
         "height": "0.5 m",
         "weight": "2.6 kg",
@@ -10120,7 +10120,7 @@ export const pokemons = [
       "description": "Lombre’s entire body is covered by a slippery, slimy film. It feels horribly unpleasant to be touched by this Pokémon’s hands. Lombre is often mistaken for a human child.",
       "evolution": {
         "prev": ["270", "Level 14"],
-        "next": [["272", "use Water Stone"]]
+        "next": ["272", "use Water Stone"]
       },
       "profile": {
         "height": "1.2 m",
@@ -10195,7 +10195,7 @@ export const pokemons = [
       },
       "species": "Acorn Pokémon",
       "description": "Seedot looks exactly like an acorn when it is dangling from a tree branch. It startles other Pokémon by suddenly moving. This Pokémon polishes its body once a day using leaves.",
-      "evolution": { "next": [["274", "Level 14"]] },
+      "evolution": { "next": ["274", "Level 14"] },
       "profile": {
         "height": "0.5 m",
         "weight": "4 kg",
@@ -10234,7 +10234,7 @@ export const pokemons = [
       "description": "This Pokémon pulls out the leaf on its head and makes a flute with it. The sound of Nuzleaf’s flute strikes fear and uncertainty in the hearts of people lost in a forest.",
       "evolution": {
         "prev": ["273", "Level 14"],
-        "next": [["275", "use Leaf Stone"]]
+        "next": ["275", "use Leaf Stone"]
       },
       "profile": {
         "height": "1 m",
@@ -10309,7 +10309,7 @@ export const pokemons = [
       },
       "species": "Tiny Swallow Pokémon",
       "description": "Taillow is young—it has only just left its nest. As a result, it sometimes becomes lonesome and cries at night. This Pokémon feeds on Wurmple that live in forests.",
-      "evolution": { "next": [["277", "Level 22"]] },
+      "evolution": { "next": ["277", "Level 22"] },
       "profile": {
         "height": "0.3 m",
         "weight": "2.3 kg",
@@ -10381,7 +10381,7 @@ export const pokemons = [
       },
       "species": "Seagull Pokémon",
       "description": "It builds nests in cliffs by the sea. It circles the skies above the ocean looking for its favorite food—Wishiwashi.",
-      "evolution": { "next": [["279", "Level 25"]] },
+      "evolution": { "next": ["279", "Level 25"] },
       "profile": {
         "height": "0.6 m",
         "weight": "9.5 kg",
@@ -10455,7 +10455,7 @@ export const pokemons = [
       },
       "species": "Feeling Pokémon",
       "description": "Ralts has the ability to sense the emotions of people. If its Trainer is in a cheerful mood, this Pokémon grows cheerful and joyous in the same way.",
-      "evolution": { "next": [["281", "Level 20"]] },
+      "evolution": { "next": ["281", "Level 20"] },
       "profile": {
         "height": "0.4 m",
         "weight": "6.6 kg",
@@ -10492,7 +10492,7 @@ export const pokemons = [
       },
       "species": "Emotion Pokémon",
       "description": "Kirlia uses the horns on its head to amplify its psychokinetic power. When the Pokémon uses its power, the air around it becomes distorted, creating mirages of nonexistent scenery.",
-      "evolution": { "prev": ["280", "Level 20"], "next": [["282", "Level 30"]] },
+      "evolution": { "prev": ["280", "Level 20"], "next": ["282", "Level 30"] },
       "profile": {
         "height": "0.8 m",
         "weight": "20.2 kg",
@@ -10566,7 +10566,7 @@ export const pokemons = [
       },
       "species": "Pond Skater Pokémon",
       "description": "It lives in ponds and marshes that feature lots of plant life. It often fights with Dewpider, whose habitat and diet are similar.",
-      "evolution": { "next": [["284", "Level 22"]] },
+      "evolution": { "next": ["284", "Level 22"] },
       "profile": {
         "height": "0.5 m",
         "weight": "1.7 kg",
@@ -10638,7 +10638,7 @@ export const pokemons = [
       },
       "species": "Mushroom Pokémon",
       "description": "If Shroomish senses danger, it shakes its body and scatters spores from the top of its head. This Pokémon’s spores are so toxic, they make trees and weeds wilt.",
-      "evolution": { "next": [["286", "Level 23"]] },
+      "evolution": { "next": ["286", "Level 23"] },
       "profile": {
         "height": "0.4 m",
         "weight": "4.5 kg",
@@ -10712,12 +10712,12 @@ export const pokemons = [
       },
       "species": "Slacker Pokémon",
       "description": "Slakoth’s heart beats just once a minute. Whatever happens, it is content to loaf around motionless. It is rare to see this Pokémon in motion.",
-      "evolution": { "next": [["288", "Level 18"]] },
+      "evolution": { "next": ["288", "Level 18"] },
       "profile": {
         "height": "0.8 m",
         "weight": "24 kg",
         "egg": ["Field"],
-        "ability": [["Truant", "false"]],
+        "ability": ["Truant", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -10745,12 +10745,12 @@ export const pokemons = [
       },
       "species": "Wild Monkey Pokémon",
       "description": "Vigoroth is simply incapable of remaining still. Even when it tries to sleep, the blood in its veins grows agitated, compelling this Pokémon to run wild throughout the jungle before it can settle down.",
-      "evolution": { "prev": ["287", "Level 18"], "next": [["289", "Level 36"]] },
+      "evolution": { "prev": ["287", "Level 18"], "next": ["289", "Level 36"] },
       "profile": {
         "height": "1.4 m",
         "weight": "46.5 kg",
         "egg": ["Field"],
-        "ability": [["Vital Spirit", "false"]],
+        "ability": ["Vital Spirit", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -10783,7 +10783,7 @@ export const pokemons = [
         "height": "2 m",
         "weight": "130.5 kg",
         "egg": ["Field"],
-        "ability": [["Truant", "false"]],
+        "ability": ["Truant", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -10895,7 +10895,7 @@ export const pokemons = [
         "height": "0.8 m",
         "weight": "1.2 kg",
         "egg": ["Mineral"],
-        "ability": [["Wonder Guard", "false"]],
+        "ability": ["Wonder Guard", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -10923,7 +10923,7 @@ export const pokemons = [
       },
       "species": "Whisper Pokémon",
       "description": "Whismur is very timid. If it starts to cry loudly, it becomes startled by its own crying and cries even harder. When it finally stops crying, the Pokémon goes to sleep, all tired out.",
-      "evolution": { "next": [["294", "Level 20"]] },
+      "evolution": { "next": ["294", "Level 20"] },
       "profile": {
         "height": "0.6 m",
         "weight": "16.3 kg",
@@ -10959,7 +10959,7 @@ export const pokemons = [
       },
       "species": "Big Voice Pokémon",
       "description": "Loudred shouts while stamping its feet. After it finishes shouting, this Pokémon becomes incapable of hearing anything for a while. This is considered to be a weak point.",
-      "evolution": { "prev": ["293", "Level 20"], "next": [["295", "Level 40"]] },
+      "evolution": { "prev": ["293", "Level 20"], "next": ["295", "Level 40"] },
       "profile": {
         "height": "1 m",
         "weight": "40.5 kg",
@@ -11031,7 +11031,7 @@ export const pokemons = [
       },
       "species": "Guts Pokémon",
       "description": "There’s a rumor of a traditional recipe for stew that Trainers can use to raise strong Makuhita.",
-      "evolution": { "next": [["297", "Level 24"]] },
+      "evolution": { "next": ["297", "Level 24"] },
       "profile": {
         "height": "1 m",
         "weight": "86.4 kg",
@@ -11105,7 +11105,7 @@ export const pokemons = [
       },
       "species": "Polka Dot Pokémon",
       "description": "Azurill’s tail is large and bouncy. It is packed full of the nutrients this Pokémon needs to grow. Azurill can be seen bouncing and playing on its big, rubbery tail.",
-      "evolution": { "next": [["183", "high Friendship"]] },
+      "evolution": { "next": ["183", "high Friendship"] },
       "profile": {
         "height": "0.2 m",
         "weight": "2 kg",
@@ -11142,7 +11142,7 @@ export const pokemons = [
       },
       "species": "Compass Pokémon",
       "description": "It hunts without twitching a muscle by pulling in its prey with powerful magnetism. But sometimes it pulls natural enemies in close.",
-      "evolution": { "next": [["476", "level up in a Magnetic Field area"]] },
+      "evolution": { "next": ["476", "level up in a Magnetic Field area"] },
       "profile": {
         "height": "1 m",
         "weight": "97 kg",
@@ -11179,7 +11179,7 @@ export const pokemons = [
       },
       "species": "Kitten Pokémon",
       "description": "Skitty is known to chase around playfully after its own tail. In the wild, this Pokémon lives in holes in the trees of forests. It is very popular as a pet because of its adorable looks.",
-      "evolution": { "next": [["301", "use Moon Stone"]] },
+      "evolution": { "next": ["301", "use Moon Stone"] },
       "profile": {
         "height": "0.6 m",
         "weight": "11 kg",
@@ -11327,7 +11327,7 @@ export const pokemons = [
       },
       "species": "Iron Armor Pokémon",
       "description": "Aron has a body of steel. With one all-out charge, this Pokémon can demolish even a heavy dump truck. The destroyed dump truck then becomes a handy meal for the Pokémon.",
-      "evolution": { "next": [["305", "Level 32"]] },
+      "evolution": { "next": ["305", "Level 32"] },
       "profile": {
         "height": "0.4 m",
         "weight": "60 kg",
@@ -11364,7 +11364,7 @@ export const pokemons = [
       },
       "species": "Iron Armor Pokémon",
       "description": "Lairon feeds on iron contained in rocks and water. It makes its nest on mountains where iron ore is buried. As a result, the Pokémon often clashes with humans mining the iron ore.",
-      "evolution": { "prev": ["304", "Level 32"], "next": [["306", "Level 42"]] },
+      "evolution": { "prev": ["304", "Level 32"], "next": ["306", "Level 42"] },
       "profile": {
         "height": "0.9 m",
         "weight": "120 kg",
@@ -11438,7 +11438,7 @@ export const pokemons = [
       },
       "species": "Meditate Pokémon",
       "description": "Meditite heightens its inner energy through meditation. It survives on just one berry a day. Minimal eating is another aspect of this Pokémon’s training.",
-      "evolution": { "next": [["308", "Level 37"]] },
+      "evolution": { "next": ["308", "Level 37"] },
       "profile": {
         "height": "0.6 m",
         "weight": "11.2 kg",
@@ -11510,7 +11510,7 @@ export const pokemons = [
       },
       "species": "Lightning Pokémon",
       "description": "Static electricity builds up all over its body as strands of its long fur rub together. This Pokémon boasts incredible speed.",
-      "evolution": { "next": [["310", "Level 26"]] },
+      "evolution": { "next": ["310", "Level 26"] },
       "profile": {
         "height": "0.6 m",
         "weight": "15.2 kg",
@@ -11732,7 +11732,7 @@ export const pokemons = [
       "description": "On extremely rare occasions, a Roselia is said to appear with its flowers in unusual colors. The thorns on this Pokémon’s head contain a vicious poison.",
       "evolution": {
         "prev": ["406", "high Friendship, Daytime"],
-        "next": [["407", "use Shiny Stone"]]
+        "next": ["407", "use Shiny Stone"]
       },
       "profile": {
         "height": "0.3 m",
@@ -11770,7 +11770,7 @@ export const pokemons = [
       },
       "species": "Stomach Pokémon",
       "description": "Most of Gulpin’s body is made up of its stomach—its heart and brain are very small in comparison. This Pokémon’s stomach contains special enzymes that dissolve anything.",
-      "evolution": { "next": [["317", "Level 26"]] },
+      "evolution": { "next": ["317", "Level 26"] },
       "profile": {
         "height": "0.4 m",
         "weight": "10.3 kg",
@@ -11844,7 +11844,7 @@ export const pokemons = [
       },
       "species": "Savage Pokémon",
       "description": "With its sturdy jaws and fangs, it can easily chomp wooden boats to splinters. It fights with Basculin over food.",
-      "evolution": { "next": [["319", "Level 30"]] },
+      "evolution": { "next": ["319", "Level 30"] },
       "profile": {
         "height": "0.8 m",
         "weight": "20.8 kg",
@@ -11916,7 +11916,7 @@ export const pokemons = [
       },
       "species": "Ball Whale Pokémon",
       "description": "Due to their memories of when they once lived on land, pods of them will, very rarely, wash up on shore.",
-      "evolution": { "next": [["321", "Level 40"]] },
+      "evolution": { "next": ["321", "Level 40"] },
       "profile": {
         "height": "2 m",
         "weight": "130 kg",
@@ -11990,7 +11990,7 @@ export const pokemons = [
       },
       "species": "Numb Pokémon",
       "description": "Numel stores magma of almost 2,200 degrees Fahrenheit within its body. If it gets wet, the magma cools and hardens. In that event, the Pokémon’s body grows heavy and its movements become sluggish.",
-      "evolution": { "next": [["323", "Level 33"]] },
+      "evolution": { "next": ["323", "Level 33"] },
       "profile": {
         "height": "0.7 m",
         "weight": "24 kg",
@@ -12101,7 +12101,7 @@ export const pokemons = [
       },
       "species": "Bounce Pokémon",
       "description": "Spoink keeps a pearl on top of its head. The pearl functions to amplify this Pokémon’s psychokinetic powers. It is therefore on a constant search for a bigger pearl.",
-      "evolution": { "next": [["326", "Level 32"]] },
+      "evolution": { "next": ["326", "Level 32"] },
       "profile": {
         "height": "0.7 m",
         "weight": "30.6 kg",
@@ -12212,7 +12212,7 @@ export const pokemons = [
       },
       "species": "Ant Pit Pokémon",
       "description": "It builds nests that double as traps, lying in wait for its prey to get caught. When night falls, it digs itself a spot beneath the sand to sleep.",
-      "evolution": { "next": [["329", "Level 35"]] },
+      "evolution": { "next": ["329", "Level 35"] },
       "profile": {
         "height": "0.7 m",
         "weight": "15 kg",
@@ -12249,12 +12249,12 @@ export const pokemons = [
       },
       "species": "Vibration Pokémon",
       "description": "It vibrates its wings to send out odd sound waves. Trainers who are with it need earplugs.",
-      "evolution": { "prev": ["328", "Level 35"], "next": [["330", "Level 45"]] },
+      "evolution": { "prev": ["328", "Level 35"], "next": ["330", "Level 45"] },
       "profile": {
         "height": "1.1 m",
         "weight": "15.3 kg",
         "egg": ["Bug"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -12287,7 +12287,7 @@ export const pokemons = [
         "height": "2 m",
         "weight": "82 kg",
         "egg": ["Bug"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -12315,7 +12315,7 @@ export const pokemons = [
       },
       "species": "Cactus Pokémon",
       "description": "The more arid and harsh the environment, the more pretty and fragrant a flower Cacnea grows. This Pokémon battles by wildly swinging its thorny arms.",
-      "evolution": { "next": [["332", "Level 32"]] },
+      "evolution": { "next": ["332", "Level 32"] },
       "profile": {
         "height": "0.4 m",
         "weight": "51.3 kg",
@@ -12387,7 +12387,7 @@ export const pokemons = [
       },
       "species": "Cotton Bird Pokémon",
       "description": "Swablu loves to make things clean. If it spots something dirty, it will wipe and polish it with its cottony wings. If its wings become dirty, this Pokémon finds a stream and showers itself.",
-      "evolution": { "next": [["334", "Level 35"]] },
+      "evolution": { "next": ["334", "Level 35"] },
       "profile": {
         "height": "0.4 m",
         "weight": "1.2 kg",
@@ -12536,7 +12536,7 @@ export const pokemons = [
         "height": "1 m",
         "weight": "168 kg",
         "egg": ["Mineral"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -12569,7 +12569,7 @@ export const pokemons = [
         "height": "1.2 m",
         "weight": "154 kg",
         "egg": ["Mineral"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -12597,7 +12597,7 @@ export const pokemons = [
       },
       "species": "Whiskers Pokémon",
       "description": "Its whiskers are filled with nerves. They can sense smells and flavors just as a person’s nose or tongue would.",
-      "evolution": { "next": [["340", "Level 30"]] },
+      "evolution": { "next": ["340", "Level 30"] },
       "profile": {
         "height": "0.4 m",
         "weight": "1.9 kg",
@@ -12671,7 +12671,7 @@ export const pokemons = [
       },
       "species": "Ruffian Pokémon",
       "description": "It can adapt very well to its environment. Feebas and Corphish are about the only Pokémon to live in stagnant ditches.",
-      "evolution": { "next": [["342", "Level 30"]] },
+      "evolution": { "next": ["342", "Level 30"] },
       "profile": {
         "height": "0.6 m",
         "weight": "11.5 kg",
@@ -12745,12 +12745,12 @@ export const pokemons = [
       },
       "species": "Clay Doll Pokémon",
       "description": "When they find others of their kind, they cry out loudly and gather together. Large numbers of them can be found in old graveyards.",
-      "evolution": { "next": [["344", "Level 36"]] },
+      "evolution": { "next": ["344", "Level 36"] },
       "profile": {
         "height": "0.5 m",
         "weight": "21.5 kg",
         "egg": ["Mineral"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -12783,7 +12783,7 @@ export const pokemons = [
         "height": "1.5 m",
         "weight": "108 kg",
         "egg": ["Mineral"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -12811,7 +12811,7 @@ export const pokemons = [
       },
       "species": "Sea Lily Pokémon",
       "description": "It sticks to rocks with its powerful suckers and can’t be washed away no matter how rough the surf gets.",
-      "evolution": { "next": [["346", "Level 40"]] },
+      "evolution": { "next": ["346", "Level 40"] },
       "profile": {
         "height": "1 m",
         "weight": "23.8 kg",
@@ -12883,7 +12883,7 @@ export const pokemons = [
       },
       "species": "Old Shrimp Pokémon",
       "description": "This is one kind of primeval bug Pokémon. With eight wings, it could apparently swim a lot faster than you’d expect.",
-      "evolution": { "next": [["348", "Level 40"]] },
+      "evolution": { "next": ["348", "Level 40"] },
       "profile": {
         "height": "0.7 m",
         "weight": "12.5 kg",
@@ -13040,7 +13040,7 @@ export const pokemons = [
         "height": "0.3 m",
         "weight": "0.8 kg",
         "egg": ["Fairy", "Amorphous"],
-        "ability": [["Forecast", "false"]],
+        "ability": ["Forecast", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -13104,7 +13104,7 @@ export const pokemons = [
       },
       "species": "Puppet Pokémon",
       "description": "There’s a proverb that says, “Shun the house where Shuppet gather in the growing dusk.”",
-      "evolution": { "next": [["354", "Level 37"]] },
+      "evolution": { "next": ["354", "Level 37"] },
       "profile": {
         "height": "0.6 m",
         "weight": "2.3 kg",
@@ -13178,7 +13178,7 @@ export const pokemons = [
       },
       "species": "Requiem Pokémon",
       "description": "Duskull wanders lost among the deep darkness of midnight. There is an oft-told admonishment given to misbehaving children that this Pokémon will spirit away bad children who earn scoldings from their mothers.",
-      "evolution": { "next": [["356", "Level 37"]] },
+      "evolution": { "next": ["356", "Level 37"] },
       "profile": {
         "height": "0.8 m",
         "weight": "15 kg",
@@ -13216,7 +13216,7 @@ export const pokemons = [
       "description": "Dusclops absorbs anything, however large the object may be. This Pokémon hypnotizes its foe by waving its hands in a macabre manner and by bringing its single eye to bear. The hypnotized foe is made to do Dusclops’s bidding.",
       "evolution": {
         "prev": ["355", "Level 37"],
-        "next": [["477", "trade holding Reaper Cloth"]]
+        "next": ["477", "trade holding Reaper Cloth"]
       },
       "profile": {
         "height": "1.6 m",
@@ -13295,7 +13295,7 @@ export const pokemons = [
         "height": "0.6 m",
         "weight": "1 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -13360,7 +13360,7 @@ export const pokemons = [
       },
       "species": "Bright Pokémon",
       "description": "Wynaut gather on moonlit nights to play by squeezing up against each other. By being squeezed, this Pokémon gains endurance and is trained to dole out powerful counterattacks.",
-      "evolution": { "next": [["202", "Level 15"]] },
+      "evolution": { "next": ["202", "Level 15"] },
       "profile": {
         "height": "0.6 m",
         "weight": "14 kg",
@@ -13475,7 +13475,7 @@ export const pokemons = [
       },
       "species": "Clap Pokémon",
       "description": "Spheal always travels by rolling around on its ball-like body. When the season for ice floes arrives, this Pokémon can be seen rolling about on ice and crossing the sea.",
-      "evolution": { "next": [["364", "Level 32"]] },
+      "evolution": { "next": ["364", "Level 32"] },
       "profile": {
         "height": "0.8 m",
         "weight": "39.5 kg",
@@ -13512,7 +13512,7 @@ export const pokemons = [
       },
       "species": "Ball Roll Pokémon",
       "description": "Sealeo often balances and rolls things on the tip of its nose. While the Pokémon is rolling something, it checks the object’s aroma and texture to determine whether it likes the object or not.",
-      "evolution": { "prev": ["363", "Level 32"], "next": [["365", "Level 44"]] },
+      "evolution": { "prev": ["363", "Level 32"], "next": ["365", "Level 44"] },
       "profile": {
         "height": "1.1 m",
         "weight": "87.6 kg",
@@ -13772,7 +13772,7 @@ export const pokemons = [
       },
       "species": "Rock Head Pokémon",
       "description": "Some theories suggest that its behavior of forcefully bashing its head into things stimulates cells that affect its evolution.",
-      "evolution": { "next": [["372", "Level 30"]] },
+      "evolution": { "next": ["372", "Level 30"] },
       "profile": {
         "height": "0.6 m",
         "weight": "42.1 kg",
@@ -13808,7 +13808,7 @@ export const pokemons = [
       },
       "species": "Endurance Pokémon",
       "description": "Shelgon lives deep within caves. It stays shut up in its hard shell, dreaming of the day it will be able to fly.",
-      "evolution": { "prev": ["371", "Level 30"], "next": [["373", "Level 50"]] },
+      "evolution": { "prev": ["371", "Level 30"], "next": ["373", "Level 50"] },
       "profile": {
         "height": "1.1 m",
         "weight": "110.5 kg",
@@ -13880,7 +13880,7 @@ export const pokemons = [
       },
       "species": "Iron Ball Pokémon",
       "description": "If you anger it, it will do more than rampage. It will also burst out strong magnetism, causing nearby machines to break.",
-      "evolution": { "next": [["375", "Level 20"]] },
+      "evolution": { "next": ["375", "Level 20"] },
       "profile": {
         "height": "0.6 m",
         "weight": "95.2 kg",
@@ -13916,7 +13916,7 @@ export const pokemons = [
       },
       "species": "Iron Claw Pokémon",
       "description": "It flies at high speeds around the skies. When it finds its prey, Metang takes a firm grip with its sharp claws and never lets go.",
-      "evolution": { "prev": ["374", "Level 20"], "next": [["376", "Level 45"]] },
+      "evolution": { "prev": ["374", "Level 20"], "next": ["376", "Level 45"] },
       "profile": {
         "height": "1.2 m",
         "weight": "202.5 kg",
@@ -14101,7 +14101,7 @@ export const pokemons = [
         "height": "1.4 m",
         "weight": "40 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "0:100"
       },
       "image": {
@@ -14134,7 +14134,7 @@ export const pokemons = [
         "height": "2 m",
         "weight": "60 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "100:0"
       },
       "image": {
@@ -14167,7 +14167,7 @@ export const pokemons = [
         "height": "4.5 m",
         "weight": "352 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Drizzle", "false"]],
+        "ability": ["Drizzle", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -14200,7 +14200,7 @@ export const pokemons = [
         "height": "3.5 m",
         "weight": "950 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Drought", "false"]],
+        "ability": ["Drought", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -14233,7 +14233,7 @@ export const pokemons = [
         "height": "7 m",
         "weight": "206.5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Air Lock", "false"]],
+        "ability": ["Air Lock", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -14266,7 +14266,7 @@ export const pokemons = [
         "height": "0.3 m",
         "weight": "1.1 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Serene Grace", "false"]],
+        "ability": ["Serene Grace", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -14299,7 +14299,7 @@ export const pokemons = [
         "height": "1.7 m",
         "weight": "60.8 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Pressure", "false"]],
+        "ability": ["Pressure", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -14327,7 +14327,7 @@ export const pokemons = [
       },
       "species": "Tiny Leaf Pokémon",
       "description": "It undertakes photosynthesis with its body, making oxygen. The leaf on its head wilts if it is thirsty.",
-      "evolution": { "next": [["388", "Level 18"]] },
+      "evolution": { "next": ["388", "Level 18"] },
       "profile": {
         "height": "0.4 m",
         "weight": "10.2 kg",
@@ -14363,7 +14363,7 @@ export const pokemons = [
       },
       "species": "Grove Pokémon",
       "description": "It knows where pure water wells up. It carries fellow Pokémon there on its back.",
-      "evolution": { "prev": ["387", "Level 18"], "next": [["389", "Level 32"]] },
+      "evolution": { "prev": ["387", "Level 18"], "next": ["389", "Level 32"] },
       "profile": {
         "height": "1.1 m",
         "weight": "97 kg",
@@ -14435,7 +14435,7 @@ export const pokemons = [
       },
       "species": "Chimp Pokémon",
       "description": "The gas made in its belly burns from its rear end. The fire burns weakly when it feels sick.",
-      "evolution": { "next": [["391", "Level 14"]] },
+      "evolution": { "next": ["391", "Level 14"] },
       "profile": {
         "height": "0.5 m",
         "weight": "6.2 kg",
@@ -14471,7 +14471,7 @@ export const pokemons = [
       },
       "species": "Playful Pokémon",
       "description": "It uses ceilings and walls to launch aerial attacks. Its fiery tail is but one weapon.",
-      "evolution": { "prev": ["390", "Level 14"], "next": [["392", "Level 36"]] },
+      "evolution": { "prev": ["390", "Level 14"], "next": ["392", "Level 36"] },
       "profile": {
         "height": "0.9 m",
         "weight": "22 kg",
@@ -14543,7 +14543,7 @@ export const pokemons = [
       },
       "species": "Penguin Pokémon",
       "description": "Because it is very proud, it hates accepting food from people. Its thick down guards it from cold.",
-      "evolution": { "next": [["394", "Level 16"]] },
+      "evolution": { "next": ["394", "Level 16"] },
       "profile": {
         "height": "0.4 m",
         "weight": "5.2 kg",
@@ -14579,7 +14579,7 @@ export const pokemons = [
       },
       "species": "Penguin Pokémon",
       "description": "It lives a solitary life. Its wings deliver wicked blows that can snap even the thickest of trees.",
-      "evolution": { "prev": ["393", "Level 16"], "next": [["395", "Level 36"]] },
+      "evolution": { "prev": ["393", "Level 16"], "next": ["395", "Level 36"] },
       "profile": {
         "height": "0.8 m",
         "weight": "23 kg",
@@ -14651,7 +14651,7 @@ export const pokemons = [
       },
       "species": "Starling Pokémon",
       "description": "They flock around mountains and fields, chasing after bug Pokémon. Their singing is noisy and annoying.",
-      "evolution": { "next": [["397", "Level 14"]] },
+      "evolution": { "next": ["397", "Level 14"] },
       "profile": {
         "height": "0.3 m",
         "weight": "2 kg",
@@ -14687,7 +14687,7 @@ export const pokemons = [
       },
       "species": "Starling Pokémon",
       "description": "It lives in forests and fields. Squabbles over territory occur when flocks collide.",
-      "evolution": { "prev": ["396", "Level 14"], "next": [["398", "Level 34"]] },
+      "evolution": { "prev": ["396", "Level 14"], "next": ["398", "Level 34"] },
       "profile": {
         "height": "0.6 m",
         "weight": "15.5 kg",
@@ -14759,7 +14759,7 @@ export const pokemons = [
       },
       "species": "Plump Mouse Pokémon",
       "description": "It constantly gnaws on logs and rocks to whittle down its front teeth. It nests alongside water.",
-      "evolution": { "next": [["400", "Level 15"]] },
+      "evolution": { "next": ["400", "Level 15"] },
       "profile": {
         "height": "0.5 m",
         "weight": "20 kg",
@@ -14833,7 +14833,7 @@ export const pokemons = [
       },
       "species": "Cricket Pokémon",
       "description": "When its antennae hit each other, it sounds like the music of a xylophone.",
-      "evolution": { "next": [["402", "Level 10"]] },
+      "evolution": { "next": ["402", "Level 10"] },
       "profile": {
         "height": "0.3 m",
         "weight": "2.2 kg",
@@ -14905,7 +14905,7 @@ export const pokemons = [
       },
       "species": "Flash Pokémon",
       "description": "All of its fur dazzles if danger is sensed. It flees while the foe is momentarily blinded.",
-      "evolution": { "next": [["404", "Level 15"]] },
+      "evolution": { "next": ["404", "Level 15"] },
       "profile": {
         "height": "0.5 m",
         "weight": "9.5 kg",
@@ -14942,7 +14942,7 @@ export const pokemons = [
       },
       "species": "Spark Pokémon",
       "description": "Strong electricity courses through the tips of its sharp claws. A light scratch causes fainting in foes.",
-      "evolution": { "prev": ["403", "Level 15"], "next": [["405", "Level 30"]] },
+      "evolution": { "prev": ["403", "Level 15"], "next": ["405", "Level 30"] },
       "profile": {
         "height": "0.9 m",
         "weight": "30.5 kg",
@@ -15016,7 +15016,7 @@ export const pokemons = [
       },
       "species": "Bud Pokémon",
       "description": "Over the winter, it closes its bud and endures the cold. In spring, the bud opens and releases pollen.",
-      "evolution": { "next": [["315", "high Friendship, Daytime"]] },
+      "evolution": { "next": ["315", "high Friendship, Daytime"] },
       "profile": {
         "height": "0.2 m",
         "weight": "1.2 kg",
@@ -15090,7 +15090,7 @@ export const pokemons = [
       },
       "species": "Head Butt Pokémon",
       "description": "Its hard skull is its distinguishing feature. It snapped trees by headbutting them, and then it fed on their ripe berries.",
-      "evolution": { "next": [["409", "Level 30"]] },
+      "evolution": { "next": ["409", "Level 30"] },
       "profile": {
         "height": "0.9 m",
         "weight": "31.5 kg",
@@ -15162,7 +15162,7 @@ export const pokemons = [
       },
       "species": "Shield Pokémon",
       "description": "Although its fossils can be found in layers of primeval rock, nothing but its face has ever been discovered.",
-      "evolution": { "next": [["411", "Level 30"]] },
+      "evolution": { "next": ["411", "Level 30"] },
       "profile": {
         "height": "0.5 m",
         "weight": "57 kg",
@@ -15347,7 +15347,7 @@ export const pokemons = [
       },
       "species": "Tiny Bee Pokémon",
       "description": "It collects and delivers honey to its colony. At night, they cluster to form a beehive and sleep.",
-      "evolution": { "next": [["416", "Level 21, Female"]] },
+      "evolution": { "next": ["416", "Level 21, Female"] },
       "profile": {
         "height": "0.3 m",
         "weight": "5.5 kg",
@@ -15456,7 +15456,7 @@ export const pokemons = [
       },
       "species": "Sea Weasel Pokémon",
       "description": "It inflates the flotation sac around its neck and pokes its head out of the water to see what is going on.",
-      "evolution": { "next": [["419", "Level 26"]] },
+      "evolution": { "next": ["419", "Level 26"] },
       "profile": {
         "height": "0.7 m",
         "weight": "29.5 kg",
@@ -15528,12 +15528,12 @@ export const pokemons = [
       },
       "species": "Cherry Pokémon",
       "description": "It evolves by sucking the energy out of the small ball where it had been storing nutrients.",
-      "evolution": { "next": [["421", "Level 25"]] },
+      "evolution": { "next": ["421", "Level 25"] },
       "profile": {
         "height": "0.4 m",
         "weight": "3.3 kg",
         "egg": ["Fairy", "Grass"],
-        "ability": [["Chlorophyll", "false"]],
+        "ability": ["Chlorophyll", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -15566,7 +15566,7 @@ export const pokemons = [
         "height": "0.5 m",
         "weight": "9.3 kg",
         "egg": ["Fairy", "Grass"],
-        "ability": [["Flower Gift", "false"]],
+        "ability": ["Flower Gift", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -15594,7 +15594,7 @@ export const pokemons = [
       },
       "species": "Sea Slug Pokémon",
       "description": "When it senses danger, a purple liquid oozes out of it. The liquid is thought to be something like greasy sweat.",
-      "evolution": { "next": [["423", "Level 30"]] },
+      "evolution": { "next": ["423", "Level 30"] },
       "profile": {
         "height": "0.3 m",
         "weight": "6.3 kg",
@@ -15705,7 +15705,7 @@ export const pokemons = [
       },
       "species": "Balloon Pokémon",
       "description": "Wandering souls gathered together to form this Pokémon. When trying to make friends with children, Drifloon grabs them by the hand.",
-      "evolution": { "next": [["426", "Level 28"]] },
+      "evolution": { "next": ["426", "Level 28"] },
       "profile": {
         "height": "0.4 m",
         "weight": "1.2 kg",
@@ -15779,7 +15779,7 @@ export const pokemons = [
       },
       "species": "Rabbit Pokémon",
       "description": "The reason it keeps one ear rolled up is so it can launch a swift counterattack if it’s attacked by an enemy.",
-      "evolution": { "next": [["428", "high Friendship"]] },
+      "evolution": { "next": ["428", "high Friendship"] },
       "profile": {
         "height": "0.4 m",
         "weight": "5.5 kg",
@@ -15858,7 +15858,7 @@ export const pokemons = [
         "height": "0.9 m",
         "weight": "4.4 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -15923,7 +15923,7 @@ export const pokemons = [
       },
       "species": "Catty Pokémon",
       "description": "When it’s happy, Glameow demonstrates beautiful movements of its tail, like a dancing ribbon.",
-      "evolution": { "next": [["432", "Level 38"]] },
+      "evolution": { "next": ["432", "Level 38"] },
       "profile": {
         "height": "0.5 m",
         "weight": "3.9 kg",
@@ -15997,12 +15997,12 @@ export const pokemons = [
       },
       "species": "Bell Pokémon",
       "description": "There is an orb inside its mouth. When it hops, the orb bounces all over and makes a ringing sound.",
-      "evolution": { "next": [["358", "high Friendship, Nighttime"]] },
+      "evolution": { "next": ["358", "high Friendship, Nighttime"] },
       "profile": {
         "height": "0.2 m",
         "weight": "0.6 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -16030,7 +16030,7 @@ export const pokemons = [
       },
       "species": "Skunk Pokémon",
       "description": "It protects itself by spraying a noxious fluid from its rear. The stench lingers for 24 hours.",
-      "evolution": { "next": [["435", "Level 34"]] },
+      "evolution": { "next": ["435", "Level 34"] },
       "profile": {
         "height": "0.4 m",
         "weight": "19.2 kg",
@@ -16104,7 +16104,7 @@ export const pokemons = [
       },
       "species": "Bronze Pokémon",
       "description": "Implements shaped like it were discovered in ancient tombs. It is unknown if they are related.",
-      "evolution": { "next": [["437", "Level 33"]] },
+      "evolution": { "next": ["437", "Level 33"] },
       "profile": {
         "height": "0.5 m",
         "weight": "60.5 kg",
@@ -16178,7 +16178,7 @@ export const pokemons = [
       },
       "species": "Bonsai Pokémon",
       "description": "If its body gets too damp, it will die. So, in a process reminiscent of sweating, its eyes expel moisture.",
-      "evolution": { "next": [["185", "after Mimic learned"]] },
+      "evolution": { "next": ["185", "after Mimic learned"] },
       "profile": {
         "height": "0.5 m",
         "weight": "15 kg",
@@ -16215,7 +16215,7 @@ export const pokemons = [
       },
       "species": "Mime Pokémon",
       "description": "When this gifted mimic surprises an opponent, Mime Jr. feels so happy that it ends up forgetting it was imitating something.",
-      "evolution": { "next": [["122", "after Mimic learned"]] },
+      "evolution": { "next": ["122", "after Mimic learned"] },
       "profile": {
         "height": "0.6 m",
         "weight": "13 kg",
@@ -16252,7 +16252,7 @@ export const pokemons = [
       },
       "species": "Playhouse Pokémon",
       "description": "When it sees something round and white, Happiny puts it into the pouch on its stomach. It sometimes becomes overloaded and can’t move.",
-      "evolution": { "next": [["113", "hold Oval Stone, Daytime"]] },
+      "evolution": { "next": ["113", "hold Oval Stone, Daytime"] },
       "profile": {
         "height": "0.6 m",
         "weight": "24.4 kg",
@@ -16362,7 +16362,7 @@ export const pokemons = [
       },
       "species": "Land Shark Pokémon",
       "description": "Its original home is an area much hotter than Alola. If you’re planning to live with one, your heating bill will soar.",
-      "evolution": { "next": [["444", "Level 24"]] },
+      "evolution": { "next": ["444", "Level 24"] },
       "profile": {
         "height": "0.7 m",
         "weight": "20.5 kg",
@@ -16398,7 +16398,7 @@ export const pokemons = [
       },
       "species": "Cave Pokémon",
       "description": "It sheds its skin and gradually grows larger. Its scales can be ground into a powder and used as raw materials for traditional medicine.",
-      "evolution": { "prev": ["443", "Level 24"], "next": [["445", "Level 48"]] },
+      "evolution": { "prev": ["443", "Level 24"], "next": ["445", "Level 48"] },
       "profile": {
         "height": "1.4 m",
         "weight": "56 kg",
@@ -16470,7 +16470,7 @@ export const pokemons = [
       },
       "species": "Big Eater Pokémon",
       "description": "Anything that looks edible, Munchlax will go on and swallow whole. Its stomach is tough enough to handle it even if the food has gone rotten.",
-      "evolution": { "next": [["143", "high Friendship"]] },
+      "evolution": { "next": ["143", "high Friendship"] },
       "profile": {
         "height": "0.6 m",
         "weight": "105 kg",
@@ -16507,7 +16507,7 @@ export const pokemons = [
       },
       "species": "Emanation Pokémon",
       "description": "It uses waves called auras to communicate with others of its kind. It doesn’t make any noise during this time, so its enemies can’t detect it.",
-      "evolution": { "next": [["448", "high Friendship, Daytime"]] },
+      "evolution": { "next": ["448", "high Friendship, Daytime"] },
       "profile": {
         "height": "0.7 m",
         "weight": "20.2 kg",
@@ -16581,7 +16581,7 @@ export const pokemons = [
       },
       "species": "Hippo Pokémon",
       "description": "It enshrouds itself with sand to protect itself from germs. It does not enjoy getting wet.",
-      "evolution": { "next": [["450", "Level 34"]] },
+      "evolution": { "next": ["450", "Level 34"] },
       "profile": {
         "height": "0.8 m",
         "weight": "49.5 kg",
@@ -16653,7 +16653,7 @@ export const pokemons = [
       },
       "species": "Scorpion Pokémon",
       "description": "It burrows under the sand to lie in wait for prey. Its tail claws can inject its prey with a savage poison.",
-      "evolution": { "next": [["452", "Level 40"]] },
+      "evolution": { "next": ["452", "Level 40"] },
       "profile": {
         "height": "0.8 m",
         "weight": "12 kg",
@@ -16727,7 +16727,7 @@ export const pokemons = [
       },
       "species": "Toxic Mouth Pokémon",
       "description": "Inflating its poison sacs, it fills the area with an odd sound and hits flinching opponents with a poison jab.",
-      "evolution": { "next": [["454", "Level 37"]] },
+      "evolution": { "next": ["454", "Level 37"] },
       "profile": {
         "height": "0.7 m",
         "weight": "23 kg",
@@ -16806,7 +16806,7 @@ export const pokemons = [
         "height": "1.4 m",
         "weight": "27 kg",
         "egg": ["Grass"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -16834,7 +16834,7 @@ export const pokemons = [
       },
       "species": "Wing Fish Pokémon",
       "description": "It lures in prey with its shining tail fins. It stays near the surface during the day and moves to the depths when night falls.",
-      "evolution": { "next": [["457", "Level 31"]] },
+      "evolution": { "next": ["457", "Level 31"] },
       "profile": {
         "height": "0.4 m",
         "weight": "7 kg",
@@ -16908,7 +16908,7 @@ export const pokemons = [
       },
       "species": "Kite Pokémon",
       "description": "Mantyke are friendly toward people and will approach boats closely. The patterns on their backs differ depending on their habitat.",
-      "evolution": { "next": [["226", "with Remoraid in party"]] },
+      "evolution": { "next": ["226", "with Remoraid in party"] },
       "profile": {
         "height": "1 m",
         "weight": "65 kg",
@@ -16945,7 +16945,7 @@ export const pokemons = [
       },
       "species": "Frost Tree Pokémon",
       "description": "In the spring, it grows berries with the texture of frozen treats around its belly.",
-      "evolution": { "next": [["460", "Level 40"]] },
+      "evolution": { "next": ["460", "Level 40"] },
       "profile": {
         "height": "1 m",
         "weight": "50.5 kg",
@@ -17680,7 +17680,7 @@ export const pokemons = [
         "height": "0.3 m",
         "weight": "0.3 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -17713,7 +17713,7 @@ export const pokemons = [
         "height": "0.3 m",
         "weight": "0.3 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -17746,7 +17746,7 @@ export const pokemons = [
         "height": "0.3 m",
         "weight": "0.3 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -17779,7 +17779,7 @@ export const pokemons = [
         "height": "0.3 m",
         "weight": "0.3 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -17920,7 +17920,7 @@ export const pokemons = [
         "height": "3.7 m",
         "weight": "420 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Slow Start", "false"]],
+        "ability": ["Slow Start", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -17989,7 +17989,7 @@ export const pokemons = [
         "height": "1.5 m",
         "weight": "85.6 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "0:100"
       },
       "image": {
@@ -18022,7 +18022,7 @@ export const pokemons = [
         "height": "0.4 m",
         "weight": "3.1 kg",
         "egg": ["Water 1", "Fairy"],
-        "ability": [["Hydration", "false"]],
+        "ability": ["Hydration", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -18055,7 +18055,7 @@ export const pokemons = [
         "height": "0.3 m",
         "weight": "1.4 kg",
         "egg": ["Water 1", "Fairy"],
-        "ability": [["Hydration", "false"]],
+        "ability": ["Hydration", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -18088,7 +18088,7 @@ export const pokemons = [
         "height": "1.5 m",
         "weight": "50.5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Bad Dreams", "false"]],
+        "ability": ["Bad Dreams", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -18121,7 +18121,7 @@ export const pokemons = [
         "height": "0.2 m",
         "weight": "2.1 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Natural Cure", "false"]],
+        "ability": ["Natural Cure", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -18154,7 +18154,7 @@ export const pokemons = [
         "height": "3.2 m",
         "weight": "320 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Multitype", "false"]],
+        "ability": ["Multitype", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -18187,7 +18187,7 @@ export const pokemons = [
         "height": "0.4 m",
         "weight": "4 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Victory Star", "false"]],
+        "ability": ["Victory Star", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -18215,7 +18215,7 @@ export const pokemons = [
       },
       "species": "Grass Snake Pokémon",
       "description": "They photosynthesize by bathing their tails in sunlight. When they are not feeling well, their tails droop.",
-      "evolution": { "next": [["496", "Level 17"]] },
+      "evolution": { "next": ["496", "Level 17"] },
       "profile": {
         "height": "0.6 m",
         "weight": "8.1 kg",
@@ -18251,7 +18251,7 @@ export const pokemons = [
       },
       "species": "Grass Snake Pokémon",
       "description": "When it gets dirty, its leaves can’t be used in photosynthesis, so it always keeps itself clean.",
-      "evolution": { "prev": ["495", "Level 17"], "next": [["497", "Level 36"]] },
+      "evolution": { "prev": ["495", "Level 17"], "next": ["497", "Level 36"] },
       "profile": {
         "height": "0.8 m",
         "weight": "16 kg",
@@ -18323,7 +18323,7 @@ export const pokemons = [
       },
       "species": "Fire Pig Pokémon",
       "description": "It loves to eat roasted berries, but sometimes it gets too excited and burns them to a crisp.",
-      "evolution": { "next": [["499", "Level 17"]] },
+      "evolution": { "next": ["499", "Level 17"] },
       "profile": {
         "height": "0.5 m",
         "weight": "9.9 kg",
@@ -18359,7 +18359,7 @@ export const pokemons = [
       },
       "species": "Fire Pig Pokémon",
       "description": "When its internal fire flares up, its movements grow sharper and faster. When in trouble, it emits smoke.",
-      "evolution": { "prev": ["498", "Level 17"], "next": [["500", "Level 36"]] },
+      "evolution": { "prev": ["498", "Level 17"], "next": ["500", "Level 36"] },
       "profile": {
         "height": "1 m",
         "weight": "55.5 kg",
@@ -18431,7 +18431,7 @@ export const pokemons = [
       },
       "species": "Sea Otter Pokémon",
       "description": "It fights using the scalchop on its stomach. In response to an attack, it retaliates immediately by slashing.",
-      "evolution": { "next": [["502", "Level 17"]] },
+      "evolution": { "next": ["502", "Level 17"] },
       "profile": {
         "height": "0.5 m",
         "weight": "5.9 kg",
@@ -18467,7 +18467,7 @@ export const pokemons = [
       },
       "species": "Discipline Pokémon",
       "description": "As a result of strict training, each Dewott learns different forms for using the scalchops.",
-      "evolution": { "prev": ["501", "Level 17"], "next": [["503", "Level 36"]] },
+      "evolution": { "prev": ["501", "Level 17"], "next": ["503", "Level 36"] },
       "profile": {
         "height": "0.8 m",
         "weight": "24.5 kg",
@@ -18539,7 +18539,7 @@ export const pokemons = [
       },
       "species": "Scout Pokémon",
       "description": "Extremely cautious, one of them will always be on the lookout, but it won’t notice a foe coming from behind.",
-      "evolution": { "next": [["505", "Level 20"]] },
+      "evolution": { "next": ["505", "Level 20"] },
       "profile": {
         "height": "0.5 m",
         "weight": "11.6 kg",
@@ -18613,7 +18613,7 @@ export const pokemons = [
       },
       "species": "Puppy Pokémon",
       "description": "This Pokémon is popular with beginners because it’s intelligent, obedient to its Trainer’s commands, and easy to raise.",
-      "evolution": { "next": [["507", "Level 16"]] },
+      "evolution": { "next": ["507", "Level 16"] },
       "profile": {
         "height": "0.4 m",
         "weight": "4.1 kg",
@@ -18650,7 +18650,7 @@ export const pokemons = [
       },
       "species": "Loyal Dog Pokémon",
       "description": "It has been living with people for so long that portrayals of it can be found on the walls of caves from long, long ago.",
-      "evolution": { "prev": ["506", "Level 16"], "next": [["508", "Level 32"]] },
+      "evolution": { "prev": ["506", "Level 16"], "next": ["508", "Level 32"] },
       "profile": {
         "height": "0.9 m",
         "weight": "14.7 kg",
@@ -18724,7 +18724,7 @@ export const pokemons = [
       },
       "species": "Devious Pokémon",
       "description": "They steal from people for fun, but their victims can’t help but forgive them. Their deceptively cute act is perfect.",
-      "evolution": { "next": [["510", "Level 20"]] },
+      "evolution": { "next": ["510", "Level 20"] },
       "profile": {
         "height": "0.4 m",
         "weight": "10.1 kg",
@@ -18798,7 +18798,7 @@ export const pokemons = [
       },
       "species": "Grass Monkey Pokémon",
       "description": "It’s good at finding berries and gathers them from all over. It’s kind enough to share them with friends.",
-      "evolution": { "next": [["512", "use Leaf Stone"]] },
+      "evolution": { "next": ["512", "use Leaf Stone"] },
       "profile": {
         "height": "0.6 m",
         "weight": "10.5 kg",
@@ -18870,7 +18870,7 @@ export const pokemons = [
       },
       "species": "High Temp Pokémon",
       "description": "This Pokémon lives in caves in volcanoes. The fire within the tuft on its head can reach 600 degrees Fahrenheit.",
-      "evolution": { "next": [["514", "use Fire Stone"]] },
+      "evolution": { "next": ["514", "use Fire Stone"] },
       "profile": {
         "height": "0.6 m",
         "weight": "11 kg",
@@ -18942,7 +18942,7 @@ export const pokemons = [
       },
       "species": "Spray Pokémon",
       "description": "The water stored inside the tuft on its head is full of nutrients. Plants that receive its water grow large.",
-      "evolution": { "next": [["516", "use Water Stone"]] },
+      "evolution": { "next": ["516", "use Water Stone"] },
       "profile": {
         "height": "0.6 m",
         "weight": "13.5 kg",
@@ -19014,7 +19014,7 @@ export const pokemons = [
       },
       "species": "Dream Eater Pokémon",
       "description": "It eats the dreams of people and Pokémon. When it eats a pleasant dream, it expels pink-colored mist.",
-      "evolution": { "next": [["518", "use Moon Stone"]] },
+      "evolution": { "next": ["518", "use Moon Stone"] },
       "profile": {
         "height": "0.6 m",
         "weight": "23.3 kg",
@@ -19088,7 +19088,7 @@ export const pokemons = [
       },
       "species": "Tiny Pigeon Pokémon",
       "description": "These Pokémon live in cities. They are accustomed to people. Flocks often gather in parks and plazas.",
-      "evolution": { "next": [["520", "Level 21"]] },
+      "evolution": { "next": ["520", "Level 21"] },
       "profile": {
         "height": "0.3 m",
         "weight": "2.1 kg",
@@ -19125,7 +19125,7 @@ export const pokemons = [
       },
       "species": "Wild Pigeon Pokémon",
       "description": "No matter where in the world it goes, it knows where its nest is, so it never gets separated from its Trainer.",
-      "evolution": { "prev": ["519", "Level 21"], "next": [["521", "Level 32"]] },
+      "evolution": { "prev": ["519", "Level 21"], "next": ["521", "Level 32"] },
       "profile": {
         "height": "0.6 m",
         "weight": "15 kg",
@@ -19199,7 +19199,7 @@ export const pokemons = [
       },
       "species": "Electrified Pokémon",
       "description": "Its mane shines when it discharges electricity. They use the frequency and rhythm of these flashes to communicate.",
-      "evolution": { "next": [["523", "Level 27"]] },
+      "evolution": { "next": ["523", "Level 27"] },
       "profile": {
         "height": "0.8 m",
         "weight": "29.8 kg",
@@ -19273,7 +19273,7 @@ export const pokemons = [
       },
       "species": "Mantle Pokémon",
       "description": "It was found in a fissure in a layer of exposed rock. The material that makes up its body is dirt from several hundred years ago.",
-      "evolution": { "next": [["525", "Level 25"]] },
+      "evolution": { "next": ["525", "Level 25"] },
       "profile": {
         "height": "0.4 m",
         "weight": "18 kg",
@@ -19310,7 +19310,7 @@ export const pokemons = [
       },
       "species": "Ore Pokémon",
       "description": "Its orange crystals are lumps of powerful energy. They’re valuable, so Boldore is sometimes targeted for them.",
-      "evolution": { "prev": ["524", "Level 25"], "next": [["526", "Trade"]] },
+      "evolution": { "prev": ["524", "Level 25"], "next": ["526", "Trade"] },
       "profile": {
         "height": "0.9 m",
         "weight": "102 kg",
@@ -19384,7 +19384,7 @@ export const pokemons = [
       },
       "species": "Bat Pokémon",
       "description": "The heart-shaped mark left on a body after a Woobat has been attached to it is said to bring good fortune.",
-      "evolution": { "next": [["528", "high Friendship"]] },
+      "evolution": { "next": ["528", "high Friendship"] },
       "profile": {
         "height": "0.4 m",
         "weight": "2.1 kg",
@@ -19458,7 +19458,7 @@ export const pokemons = [
       },
       "species": "Mole Pokémon",
       "description": "By spinning its body, it can dig straight through the ground at a speed of 30 mph.",
-      "evolution": { "next": [["530", "Level 31"]] },
+      "evolution": { "next": ["530", "Level 31"] },
       "profile": {
         "height": "0.3 m",
         "weight": "8.5 kg",
@@ -19569,7 +19569,7 @@ export const pokemons = [
       },
       "species": "Muscular Pokémon",
       "description": "Always carrying squared logs, they help out with construction. As they grow, they carry bigger logs.",
-      "evolution": { "next": [["533", "Level 25"]] },
+      "evolution": { "next": ["533", "Level 25"] },
       "profile": {
         "height": "0.6 m",
         "weight": "12.5 kg",
@@ -19606,7 +19606,7 @@ export const pokemons = [
       },
       "species": "Muscular Pokémon",
       "description": "This Pokémon is so muscular and strongly built that even a group of wrestlers could not make it budge an inch.",
-      "evolution": { "prev": ["532", "Level 25"], "next": [["534", "Trade"]] },
+      "evolution": { "prev": ["532", "Level 25"], "next": ["534", "Trade"] },
       "profile": {
         "height": "1.2 m",
         "weight": "40 kg",
@@ -19680,7 +19680,7 @@ export const pokemons = [
       },
       "species": "Tadpole Pokémon",
       "description": "By vibrating its cheeks, it emits sound waves imperceptible to humans. It uses the rhythm of these sounds to talk.",
-      "evolution": { "next": [["536", "Level 25"]] },
+      "evolution": { "next": ["536", "Level 25"] },
       "profile": {
         "height": "0.5 m",
         "weight": "4.5 kg",
@@ -19717,7 +19717,7 @@ export const pokemons = [
       },
       "species": "Vibration Pokémon",
       "description": "It lives in the water and on land. It uses its long, sticky tongue to immobilize its opponents.",
-      "evolution": { "prev": ["535", "Level 25"], "next": [["537", "Level 36"]] },
+      "evolution": { "prev": ["535", "Level 25"], "next": ["537", "Level 36"] },
       "profile": {
         "height": "0.8 m",
         "weight": "17 kg",
@@ -19865,7 +19865,7 @@ export const pokemons = [
       },
       "species": "Sewing Pokémon",
       "description": "Since this Pokémon makes its own clothes out of leaves, it is a popular mascot for fashion designers.",
-      "evolution": { "next": [["541", "Level 20"]] },
+      "evolution": { "next": ["541", "Level 20"] },
       "profile": {
         "height": "0.3 m",
         "weight": "2.5 kg",
@@ -19904,7 +19904,7 @@ export const pokemons = [
       "description": "It protects itself from the cold by wrapping up in leaves. It stays on the move, eating leaves in forests.",
       "evolution": {
         "prev": ["540", "Level 20"],
-        "next": [["542", "high Friendship"]]
+        "next": ["542", "high Friendship"]
       },
       "profile": {
         "height": "0.5 m",
@@ -19979,7 +19979,7 @@ export const pokemons = [
       },
       "species": "Centipede Pokémon",
       "description": "Its bite injects a potent poison, enough to paralyze large bird Pokémon that try to prey on it.",
-      "evolution": { "next": [["544", "Level 22"]] },
+      "evolution": { "next": ["544", "Level 22"] },
       "profile": {
         "height": "0.4 m",
         "weight": "5.3 kg",
@@ -20016,7 +20016,7 @@ export const pokemons = [
       },
       "species": "Curlipede Pokémon",
       "description": "It is usually motionless, but when attacked, it rotates at high speed and then crashes into its opponent.",
-      "evolution": { "prev": ["543", "Level 22"], "next": [["545", "Level 30"]] },
+      "evolution": { "prev": ["543", "Level 22"], "next": ["545", "Level 30"] },
       "profile": {
         "height": "1.2 m",
         "weight": "58.5 kg",
@@ -20090,7 +20090,7 @@ export const pokemons = [
       },
       "species": "Cotton Puff Pokémon",
       "description": "When attacked, it expels cotton from its body to create a diversion. The cotton it loses grows back in quickly.",
-      "evolution": { "next": [["547", "use Sun Stone"]] },
+      "evolution": { "next": ["547", "use Sun Stone"] },
       "profile": {
         "height": "0.3 m",
         "weight": "0.6 kg",
@@ -20164,7 +20164,7 @@ export const pokemons = [
       },
       "species": "Bulb Pokémon",
       "description": "They prefer clean water and soil. When the environment they live in turns bad, the whole bunch will up and move to a new area.",
-      "evolution": { "next": [["549", "use Sun Stone"]] },
+      "evolution": { "next": ["549", "use Sun Stone"] },
       "profile": {
         "height": "0.5 m",
         "weight": "6.6 kg",
@@ -20275,7 +20275,7 @@ export const pokemons = [
       },
       "species": "Desert Croc Pokémon",
       "description": "Sandile’s still not good at hunting, so it mostly eats things that have collapsed in the desert. It’s called “the cleaner of the desert.”",
-      "evolution": { "next": [["552", "Level 29"]] },
+      "evolution": { "next": ["552", "Level 29"] },
       "profile": {
         "height": "0.7 m",
         "weight": "15.2 kg",
@@ -20312,7 +20312,7 @@ export const pokemons = [
       },
       "species": "Desert Croc Pokémon",
       "description": "It buries some of its prey in the sand to use as emergency meals when its hunts are unsuccessful.",
-      "evolution": { "prev": ["551", "Level 29"], "next": [["553", "Level 40"]] },
+      "evolution": { "prev": ["551", "Level 29"], "next": ["553", "Level 40"] },
       "profile": {
         "height": "1 m",
         "weight": "33.4 kg",
@@ -20386,7 +20386,7 @@ export const pokemons = [
       },
       "species": "Zen Charm Pokémon",
       "description": "When it sleeps, it pulls its limbs into its body and its internal fire goes down to 1,100 degrees Fahrenheit.",
-      "evolution": { "next": [["555", "use Ice Stone"]] },
+      "evolution": { "next": ["555", "use Ice Stone"] },
       "profile": {
         "height": "0.6 m",
         "weight": "37.5 kg",
@@ -20495,7 +20495,7 @@ export const pokemons = [
       },
       "species": "Rock Inn Pokémon",
       "description": "When it finds a stone of a suitable size, it secretes a liquid from its mouth to open up a hole to crawl into.",
-      "evolution": { "next": [["558", "Level 34"]] },
+      "evolution": { "next": ["558", "Level 34"] },
       "profile": {
         "height": "0.3 m",
         "weight": "14.5 kg",
@@ -20569,7 +20569,7 @@ export const pokemons = [
       },
       "species": "Shedding Pokémon",
       "description": "It stretches its saggy skin up to its neck to protect itself. The saggier their skin, the more respect they garner.",
-      "evolution": { "next": [["560", "Level 39"]] },
+      "evolution": { "next": ["560", "Level 39"] },
       "profile": {
         "height": "0.6 m",
         "weight": "11.8 kg",
@@ -20680,12 +20680,12 @@ export const pokemons = [
       },
       "species": "Spirit Pokémon",
       "description": "Each of them carries a mask that used to be its face when it was human. Sometimes they look at it and cry.",
-      "evolution": { "next": [["867", "near Dusty Bowl"]] },
+      "evolution": { "next": ["867", "near Dusty Bowl"] },
       "profile": {
         "height": "0.5 m",
         "weight": "1.5 kg",
         "egg": ["Mineral", "Amorphous"],
-        "ability": [["Mummy", "false"]],
+        "ability": ["Mummy", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -20718,7 +20718,7 @@ export const pokemons = [
         "height": "1.7 m",
         "weight": "76.5 kg",
         "egg": ["Mineral", "Amorphous"],
-        "ability": [["Mummy", "false"]],
+        "ability": ["Mummy", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -20746,7 +20746,7 @@ export const pokemons = [
       },
       "species": "Prototurtle Pokémon",
       "description": "Its hunting grounds encompassed a broad area, from the land to more than half a mile deep in the ocean.",
-      "evolution": { "next": [["565", "Level 37"]] },
+      "evolution": { "next": ["565", "Level 37"] },
       "profile": {
         "height": "0.7 m",
         "weight": "16.5 kg",
@@ -20820,12 +20820,12 @@ export const pokemons = [
       },
       "species": "First Bird Pokémon",
       "description": "Restored from a fossil, this ancient bird Pokémon has wings but can’t yet fly.",
-      "evolution": { "next": [["567", "Level 37"]] },
+      "evolution": { "next": ["567", "Level 37"] },
       "profile": {
         "height": "0.5 m",
         "weight": "9.5 kg",
         "egg": ["Flying", "Water 3"],
-        "ability": [["Defeatist", "false"]],
+        "ability": ["Defeatist", "false"],
         "gender": "87.5:12.5"
       },
       "image": {
@@ -20858,7 +20858,7 @@ export const pokemons = [
         "height": "1.4 m",
         "weight": "32 kg",
         "egg": ["Flying", "Water 3"],
-        "ability": [["Defeatist", "false"]],
+        "ability": ["Defeatist", "false"],
         "gender": "87.5:12.5"
       },
       "image": {
@@ -20886,7 +20886,7 @@ export const pokemons = [
       },
       "species": "Trash Bag Pokémon",
       "description": "If a young Pokémon or child breathes in the toxic gas that Trubbish belches out, it could be a life-threatening situation.",
-      "evolution": { "next": [["569", "Level 36"]] },
+      "evolution": { "next": ["569", "Level 36"] },
       "profile": {
         "height": "0.6 m",
         "weight": "31 kg",
@@ -20960,12 +20960,12 @@ export const pokemons = [
       },
       "species": "Tricky Fox Pokémon",
       "description": "If a normally talkative child suddenly stops talking, it may have been replaced by Zorua.",
-      "evolution": { "next": [["571", "Level 30"]] },
+      "evolution": { "next": ["571", "Level 30"] },
       "profile": {
         "height": "0.7 m",
         "weight": "12.5 kg",
         "egg": ["Field"],
-        "ability": [["Illusion", "false"]],
+        "ability": ["Illusion", "false"],
         "gender": "87.5:12.5"
       },
       "image": {
@@ -20998,7 +20998,7 @@ export const pokemons = [
         "height": "1.6 m",
         "weight": "81.1 kg",
         "egg": ["Field"],
-        "ability": [["Illusion", "false"]],
+        "ability": ["Illusion", "false"],
         "gender": "87.5:12.5"
       },
       "image": {
@@ -21026,7 +21026,7 @@ export const pokemons = [
       },
       "species": "Chinchilla Pokémon",
       "description": "When its tail has gotten dirty from self-cleaning or from cleaning its nest, Minccino spends a whole day washing its tail in clean spring water.",
-      "evolution": { "next": [["573", "use Shiny Stone"]] },
+      "evolution": { "next": ["573", "use Shiny Stone"] },
       "profile": {
         "height": "0.4 m",
         "weight": "5.8 kg",
@@ -21100,7 +21100,7 @@ export const pokemons = [
       },
       "species": "Fixation Pokémon",
       "description": "They intently observe both Trainers and Pokémon. Apparently, they are looking at something that only Gothita can see.",
-      "evolution": { "next": [["575", "Level 32"]] },
+      "evolution": { "next": ["575", "Level 32"] },
       "profile": {
         "height": "0.4 m",
         "weight": "5.8 kg",
@@ -21137,7 +21137,7 @@ export const pokemons = [
       },
       "species": "Manipulate Pokémon",
       "description": "According to many old tales, it creates friends for itself by controlling sleeping children on starry nights.",
-      "evolution": { "prev": ["574", "Level 32"], "next": [["576", "Level 41"]] },
+      "evolution": { "prev": ["574", "Level 32"], "next": ["576", "Level 41"] },
       "profile": {
         "height": "0.7 m",
         "weight": "18 kg",
@@ -21211,7 +21211,7 @@ export const pokemons = [
       },
       "species": "Cell Pokémon",
       "description": "They drive away attackers by unleashing psychic power. They can use telepathy to talk with others.",
-      "evolution": { "next": [["578", "Level 32"]] },
+      "evolution": { "next": ["578", "Level 32"] },
       "profile": {
         "height": "0.3 m",
         "weight": "1 kg",
@@ -21248,7 +21248,7 @@ export const pokemons = [
       },
       "species": "Mitosis Pokémon",
       "description": "When their two divided brains think the same thoughts, their psychic power is maximized.",
-      "evolution": { "prev": ["577", "Level 32"], "next": [["579", "Level 41"]] },
+      "evolution": { "prev": ["577", "Level 32"], "next": ["579", "Level 41"] },
       "profile": {
         "height": "0.6 m",
         "weight": "8 kg",
@@ -21322,7 +21322,7 @@ export const pokemons = [
       },
       "species": "Water Bird Pokémon",
       "description": "They are better at swimming than flying, and they happily eat their favorite food, peat moss, as they dive underwater.",
-      "evolution": { "next": [["581", "Level 35"]] },
+      "evolution": { "next": ["581", "Level 35"] },
       "profile": {
         "height": "0.5 m",
         "weight": "5.5 kg",
@@ -21396,7 +21396,7 @@ export const pokemons = [
       },
       "species": "Fresh Snow Pokémon",
       "description": "When the morning sun hit an icicle, it wished not to melt, and thus Vanillite was born. At night, it buries itself in snow to sleep.",
-      "evolution": { "next": [["583", "Level 35"]] },
+      "evolution": { "next": ["583", "Level 35"] },
       "profile": {
         "height": "0.4 m",
         "weight": "5.7 kg",
@@ -21433,7 +21433,7 @@ export const pokemons = [
       },
       "species": "Icy Snow Pokémon",
       "description": "This hearty Pokémon survived the Ice Age. It’s incredibly popular in very hot regions.",
-      "evolution": { "prev": ["582", "Level 35"], "next": [["584", "Level 47"]] },
+      "evolution": { "prev": ["582", "Level 35"], "next": ["584", "Level 47"] },
       "profile": {
         "height": "1.1 m",
         "weight": "41 kg",
@@ -21507,7 +21507,7 @@ export const pokemons = [
       },
       "species": "Season Pokémon",
       "description": "The turning of the seasons changes the color and scent of this Pokémon’s fur. People use it to mark the seasons.",
-      "evolution": { "next": [["586", "Level 34"]] },
+      "evolution": { "next": ["586", "Level 34"] },
       "profile": {
         "height": "0.6 m",
         "weight": "19.5 kg",
@@ -21617,7 +21617,7 @@ export const pokemons = [
       },
       "species": "Clamping Pokémon",
       "description": "For some reason they evolve when they receive electrical energy while they are attacking Shelmet.",
-      "evolution": { "next": [["589", "Trade with Shelmet"]] },
+      "evolution": { "next": ["589", "Trade with Shelmet"] },
       "profile": {
         "height": "0.5 m",
         "weight": "5.9 kg",
@@ -21691,7 +21691,7 @@ export const pokemons = [
       },
       "species": "Mushroom Pokémon",
       "description": "It lures Pokémon with its pattern that looks just like a Poké Ball, then releases poison spores.",
-      "evolution": { "next": [["591", "Level 39"]] },
+      "evolution": { "next": ["591", "Level 39"] },
       "profile": {
         "height": "0.2 m",
         "weight": "1 kg",
@@ -21763,7 +21763,7 @@ export const pokemons = [
       },
       "species": "Floating Pokémon",
       "description": "Using the invisible poison spikes on its veillike arms and legs, it paralyzes its enemies and causes them to drown.",
-      "evolution": { "next": [["593", "Level 40"]] },
+      "evolution": { "next": ["593", "Level 40"] },
       "profile": {
         "height": "1.2 m",
         "weight": "33 kg",
@@ -21874,7 +21874,7 @@ export const pokemons = [
       },
       "species": "Attaching Pokémon",
       "description": "They attach themselves to large-bodied Pokémon and absorb static electricity, which they store in an electric pouch.",
-      "evolution": { "next": [["596", "Level 36"]] },
+      "evolution": { "next": ["596", "Level 36"] },
       "profile": {
         "height": "0.1 m",
         "weight": "0.6 kg",
@@ -21948,12 +21948,12 @@ export const pokemons = [
       },
       "species": "Thorn Seed Pokémon",
       "description": "It absorbs the iron it finds in the rock while clinging to the ceiling. It shoots spikes when in danger.",
-      "evolution": { "next": [["598", "Level 40"]] },
+      "evolution": { "next": ["598", "Level 40"] },
       "profile": {
         "height": "0.6 m",
         "weight": "18.8 kg",
         "egg": ["Grass", "Mineral"],
-        "ability": [["Iron Barbs", "false"]],
+        "ability": ["Iron Barbs", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -22017,7 +22017,7 @@ export const pokemons = [
       },
       "species": "Gear Pokémon",
       "description": "The two minigears that mesh together are predetermined. Each will rebound from other minigears without meshing.",
-      "evolution": { "next": [["600", "Level 38"]] },
+      "evolution": { "next": ["600", "Level 38"] },
       "profile": {
         "height": "0.3 m",
         "weight": "21 kg",
@@ -22054,7 +22054,7 @@ export const pokemons = [
       },
       "species": "Gear Pokémon",
       "description": "A minigear and big gear comprise its body. If the minigear it launches at a foe doesn’t return, it will die.",
-      "evolution": { "prev": ["599", "Level 38"], "next": [["601", "Level 49"]] },
+      "evolution": { "prev": ["599", "Level 38"], "next": ["601", "Level 49"] },
       "profile": {
         "height": "0.6 m",
         "weight": "51 kg",
@@ -22128,12 +22128,12 @@ export const pokemons = [
       },
       "species": "EleFish Pokémon",
       "description": "One alone can emit only a trickle of electricity, so a group of them gathers to unleash a powerful electric shock.",
-      "evolution": { "next": [["603", "Level 39"]] },
+      "evolution": { "next": ["603", "Level 39"] },
       "profile": {
         "height": "0.2 m",
         "weight": "0.3 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -22163,13 +22163,13 @@ export const pokemons = [
       "description": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity.",
       "evolution": {
         "prev": ["602", "Level 39"],
-        "next": [["604", "use Thunder Stone"]]
+        "next": ["604", "use Thunder Stone"]
       },
       "profile": {
         "height": "1.2 m",
         "weight": "22 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -22202,7 +22202,7 @@ export const pokemons = [
         "height": "2.1 m",
         "weight": "80.5 kg",
         "egg": ["Amorphous"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -22230,7 +22230,7 @@ export const pokemons = [
       },
       "species": "Cerebral Pokémon",
       "description": "This Pokémon is shrouded in mystery. It’s said to have appeared from a UFO that fell from the sky about 50 years ago.",
-      "evolution": { "next": [["606", "Level 42"]] },
+      "evolution": { "next": ["606", "Level 42"] },
       "profile": {
         "height": "0.5 m",
         "weight": "9 kg",
@@ -22304,7 +22304,7 @@ export const pokemons = [
       },
       "species": "Candle Pokémon",
       "description": "Litwick shines a light that absorbs the life energy of people and Pokémon, which becomes the fuel that it burns.",
-      "evolution": { "next": [["608", "Level 41"]] },
+      "evolution": { "next": ["608", "Level 41"] },
       "profile": {
         "height": "0.3 m",
         "weight": "3.1 kg",
@@ -22343,7 +22343,7 @@ export const pokemons = [
       "description": "It arrives near the moment of death and steals spirit from the body.",
       "evolution": {
         "prev": ["607", "Level 41"],
-        "next": [["609", "use Dusk Stone"]]
+        "next": ["609", "use Dusk Stone"]
       },
       "profile": {
         "height": "0.6 m",
@@ -22418,7 +22418,7 @@ export const pokemons = [
       },
       "species": "Tusk Pokémon",
       "description": "They mark their territory by leaving gashes in trees with their tusks. If a tusk breaks, a new one grows in quickly.",
-      "evolution": { "next": [["611", "Level 38"]] },
+      "evolution": { "next": ["611", "Level 38"] },
       "profile": {
         "height": "0.6 m",
         "weight": "18 kg",
@@ -22455,7 +22455,7 @@ export const pokemons = [
       },
       "species": "Axe Jaw Pokémon",
       "description": "A broken tusk will not grow back, so it diligently sharpens its tusks on river rocks after the end of a battle.",
-      "evolution": { "prev": ["610", "Level 38"], "next": [["612", "Level 48"]] },
+      "evolution": { "prev": ["610", "Level 38"], "next": ["612", "Level 48"] },
       "profile": {
         "height": "1 m",
         "weight": "36 kg",
@@ -22529,7 +22529,7 @@ export const pokemons = [
       },
       "species": "Chill Pokémon",
       "description": "Their snot is a barometer of health. When healthy, their snot is sticky and the power of their ice moves increases.",
-      "evolution": { "next": [["614", "Level 37"]] },
+      "evolution": { "next": ["614", "Level 37"] },
       "profile": {
         "height": "0.5 m",
         "weight": "8.5 kg",
@@ -22608,7 +22608,7 @@ export const pokemons = [
         "height": "1.1 m",
         "weight": "148 kg",
         "egg": ["Mineral"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -22636,7 +22636,7 @@ export const pokemons = [
       },
       "species": "Snail Pokémon",
       "description": "It evolves when bathed in an electric-like energy along with Karrablast. The reason is still unknown.",
-      "evolution": { "next": [["617", "Trade with Karrablast"]] },
+      "evolution": { "next": ["617", "Trade with Karrablast"] },
       "profile": {
         "height": "0.4 m",
         "weight": "7.7 kg",
@@ -22747,7 +22747,7 @@ export const pokemons = [
       },
       "species": "Martial Arts Pokémon",
       "description": "They seclude themselves in the mountains and devote themselves to training. The form of their kicks and chops differs from pack to pack.",
-      "evolution": { "next": [["620", "Level 50"]] },
+      "evolution": { "next": ["620", "Level 50"] },
       "profile": {
         "height": "0.9 m",
         "weight": "20 kg",
@@ -22858,7 +22858,7 @@ export const pokemons = [
       },
       "species": "Automaton Pokémon",
       "description": "Although ancient people apparently built it by working with clay, the source of its energy is unclear.",
-      "evolution": { "next": [["623", "Level 43"]] },
+      "evolution": { "next": ["623", "Level 43"] },
       "profile": {
         "height": "1 m",
         "weight": "92 kg",
@@ -22932,7 +22932,7 @@ export const pokemons = [
       },
       "species": "Sharp Blade Pokémon",
       "description": "It follows Bisharp’s orders to a tee when it attacks enemies. After slashing an opponent, Pawniard clangs both of its blades together.",
-      "evolution": { "next": [["625", "Level 52"]] },
+      "evolution": { "next": ["625", "Level 52"] },
       "profile": {
         "height": "0.5 m",
         "weight": "10.2 kg",
@@ -23043,7 +23043,7 @@ export const pokemons = [
       },
       "species": "Eaglet Pokémon",
       "description": "Known as a natural-born warrior, soon after its hatching, it will challenge its parent to a fight in order to gain their acceptance.",
-      "evolution": { "next": [["628", "Level 54"]] },
+      "evolution": { "next": ["628", "Level 54"] },
       "profile": {
         "height": "0.5 m",
         "weight": "10.5 kg",
@@ -23117,7 +23117,7 @@ export const pokemons = [
       },
       "species": "Diapered Pokémon",
       "description": "Its healthy appetite leads to visible growth spurts. It often has to replace the bones it wears as its size increases.",
-      "evolution": { "next": [["630", "Level 54"]] },
+      "evolution": { "next": ["630", "Level 54"] },
       "profile": {
         "height": "0.5 m",
         "weight": "9 kg",
@@ -23265,12 +23265,12 @@ export const pokemons = [
       },
       "species": "Irate Pokémon",
       "description": "Lacking sight, it’s unaware of its surroundings, so it bumps into things and eats anything that moves.",
-      "evolution": { "next": [["634", "Level 50"]] },
+      "evolution": { "next": ["634", "Level 50"] },
       "profile": {
         "height": "0.8 m",
         "weight": "17.3 kg",
         "egg": ["Dragon"],
-        "ability": [["Hustle", "false"]],
+        "ability": ["Hustle", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -23298,12 +23298,12 @@ export const pokemons = [
       },
       "species": "Hostile Pokémon",
       "description": "After it has eaten up all the food in its territory, it moves to another area. Its two heads do not get along.",
-      "evolution": { "prev": ["633", "Level 50"], "next": [["635", "Level 64"]] },
+      "evolution": { "prev": ["633", "Level 50"], "next": ["635", "Level 64"] },
       "profile": {
         "height": "1.4 m",
         "weight": "50 kg",
         "egg": ["Dragon"],
-        "ability": [["Hustle", "false"]],
+        "ability": ["Hustle", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -23336,7 +23336,7 @@ export const pokemons = [
         "height": "1.8 m",
         "weight": "160 kg",
         "egg": ["Dragon"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -23364,7 +23364,7 @@ export const pokemons = [
       },
       "species": "Torch Pokémon",
       "description": "It protects itself with flame. Long years ago, people believed Larvesta had a nest on the sun.",
-      "evolution": { "next": [["637", "Level 59"]] },
+      "evolution": { "next": ["637", "Level 59"] },
       "profile": {
         "height": "1.1 m",
         "weight": "28.8 kg",
@@ -23441,7 +23441,7 @@ export const pokemons = [
         "height": "2.1 m",
         "weight": "250 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Justified", "false"]],
+        "ability": ["Justified", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -23474,7 +23474,7 @@ export const pokemons = [
         "height": "1.9 m",
         "weight": "260 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Justified", "false"]],
+        "ability": ["Justified", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -23507,7 +23507,7 @@ export const pokemons = [
         "height": "2 m",
         "weight": "200 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Justified", "false"]],
+        "ability": ["Justified", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -23612,7 +23612,7 @@ export const pokemons = [
         "height": "3.2 m",
         "weight": "330 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Turboblaze", "false"]],
+        "ability": ["Turboblaze", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -23645,7 +23645,7 @@ export const pokemons = [
         "height": "2.9 m",
         "weight": "345 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Teravolt", "false"]],
+        "ability": ["Teravolt", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -23714,7 +23714,7 @@ export const pokemons = [
         "height": "3 m",
         "weight": "325 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Pressure", "false"]],
+        "ability": ["Pressure", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -23747,7 +23747,7 @@ export const pokemons = [
         "height": "1.4 m",
         "weight": "48.5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Justified", "false"]],
+        "ability": ["Justified", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -23780,7 +23780,7 @@ export const pokemons = [
         "height": "0.6 m",
         "weight": "6.5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Serene Grace", "false"]],
+        "ability": ["Serene Grace", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -23813,7 +23813,7 @@ export const pokemons = [
         "height": "1.5 m",
         "weight": "82.5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Download", "false"]],
+        "ability": ["Download", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -23841,7 +23841,7 @@ export const pokemons = [
       },
       "species": "Spiny Nut Pokémon",
       "description": "Such a thick shell of wood covers its head and back that even a direct hit from a truck wouldn’t faze it.",
-      "evolution": { "next": [["651", "Level 16"]] },
+      "evolution": { "next": ["651", "Level 16"] },
       "profile": {
         "height": "0.4 m",
         "weight": "9 kg",
@@ -23877,7 +23877,7 @@ export const pokemons = [
       },
       "species": "Spiny Armor Pokémon",
       "description": "They strengthen their lower bodies by running into one another. They are very kind and won’t start fights.",
-      "evolution": { "prev": ["650", "Level 16"], "next": [["652", "Level 36"]] },
+      "evolution": { "prev": ["650", "Level 16"], "next": ["652", "Level 36"] },
       "profile": {
         "height": "0.7 m",
         "weight": "29 kg",
@@ -23949,7 +23949,7 @@ export const pokemons = [
       },
       "species": "Fox Pokémon",
       "description": "As it walks, it munches on a twig in place of a snack. It intimidates opponents by puffing hot air out of its ears.",
-      "evolution": { "next": [["654", "Level 16"]] },
+      "evolution": { "next": ["654", "Level 16"] },
       "profile": {
         "height": "0.4 m",
         "weight": "9.4 kg",
@@ -23985,7 +23985,7 @@ export const pokemons = [
       },
       "species": "Fox Pokémon",
       "description": "When the twig is plucked from its tail, friction sets the twig alight. The flame is used to send signals to its allies.",
-      "evolution": { "prev": ["653", "Level 16"], "next": [["655", "Level 36"]] },
+      "evolution": { "prev": ["653", "Level 16"], "next": ["655", "Level 36"] },
       "profile": {
         "height": "1 m",
         "weight": "14.5 kg",
@@ -24057,7 +24057,7 @@ export const pokemons = [
       },
       "species": "Bubble Frog Pokémon",
       "description": "It protects its skin by covering its body in delicate bubbles. Beneath its happy-go-lucky air, it keeps a watchful eye on its surroundings.",
-      "evolution": { "next": [["657", "Level 16"]] },
+      "evolution": { "next": ["657", "Level 16"] },
       "profile": {
         "height": "0.3 m",
         "weight": "7 kg",
@@ -24093,7 +24093,7 @@ export const pokemons = [
       },
       "species": "Bubble Frog Pokémon",
       "description": "Its swiftness is unparalleled. It can scale a tower of more than 2,000 feet in a minute’s time.",
-      "evolution": { "prev": ["656", "Level 16"], "next": [["658", "Level 36"]] },
+      "evolution": { "prev": ["656", "Level 16"], "next": ["658", "Level 36"] },
       "profile": {
         "height": "0.6 m",
         "weight": "10.9 kg",
@@ -24165,7 +24165,7 @@ export const pokemons = [
       },
       "species": "Digging Pokémon",
       "description": "It has ears like shovels. Digging holes strengthens its ears so much that they can sever thick roots effortlessly.",
-      "evolution": { "next": [["660", "Level 20"]] },
+      "evolution": { "next": ["660", "Level 20"] },
       "profile": {
         "height": "0.4 m",
         "weight": "5 kg",
@@ -24239,7 +24239,7 @@ export const pokemons = [
       },
       "species": "Tiny Robin Pokémon",
       "description": "Its body is always warm. Trainers who live in cold areas apparently sleep with it in their bed.",
-      "evolution": { "next": [["662", "Level 17"]] },
+      "evolution": { "next": ["662", "Level 17"] },
       "profile": {
         "height": "0.3 m",
         "weight": "1.7 kg",
@@ -24275,7 +24275,7 @@ export const pokemons = [
       },
       "species": "Ember Pokémon",
       "description": "Its speed right after takeoff already puts it in the top speed class of all bird Pokémon.",
-      "evolution": { "prev": ["661", "Level 17"], "next": [["663", "Level 35"]] },
+      "evolution": { "prev": ["661", "Level 17"], "next": ["663", "Level 35"] },
       "profile": {
         "height": "0.7 m",
         "weight": "16 kg",
@@ -24347,7 +24347,7 @@ export const pokemons = [
       },
       "species": "Scatterdust Pokémon",
       "description": "The powder that covers its body regulates its temperature, so it can live in any region or climate.",
-      "evolution": { "next": [["665", "Level 9"]] },
+      "evolution": { "next": ["665", "Level 9"] },
       "profile": {
         "height": "0.3 m",
         "weight": "2.5 kg",
@@ -24384,7 +24384,7 @@ export const pokemons = [
       },
       "species": "Scatterdust Pokémon",
       "description": "The beaks of bird Pokémon can’t begin to scratch its stalwart body. To defend itself, it spews powder.",
-      "evolution": { "prev": ["664", "Level 9"], "next": [["666", "Level 12"]] },
+      "evolution": { "prev": ["664", "Level 9"], "next": ["666", "Level 12"] },
       "profile": {
         "height": "0.3 m",
         "weight": "8.4 kg",
@@ -24457,7 +24457,7 @@ export const pokemons = [
       },
       "species": "Lion Cub Pokémon",
       "description": "This hot-blooded Pokémon is filled with curiosity. When it gets angry or starts fighting, its short mane gets hot.",
-      "evolution": { "next": [["668", "Level 35"]] },
+      "evolution": { "next": ["668", "Level 35"] },
       "profile": {
         "height": "0.6 m",
         "weight": "13.5 kg",
@@ -24531,7 +24531,7 @@ export const pokemons = [
       },
       "species": "Single Bloom Pokémon",
       "description": "Flabébé wears a crown made from pollen it’s collected from its flower. The crown has hidden healing properties.",
-      "evolution": { "next": [["670", "Level 19"]] },
+      "evolution": { "next": ["670", "Level 19"] },
       "profile": {
         "height": "0.1 m",
         "weight": "0.1 kg",
@@ -24569,7 +24569,7 @@ export const pokemons = [
       "description": "It gives its own power to flowers, pouring its heart into caring for them. Floette never forgives anyone who messes up a flower bed.",
       "evolution": {
         "prev": ["669", "Level 19"],
-        "next": [["671", "use Shiny Stone"]]
+        "next": ["671", "use Shiny Stone"]
       },
       "profile": {
         "height": "0.2 m",
@@ -24642,7 +24642,7 @@ export const pokemons = [
       },
       "species": "Mount Pokémon",
       "description": "If it has sunshine and water, it doesn’t need to eat, because it can generate energy from the leaves on its back.",
-      "evolution": { "next": [["673", "Level 32"]] },
+      "evolution": { "next": ["673", "Level 32"] },
       "profile": {
         "height": "0.9 m",
         "weight": "31 kg",
@@ -24714,7 +24714,7 @@ export const pokemons = [
       },
       "species": "Playful Pokémon",
       "description": "It’s desperate to intimidate its opponents. Be nice and pretend to be scared if you catch it glaring at you intensely.",
-      "evolution": { "next": [["675", "Level 32, Dark type Pokémon in party"]] },
+      "evolution": { "next": ["675", "Level 32, Dark type Pokémon in party"] },
       "profile": {
         "height": "0.6 m",
         "weight": "8 kg",
@@ -24793,7 +24793,7 @@ export const pokemons = [
         "height": "1.2 m",
         "weight": "28 kg",
         "egg": ["Field"],
-        "ability": [["Fur Coat", "false"]],
+        "ability": ["Fur Coat", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -24821,7 +24821,7 @@ export const pokemons = [
       },
       "species": "Restraint Pokémon",
       "description": "It has enough psychic energy to blast everything within 300 feet of itself, but it has no control over its power.",
-      "evolution": { "next": [["678", "Level 25"]] },
+      "evolution": { "next": ["678", "Level 25"] },
       "profile": {
         "height": "0.3 m",
         "weight": "3.5 kg",
@@ -24895,12 +24895,12 @@ export const pokemons = [
       },
       "species": "Sword Pokémon",
       "description": "If anyone dares to grab its hilt, it wraps a blue cloth around that person’s arm and drains that person’s life energy completely.",
-      "evolution": { "next": [["680", "Level 35"]] },
+      "evolution": { "next": ["680", "Level 35"] },
       "profile": {
         "height": "0.8 m",
         "weight": "2 kg",
         "egg": ["Mineral"],
-        "ability": [["No Guard", "false"]],
+        "ability": ["No Guard", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -24930,13 +24930,13 @@ export const pokemons = [
       "description": "The complex attack patterns of its two swords are unstoppable, even for an opponent greatly accomplished at swordplay.",
       "evolution": {
         "prev": ["679", "Level 35"],
-        "next": [["681", "use Dusk Stone"]]
+        "next": ["681", "use Dusk Stone"]
       },
       "profile": {
         "height": "0.8 m",
         "weight": "4.5 kg",
         "egg": ["Mineral"],
-        "ability": [["No Guard", "false"]],
+        "ability": ["No Guard", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -24969,7 +24969,7 @@ export const pokemons = [
         "height": "1.7 m",
         "weight": "53 kg",
         "egg": ["Mineral"],
-        "ability": [["Stance Change", "false"]],
+        "ability": ["Stance Change", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -24997,7 +24997,7 @@ export const pokemons = [
       },
       "species": "Perfume Pokémon",
       "description": "In the past, rather than using perfume, royal ladies carried a Spritzee that would waft a fragrance they liked.",
-      "evolution": { "next": [["683", "trade holding Sachet"]] },
+      "evolution": { "next": ["683", "trade holding Sachet"] },
       "profile": {
         "height": "0.2 m",
         "weight": "0.5 kg",
@@ -25069,7 +25069,7 @@ export const pokemons = [
       },
       "species": "Cotton Candy Pokémon",
       "description": "Because it eats nothing but sweets, its fur is as sticky sweet as cotton candy.",
-      "evolution": { "next": [["685", "trade holding Whipped Dream"]] },
+      "evolution": { "next": ["685", "trade holding Whipped Dream"] },
       "profile": {
         "height": "0.4 m",
         "weight": "3.5 kg",
@@ -25141,7 +25141,7 @@ export const pokemons = [
       },
       "species": "Revolving Pokémon",
       "description": "When exchanging information with others of its kind, it flashes the light-emitting spots on its body in a complex rhythm.",
-      "evolution": { "next": [["687", "Level 30, holding console upside down"]] },
+      "evolution": { "next": ["687", "Level 30, holding console upside down"] },
       "profile": {
         "height": "0.4 m",
         "weight": "3.5 kg",
@@ -25215,7 +25215,7 @@ export const pokemons = [
       },
       "species": "Two-Handed Pokémon",
       "description": "They stretch and then contract, yanking their rocks along with them in bold hops. They eat seaweed that washes up on the shoreline.",
-      "evolution": { "next": [["689", "Level 39"]] },
+      "evolution": { "next": ["689", "Level 39"] },
       "profile": {
         "height": "0.5 m",
         "weight": "31 kg",
@@ -25289,7 +25289,7 @@ export const pokemons = [
       },
       "species": "Mock Kelp Pokémon",
       "description": "It’s not good at swimming, so it clings to the seaweed. In the Alola region, it’s often found near Dhelmise.",
-      "evolution": { "next": [["691", "Level 48"]] },
+      "evolution": { "next": ["691", "Level 48"] },
       "profile": {
         "height": "0.5 m",
         "weight": "7.3 kg",
@@ -25363,12 +25363,12 @@ export const pokemons = [
       },
       "species": "Water Gun Pokémon",
       "description": "It moves around by jetting water from its right pincer. It has a poor sense of balance, so it’s terrible at swimming straight.",
-      "evolution": { "next": [["693", "Level 37"]] },
+      "evolution": { "next": ["693", "Level 37"] },
       "profile": {
         "height": "0.5 m",
         "weight": "8.3 kg",
         "egg": ["Water 1", "Water 3"],
-        "ability": [["Mega Launcher", "false"]],
+        "ability": ["Mega Launcher", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -25401,7 +25401,7 @@ export const pokemons = [
         "height": "1.3 m",
         "weight": "35.3 kg",
         "egg": ["Water 1", "Water 3"],
-        "ability": [["Mega Launcher", "false"]],
+        "ability": ["Mega Launcher", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -25429,7 +25429,7 @@ export const pokemons = [
       },
       "species": "Generator Pokémon",
       "description": "The frills on either side of its head have cells that generate electricity when exposed to sunlight.",
-      "evolution": { "next": [["695", "use Sun Stone"]] },
+      "evolution": { "next": ["695", "use Sun Stone"] },
       "profile": {
         "height": "0.5 m",
         "weight": "6 kg",
@@ -25503,7 +25503,7 @@ export const pokemons = [
       },
       "species": "Royal Heir Pokémon",
       "description": "Tyrunt is spoiled and selfish. It may just be trying to frolic, but sometimes the ones it’s trying to frolic with are gravely injured.",
-      "evolution": { "next": [["697", "Level 39, Daytime"]] },
+      "evolution": { "next": ["697", "Level 39, Daytime"] },
       "profile": {
         "height": "0.8 m",
         "weight": "26 kg",
@@ -25575,7 +25575,7 @@ export const pokemons = [
       },
       "species": "Tundra Pokémon",
       "description": "Amaura was restored successfully, but it’s not expected to live long because of the heat of the current environment.",
-      "evolution": { "next": [["699", "Level 39, Nighttime"]] },
+      "evolution": { "next": ["699", "Level 39, Nighttime"] },
       "profile": {
         "height": "1.3 m",
         "weight": "25.2 kg",
@@ -25793,7 +25793,7 @@ export const pokemons = [
       },
       "species": "Soft Tissue Pokémon",
       "description": "Its body is mostly water. If it dries out, it will die, so it’s always sitting with perfect stillness in the shade.",
-      "evolution": { "next": [["705", "Level 40"]] },
+      "evolution": { "next": ["705", "Level 40"] },
       "profile": {
         "height": "0.3 m",
         "weight": "2.8 kg",
@@ -25832,7 +25832,7 @@ export const pokemons = [
       "description": "Its entire body is covered with gooey mucus that can dissolve anything. Be sure to put gloves on if you’re going to touch it.",
       "evolution": {
         "prev": ["704", "Level 40"],
-        "next": [["706", "Level 50, during rain"]]
+        "next": ["706", "Level 50, during rain"]
       },
       "profile": {
         "height": "0.8 m",
@@ -25943,7 +25943,7 @@ export const pokemons = [
       },
       "species": "Stump Pokémon",
       "description": "An unknown spirit came to lodge in a tree stump, creating this Pokémon. A cure-all can be made from an infusion of its green leaves.",
-      "evolution": { "next": [["709", "Trade"]] },
+      "evolution": { "next": ["709", "Trade"] },
       "profile": {
         "height": "0.4 m",
         "weight": "7 kg",
@@ -26017,7 +26017,7 @@ export const pokemons = [
       },
       "species": "Pumpkin Pokémon",
       "description": "It is said to carry wandering spirits to the place where they belong so they can move on.",
-      "evolution": { "next": [["711", "Trade"]] },
+      "evolution": { "next": ["711", "Trade"] },
       "profile": {
         "height": "0.4 m",
         "weight": "5 kg",
@@ -26091,7 +26091,7 @@ export const pokemons = [
       },
       "species": "Ice Chunk Pokémon",
       "description": "Using air of -150 degrees Fahrenheit, they freeze opponents solid. They live in herds above the snow line on mountains.",
-      "evolution": { "next": [["713", "Level 37"]] },
+      "evolution": { "next": ["713", "Level 37"] },
       "profile": {
         "height": "1 m",
         "weight": "99.5 kg",
@@ -26165,7 +26165,7 @@ export const pokemons = [
       },
       "species": "Sound Wave Pokémon",
       "description": "It flies around in search of fruit to eat. It uses ultrasonic waves to detect which fruits are ripe.",
-      "evolution": { "next": [["715", "Level 48"]] },
+      "evolution": { "next": ["715", "Level 48"] },
       "profile": {
         "height": "0.5 m",
         "weight": "8 kg",
@@ -26244,7 +26244,7 @@ export const pokemons = [
         "height": "3 m",
         "weight": "215 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Fairy Aura", "false"]],
+        "ability": ["Fairy Aura", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -26277,7 +26277,7 @@ export const pokemons = [
         "height": "5.8 m",
         "weight": "203 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Dark Aura", "false"]],
+        "ability": ["Dark Aura", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -26310,7 +26310,7 @@ export const pokemons = [
         "height": "5 m",
         "weight": "305 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Aura Break", "false"]],
+        "ability": ["Aura Break", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -26343,7 +26343,7 @@ export const pokemons = [
         "height": "0.7 m",
         "weight": "8.8 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Clear Body", "false"]],
+        "ability": ["Clear Body", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -26376,7 +26376,7 @@ export const pokemons = [
         "height": "0.5 m",
         "weight": "9 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Magician", "false"]],
+        "ability": ["Magician", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -26409,7 +26409,7 @@ export const pokemons = [
         "height": "1.7 m",
         "weight": "195 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Water Absorb", "false"]],
+        "ability": ["Water Absorb", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -26437,7 +26437,7 @@ export const pokemons = [
       },
       "species": "Grass Quill Pokémon",
       "description": "It feels relaxed in tight, dark places and has been known to use its Trainer’s pocket or bag as a nest.",
-      "evolution": { "next": [["723", "Level 17"]] },
+      "evolution": { "next": ["723", "Level 17"] },
       "profile": {
         "height": "0.3 m",
         "weight": "1.5 kg",
@@ -26473,7 +26473,7 @@ export const pokemons = [
       },
       "species": "Blade Quill Pokémon",
       "description": "Supremely sensitive to the presence of others, it can detect opponents standing behind it, flinging its sharp feathers to take them out.",
-      "evolution": { "prev": ["722", "Level 17"], "next": [["724", "Level 34"]] },
+      "evolution": { "prev": ["722", "Level 17"], "next": ["724", "Level 34"] },
       "profile": {
         "height": "0.7 m",
         "weight": "16 kg",
@@ -26545,7 +26545,7 @@ export const pokemons = [
       },
       "species": "Fire Cat Pokémon",
       "description": "Its coat regrows twice a year. When the time comes, Litten sets its own body on fire and burns away the old fur.",
-      "evolution": { "next": [["726", "Level 17"]] },
+      "evolution": { "next": ["726", "Level 17"] },
       "profile": {
         "height": "0.4 m",
         "weight": "4.3 kg",
@@ -26581,7 +26581,7 @@ export const pokemons = [
       },
       "species": "Fire Cat Pokémon",
       "description": "When its mane is standing on end, you can tell it’s feeling good. When it isn’t feeling well, its fur will lie down flat.",
-      "evolution": { "prev": ["725", "Level 17"], "next": [["727", "Level 34"]] },
+      "evolution": { "prev": ["725", "Level 17"], "next": ["727", "Level 34"] },
       "profile": {
         "height": "0.7 m",
         "weight": "25 kg",
@@ -26653,7 +26653,7 @@ export const pokemons = [
       },
       "species": "Sea Lion Pokémon",
       "description": "Popplio gets on top of its bouncy water balloons to jump higher. It’s quite the acrobatic fighter!",
-      "evolution": { "next": [["729", "Level 17"]] },
+      "evolution": { "next": ["729", "Level 17"] },
       "profile": {
         "height": "0.4 m",
         "weight": "7.5 kg",
@@ -26689,7 +26689,7 @@ export const pokemons = [
       },
       "species": "Pop Star Pokémon",
       "description": "It attacks by smacking its enemies with the exploding water balloons that it creates.",
-      "evolution": { "prev": ["728", "Level 17"], "next": [["730", "Level 34"]] },
+      "evolution": { "prev": ["728", "Level 17"], "next": ["730", "Level 34"] },
       "profile": {
         "height": "0.6 m",
         "weight": "17.5 kg",
@@ -26761,7 +26761,7 @@ export const pokemons = [
       },
       "species": "Woodpecker Pokémon",
       "description": "It may look spindly, but its neck muscles are heavy-duty. It can peck at a tree 16 times per second!",
-      "evolution": { "next": [["732", "Level 14"]] },
+      "evolution": { "next": ["732", "Level 14"] },
       "profile": {
         "height": "0.3 m",
         "weight": "1.2 kg",
@@ -26798,7 +26798,7 @@ export const pokemons = [
       },
       "species": "Bugle Beak Pokémon",
       "description": "From its mouth, it fires the seeds of berries it has eaten. The scattered seeds give rise to new plants.",
-      "evolution": { "prev": ["731", "Level 14"], "next": [["733", "Level 28"]] },
+      "evolution": { "prev": ["731", "Level 14"], "next": ["733", "Level 28"] },
       "profile": {
         "height": "0.6 m",
         "weight": "14.8 kg",
@@ -26872,7 +26872,7 @@ export const pokemons = [
       },
       "species": "Loitering Pokémon",
       "description": "Although it will eat anything, it prefers fresh living things, so it marches down streets in search of prey.",
-      "evolution": { "next": [["735", "Level 20, Daytime"]] },
+      "evolution": { "next": ["735", "Level 20, Daytime"] },
       "profile": {
         "height": "0.4 m",
         "weight": "6 kg",
@@ -26946,12 +26946,12 @@ export const pokemons = [
       },
       "species": "Larva Pokémon",
       "description": "It spits a sticky thread to stop opponents in their tracks, and then it grabs them in its sharp, sturdy mandibles to take them down.",
-      "evolution": { "next": [["737", "Level 20"]] },
+      "evolution": { "next": ["737", "Level 20"] },
       "profile": {
         "height": "0.4 m",
         "weight": "4.4 kg",
         "egg": ["Bug"],
-        "ability": [["Swarm", "false"]],
+        "ability": ["Swarm", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -26981,13 +26981,13 @@ export const pokemons = [
       "description": "Its stout shell provides excellent defense from attacks. It uses electricity on persistent opponents.",
       "evolution": {
         "prev": ["736", "Level 20"],
-        "next": [["738", "Level up in a Magnetic Field area"]]
+        "next": ["738", "Level up in a Magnetic Field area"]
       },
       "profile": {
         "height": "0.5 m",
         "weight": "10.5 kg",
         "egg": ["Bug"],
-        "ability": [["Battery", "false"]],
+        "ability": ["Battery", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -27025,7 +27025,7 @@ export const pokemons = [
         "height": "1.5 m",
         "weight": "45 kg",
         "egg": ["Bug"],
-        "ability": [["Levitate", "false"]],
+        "ability": ["Levitate", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -27053,7 +27053,7 @@ export const pokemons = [
       },
       "species": "Boxing Pokémon",
       "description": "Crabrawler has been known to mistake Exeggutor for a coconut tree and climb it. The enraged Exeggutor shakes it off and stomps it.",
-      "evolution": { "next": [["740", "at Mount Lanakila"]] },
+      "evolution": { "next": ["740", "at Mount Lanakila"] },
       "profile": {
         "height": "0.6 m",
         "weight": "7 kg",
@@ -27132,7 +27132,7 @@ export const pokemons = [
         "height": "0.6 m",
         "weight": "3.4 kg",
         "egg": ["Flying"],
-        "ability": [["Dancer", "false"]],
+        "ability": ["Dancer", "false"],
         "gender": "25:75"
       },
       "image": {
@@ -27160,7 +27160,7 @@ export const pokemons = [
       },
       "species": "Bee Fly Pokémon",
       "description": "Cutiefly can pick up the auras of living things. It skillfully reads those auras to predict its foes’ movements and make fools of them.",
-      "evolution": { "next": [["743", "Level 25"]] },
+      "evolution": { "next": ["743", "Level 25"] },
       "profile": {
         "height": "0.1 m",
         "weight": "0.2 kg",
@@ -27234,7 +27234,7 @@ export const pokemons = [
       },
       "species": "Puppy Pokémon",
       "description": "When it rubs the rocks on its neck against you, that’s proof of its love for you. However, the rocks are sharp, so the gesture is quite painful!",
-      "evolution": { "next": [["745", "Level 25"]] },
+      "evolution": { "next": ["745", "Level 25"] },
       "profile": {
         "height": "0.5 m",
         "weight": "9.2 kg",
@@ -27313,7 +27313,7 @@ export const pokemons = [
         "height": "0.2 m",
         "weight": "0.3 kg",
         "egg": ["Water 2"],
-        "ability": [["Schooling", "false"]],
+        "ability": ["Schooling", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -27341,7 +27341,7 @@ export const pokemons = [
       },
       "species": "Brutal Star Pokémon",
       "description": "Aside from its head, its body parts regenerate quickly if they’re cut off. After a good night’s sleep, Mareanie is back to normal.",
-      "evolution": { "next": [["748", "Level 38"]] },
+      "evolution": { "next": ["748", "Level 38"] },
       "profile": {
         "height": "0.4 m",
         "weight": "8 kg",
@@ -27415,7 +27415,7 @@ export const pokemons = [
       },
       "species": "Donkey Pokémon",
       "description": "Possessing mighty power, Mudbray can be loaded with 50 times its own body weight and will be totally fine.",
-      "evolution": { "next": [["750", "Level 30"]] },
+      "evolution": { "next": ["750", "Level 30"] },
       "profile": {
         "height": "1 m",
         "weight": "110 kg",
@@ -27489,7 +27489,7 @@ export const pokemons = [
       },
       "species": "Water Bubble Pokémon",
       "description": "It can only breathe oxygen that has dissolved in water, so it wears a water bubble on its head when it walks around on land.",
-      "evolution": { "next": [["752", "Level 22"]] },
+      "evolution": { "next": ["752", "Level 22"] },
       "profile": {
         "height": "0.3 m",
         "weight": "4 kg",
@@ -27561,7 +27561,7 @@ export const pokemons = [
       },
       "species": "Sickle Grass Pokémon",
       "description": "It loves the sunshine. When it basks in the sunlight regularly, it grows up with vivid coloration.",
-      "evolution": { "next": [["754", "Level 34, Daytime"]] },
+      "evolution": { "next": ["754", "Level 34, Daytime"] },
       "profile": {
         "height": "0.3 m",
         "weight": "1.5 kg",
@@ -27633,7 +27633,7 @@ export const pokemons = [
       },
       "species": "Illuminating Pokémon",
       "description": "It likes damp dark places. When night falls, the spores filling the caps of its mushrooms glow.",
-      "evolution": { "next": [["756", "Level 24"]] },
+      "evolution": { "next": ["756", "Level 24"] },
       "profile": {
         "height": "0.2 m",
         "weight": "1.5 kg",
@@ -27707,7 +27707,7 @@ export const pokemons = [
       },
       "species": "Toxic Lizard Pokémon",
       "description": "It weakens opponents and sends them reeling with its poisonous gas. Salandit doesn’t deal well with Spinda, since it’s always reeling.",
-      "evolution": { "next": [["758", "Level 33, Female"]] },
+      "evolution": { "next": ["758", "Level 33, Female"] },
       "profile": {
         "height": "0.6 m",
         "weight": "4.8 kg",
@@ -27779,7 +27779,7 @@ export const pokemons = [
       },
       "species": "Flailing Pokémon",
       "description": "Stufful hates to be hugged or touched in any way. It will squirm, thrash, and resist with amazing power.",
-      "evolution": { "next": [["760", "Level 27"]] },
+      "evolution": { "next": ["760", "Level 27"] },
       "profile": {
         "height": "0.5 m",
         "weight": "6.8 kg",
@@ -27853,7 +27853,7 @@ export const pokemons = [
       },
       "species": "Fruit Pokémon",
       "description": "It tries to resist being swallowed by a bird Pokémon by spinning the sepals on its head. It’s usually a fruitless attempt.",
-      "evolution": { "next": [["762", "Level 18"]] },
+      "evolution": { "next": ["762", "Level 18"] },
       "profile": {
         "height": "0.3 m",
         "weight": "3.2 kg",
@@ -27892,7 +27892,7 @@ export const pokemons = [
       "description": "It bounces around, swinging the sepals on its head with abandon. They’re quite painful when they smack you!",
       "evolution": {
         "prev": ["761", "Level 18"],
-        "next": [["763", "after Stomp learned"]]
+        "next": ["763", "after Stomp learned"]
       },
       "profile": {
         "height": "0.7 m",
@@ -28077,12 +28077,12 @@ export const pokemons = [
       },
       "species": "Turn Tail Pokémon",
       "description": "An astonishingly cowardly Pokémon, Wimpod will whir its legs at high speeds to run away if anything comes near it.",
-      "evolution": { "next": [["768", "Level 30"]] },
+      "evolution": { "next": ["768", "Level 30"] },
       "profile": {
         "height": "0.5 m",
         "weight": "12 kg",
         "egg": ["Bug", "Water 3"],
-        "ability": [["Wimp Out", "false"]],
+        "ability": ["Wimp Out", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -28115,7 +28115,7 @@ export const pokemons = [
         "height": "2 m",
         "weight": "108 kg",
         "egg": ["Bug", "Water 3"],
-        "ability": [["Emergency Exit", "false"]],
+        "ability": ["Emergency Exit", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -28143,7 +28143,7 @@ export const pokemons = [
       },
       "species": "Sand Heap Pokémon",
       "description": "If you build sand mounds when you’re playing, destroy them before you go home, or they may get possessed and become Sandygast.",
-      "evolution": { "next": [["770", "Level 42"]] },
+      "evolution": { "next": ["770", "Level 42"] },
       "profile": {
         "height": "0.5 m",
         "weight": "70 kg",
@@ -28251,12 +28251,12 @@ export const pokemons = [
       },
       "species": "Synthetic Pokémon",
       "description": "There’s danger of its going on a rampage, so its true power is sealed away beneath its control mask.",
-      "evolution": { "next": [["773", "high Friendship"]] },
+      "evolution": { "next": ["773", "high Friendship"] },
       "profile": {
         "height": "1.9 m",
         "weight": "120.5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Battle Armor", "false"]],
+        "ability": ["Battle Armor", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -28289,7 +28289,7 @@ export const pokemons = [
         "height": "2.3 m",
         "weight": "100.5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Rks System", "false"]],
+        "ability": ["Rks System", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -28322,7 +28322,7 @@ export const pokemons = [
         "height": "0.3 m",
         "weight": "40 kg",
         "egg": ["Mineral"],
-        "ability": [["Shields Down", "false"]],
+        "ability": ["Shields Down", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -28355,7 +28355,7 @@ export const pokemons = [
         "height": "0.4 m",
         "weight": "19.9 kg",
         "egg": ["Field"],
-        "ability": [["Comatose", "false"]],
+        "ability": ["Comatose", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -28388,7 +28388,7 @@ export const pokemons = [
         "height": "2 m",
         "weight": "212 kg",
         "egg": ["Monster", "Dragon"],
-        "ability": [["Shell Armor", "false"]],
+        "ability": ["Shell Armor", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -28458,7 +28458,7 @@ export const pokemons = [
         "height": "0.2 m",
         "weight": "0.7 kg",
         "egg": ["Amorphous"],
-        "ability": [["Disguise", "false"]],
+        "ability": ["Disguise", "false"],
         "gender": "50:50"
       },
       "image": {
@@ -28565,7 +28565,7 @@ export const pokemons = [
         "height": "3.9 m",
         "weight": "210 kg",
         "egg": ["Mineral"],
-        "ability": [["Steelworker", "false"]],
+        "ability": ["Steelworker", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -28593,7 +28593,7 @@ export const pokemons = [
       },
       "species": "Scaly Pokémon",
       "description": "It will never show an enemy its back in battle. Ancient warriors liked Jangmo-o for its valiant disposition and made it one of their own.",
-      "evolution": { "next": [["783", "Level 35"]] },
+      "evolution": { "next": ["783", "Level 35"] },
       "profile": {
         "height": "0.6 m",
         "weight": "29.7 kg",
@@ -28630,7 +28630,7 @@ export const pokemons = [
       },
       "species": "Scaly Pokémon",
       "description": "The scales it sheds can be molded and processed to make pots and pans. They conduct heat well, so they’re a popular item.",
-      "evolution": { "prev": ["782", "Level 35"], "next": [["784", "Level 45"]] },
+      "evolution": { "prev": ["782", "Level 35"], "next": ["784", "Level 45"] },
       "profile": {
         "height": "1.2 m",
         "weight": "47 kg",
@@ -28848,12 +28848,12 @@ export const pokemons = [
       },
       "species": "Nebula Pokémon",
       "description": "Whether or not it’s a Pokémon from this world is a mystery. When it’s in a jam, it warps away to a safe place to hide.",
-      "evolution": { "next": [["790", "Level 43"]] },
+      "evolution": { "next": ["790", "Level 43"] },
       "profile": {
         "height": "0.2 m",
         "weight": "0.1 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Unaware", "false"]],
+        "ability": ["Unaware", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -28892,7 +28892,7 @@ export const pokemons = [
         "height": "0.1 m",
         "weight": "999.9 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Sturdy", "false"]],
+        "ability": ["Sturdy", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -28925,7 +28925,7 @@ export const pokemons = [
         "height": "3.4 m",
         "weight": "230 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Full Metal Body", "false"]],
+        "ability": ["Full Metal Body", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -28958,7 +28958,7 @@ export const pokemons = [
         "height": "4 m",
         "weight": "120 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Shadow Shield", "false"]],
+        "ability": ["Shadow Shield", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -28991,7 +28991,7 @@ export const pokemons = [
         "height": "1.2 m",
         "weight": "55.5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29024,7 +29024,7 @@ export const pokemons = [
         "height": "2.4 m",
         "weight": "333.6 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29057,7 +29057,7 @@ export const pokemons = [
         "height": "1.8 m",
         "weight": "25 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29090,7 +29090,7 @@ export const pokemons = [
         "height": "3.8 m",
         "weight": "100 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29123,7 +29123,7 @@ export const pokemons = [
         "height": "9.2 m",
         "weight": "999.9 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29156,7 +29156,7 @@ export const pokemons = [
         "height": "0.3 m",
         "weight": "0.1 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29189,7 +29189,7 @@ export const pokemons = [
         "height": "5.5 m",
         "weight": "888 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29222,7 +29222,7 @@ export const pokemons = [
         "height": "2.4 m",
         "weight": "230 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Prism Armor", "false"]],
+        "ability": ["Prism Armor", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29255,7 +29255,7 @@ export const pokemons = [
         "height": "1 m",
         "weight": "80.5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Soul Heart", "false"]],
+        "ability": ["Soul Heart", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29288,7 +29288,7 @@ export const pokemons = [
         "height": "0.7 m",
         "weight": "22.2 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Technician", "false"]],
+        "ability": ["Technician", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29316,12 +29316,12 @@ export const pokemons = [
       },
       "species": "Poison Pin Pokémon",
       "description": "An Ultra Beast that lives in a different world, it cackles wildly as it sprays its opponents with poison from the needles on its head.",
-      "evolution": { "next": [["804", "after Dragon Pulse learned"]] },
+      "evolution": { "next": ["804", "after Dragon Pulse learned"] },
       "profile": {
         "height": "0.6 m",
         "weight": "1.8 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29354,7 +29354,7 @@ export const pokemons = [
         "height": "3.6 m",
         "weight": "150 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29387,7 +29387,7 @@ export const pokemons = [
         "height": "5.5 m",
         "weight": "820 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29420,7 +29420,7 @@ export const pokemons = [
         "height": "1.8 m",
         "weight": "13 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Beast Boost", "false"]],
+        "ability": ["Beast Boost", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29453,7 +29453,7 @@ export const pokemons = [
         "height": "1.5 m",
         "weight": "44.5 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Volt Absorb", "false"]],
+        "ability": ["Volt Absorb", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29481,12 +29481,12 @@ export const pokemons = [
       },
       "species": "Hex Nut Pokémon",
       "description": "They live as a group, but when the time comes, one strong Meltan will absorb all the others and evolve.",
-      "evolution": { "next": [["809", "Pokémon GO only, 400 Meltan Candies"]] },
+      "evolution": { "next": ["809", "Pokémon GO only, 400 Meltan Candies"] },
       "profile": {
         "height": "0.2 m",
         "weight": "8.0 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Magnet Pull", "false"]],
+        "ability": ["Magnet Pull", "false"],
         "gender": "Genderless"
       },
       "image": {
@@ -29519,7 +29519,7 @@ export const pokemons = [
         "height": "2.5 m",
         "weight": "800.0 kg",
         "egg": ["Undiscovered"],
-        "ability": [["Iron Fist", "false"]],
+        "ability": ["Iron Fist", "false"],
         "gender": "Genderless"
       },
       "image": {
