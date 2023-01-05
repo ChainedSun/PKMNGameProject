@@ -20,11 +20,16 @@ const aTwo = document.getElementById("a2")
 const hA = document.getElementById("ha")
 const evoContainers = document.querySelectorAll("#evolutionStageContainer")
 
+const evoEevee = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "eevee" || undefined)
+const evo6 = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "6" || undefined)
+const evo5 = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "5" || undefined)
+const evo4 = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "4" || undefined)
+const evo3 = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "3" || undefined)
 const evo2 = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "2" || undefined)
 const evo1 = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "1" || undefined)
 const evoNA = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "0" || undefined)
-console.log(evo2,evo1,evoNA)
 
+const statsTable = document.getElementById("statsTable")
 
 import { types } from "../setLocalStorage.js";
 import { pokemons } from "../setLocalStorage.js";
@@ -481,6 +486,7 @@ function populateDetails(card) {
             newProfile["species"] = e["species"]
             setSpeciesDetails(newProfile)
             setEvolutionInfo(idVal, e["evolution"])
+            setBaseStatsDetails(e["base"])
             nameDetails.textContent = e["name"]["english"]
           }
         }
@@ -734,7 +740,7 @@ function setEvolutionInfo(pokemonId, evoProfile = {}) {
   // let levelArr = []
   let imagesArr = []
   let type = 0
-  // console.log(evoProfile)
+  //console.log(evoProfile)
   let firstEvo
   let nextEvo
   let lastEvo
@@ -744,72 +750,68 @@ function setEvolutionInfo(pokemonId, evoProfile = {}) {
     evoNA.classList.remove("hidden")
     evo1.classList.add("hidden")
     evo2.classList.add("hidden")
+    evo3.classList.add("hidden")
+    evo4.classList.add("hidden")
     //console.log(typeof(evo2), typeof(evo1), typeof(evoNA))
   } else if(Object.keys(evoProfile).length >= 1) {
     //console.log("here")
-    if(true) {
-      if(evoProfile.hasOwnProperty("prev") && evoProfile.hasOwnProperty("next")) {
-        //console.log(evoProfile["prev"], evoProfile["next"])
+    if(evoProfile.hasOwnProperty("prev") && evoProfile.hasOwnProperty("next")) {
+      //console.log(evoProfile["prev"], evoProfile["next"])
+      evoNA.classList.add("hidden")
+      evo1.classList.add("hidden")
+      evo2.classList.remove("hidden")
+      nextEvo = evoProfile
+      firstEvo = requestEvolutionInformation(nextEvo["prev"][0])
+      lastEvo = requestEvolutionInformation(nextEvo["next"][0])
+      type = 2
+      indexArr.push(nextEvo["prev"][0], firstEvo["next"][0], nextEvo["next"][0])
+      // console.log(indexArr)
+    } 
+    
+    else if(evoProfile.hasOwnProperty("prev") && !evoProfile.hasOwnProperty("next")) {
+      lastEvo = evoProfile
+      nextEvo = requestEvolutionInformation(evoProfile["prev"][0])
+      if(Object.keys(nextEvo).length > 1) {
         evoNA.classList.add("hidden")
         evo1.classList.add("hidden")
         evo2.classList.remove("hidden")
-        nextEvo = evoProfile
         firstEvo = requestEvolutionInformation(nextEvo["prev"][0])
-        lastEvo = requestEvolutionInformation(nextEvo["next"][0])
-        type = 2
         indexArr.push(nextEvo["prev"][0], firstEvo["next"][0], nextEvo["next"][0])
-        // console.log(indexArr)
-      } 
-      
-      else if(evoProfile.hasOwnProperty("prev") && !evoProfile.hasOwnProperty("next")) {
-        lastEvo = evoProfile
-        nextEvo = requestEvolutionInformation(evoProfile["prev"][0])
-        if(Object.keys(nextEvo).length > 1) {
-          evoNA.classList.add("hidden")
-          evo1.classList.add("hidden")
-          evo2.classList.remove("hidden")
-          firstEvo = requestEvolutionInformation(nextEvo["prev"][0])
-          indexArr.push(nextEvo["prev"][0], firstEvo["next"][0], nextEvo["next"][0])
-          type = 2
-        } else {
-          evoNA.classList.add("hidden")
-          evo1.classList.remove("hidden")
-          evo2.classList.add("hidden")
-          firstEvo = nextEvo
-          indexArr.push(lastEvo["prev"][0], firstEvo["next"][0])
-          type = 1
-        }
-        // console.log(indexArr)
-      } 
-      
-      else if(!evoProfile.hasOwnProperty("prev") && evoProfile.hasOwnProperty("next")) {
-        firstEvo = evoProfile
-        nextEvo = requestEvolutionInformation(evoProfile["next"][0])
-        if(Object.keys(nextEvo).length > 1) {
-          evoNA.classList.add("hidden")
-          evo1.classList.add("hidden")
-          evo2.classList.remove("hidden")
-          lastEvo = requestEvolutionInformation(nextEvo["next"][0])
-          indexArr.push(nextEvo["prev"][0], firstEvo["next"][0], nextEvo["next"][0])
-          type = 2
-        } else {
-          evoNA.classList.add("hidden")
-          evo1.classList.remove("hidden")
-          evo2.classList.add("hidden")
-          lastEvo = requestEvolutionInformation(firstEvo["next"][0])
-          indexArr.push(lastEvo["prev"][0], firstEvo["next"][0])
-          type = 1
-        }
-        // console.log(indexArr)
+        type = 2
+      } else {
+        evoNA.classList.add("hidden")
+        evo1.classList.remove("hidden")
+        evo2.classList.add("hidden")
+        firstEvo = nextEvo
+        indexArr.push(lastEvo["prev"][0], firstEvo["next"][0])
+        type = 1
       }
-
-      
-
-
-    } else {
-      console.log("here")
+      // console.log(indexArr)
+    } 
+    
+    else if(!evoProfile.hasOwnProperty("prev") && evoProfile.hasOwnProperty("next")) {
+      firstEvo = evoProfile
+      nextEvo = requestEvolutionInformation(evoProfile["next"][0])
+      if(Object.keys(nextEvo).length > 1) {
+        evoNA.classList.add("hidden")
+        evo1.classList.add("hidden")
+        evo2.classList.remove("hidden")
+        lastEvo = requestEvolutionInformation(nextEvo["next"][0])
+        indexArr.push(nextEvo["prev"][0], firstEvo["next"][0], nextEvo["next"][0])
+        type = 2
+      } else {
+        evoNA.classList.add("hidden")
+        evo1.classList.remove("hidden")
+        evo2.classList.add("hidden")
+        lastEvo = requestEvolutionInformation(firstEvo["next"][0])
+        indexArr.push(lastEvo["prev"][0], firstEvo["next"][0])
+        type = 1
+      }
+      // console.log(indexArr)
     }
-    //console.log(evoArr)
+
+    
+    console.log(lastEvo)
     // let newArr = Object.entries(evoProfile).map(([key, value]) => [key, value])
     // for(let evImage of evolutionImages) {
     //   if (evImage.getAttribute("data-stage") === "0") {
@@ -821,37 +823,10 @@ function setEvolutionInfo(pokemonId, evoProfile = {}) {
 
   switch(type) {
     case 0:
-      [...evo2.children].forEach(child => {
-        if(child.id == "evolutionStage") {
-          [...child.children].forEach(c => {
-            child.removeChild(c)
-          })
-        }
-      })
+      cleanOutChildren()
       break;
     case 1:
-      break;
-    case 2:
-      // let containerChildren = [...evo2.children]
-      // let newArr = []
-      // containerChildren.forEach(child => {
-      //   if(child.id == "evolutionStage") {
-      //     newArr.push(child)
-      //   }
-      // })
-      // for(let i = 0; i < newArr.length; i++) {
-      //   let childList = [...newArr[i].children]
-        
-      //   console.log(childList)
-      //   childList.forEach(child => {
-      //     if (child.tagName == "IMG") {
-      //       if(child.getAttribute("data-stage") == i) {
-      //         child.src = evoImageFilePathLocal + indexArr[i] + imageFileExtension
-      //       }
-      //     }
-      //   })
-      // }
-      let containerChildren = [...evo2.children]
+      let containerChildren = [...evo1.children]
       let newArr = []
       containerChildren.forEach(child => {
         if(child.id == "evolutionStage") {
@@ -869,7 +844,8 @@ function setEvolutionInfo(pokemonId, evoProfile = {}) {
                 newIndex = Number.parseInt(newIndex)
                 if(newIndex == indexArr[i]) {
                   newEntry = entry.cloneNode(true)
-                  newEntry.classList.remove("entrySelected")
+                  newEntry.classList.remove("searchHidden")
+                  newEntry.classList.remove("hidden")
                   newEntry.addEventListener("click", function(event) {
                     pokemonCardSelected(event.target)
                   })
@@ -883,8 +859,43 @@ function setEvolutionInfo(pokemonId, evoProfile = {}) {
         })
         newArr[i].appendChild(newEntry)
       }
+    break;
+    case 2:
+      let evo2ContainerChildren = [...evo2.children]
+      let evo2NewArr = []
+      evo2ContainerChildren.forEach(child => {
+        if(child.id == "evolutionStage") {
+          evo2NewArr.push(child)
+        }
+      })
+      for(let i = 0; i < evo2NewArr.length; i++) {
+        let newEntry = null
+        pokemonEntries.forEach(entry => {
+          if(newEntry === null) {
+            [...entry.children].forEach(child => {
+              if(child.id == "pokedexIndex") {
+                let newIndex = child.textContent
+                newIndex = newIndex.replace("#","")
+                newIndex = Number.parseInt(newIndex)
+                if(newIndex == indexArr[i]) {
+                  newEntry = entry.cloneNode(true)
+                  newEntry.classList.remove("searchHidden")
+                  newEntry.classList.remove("hidden")
+                  newEntry.addEventListener("click", function(event) {
+                    pokemonCardSelected(event.target)
+                  })
+                  return
+                }
+              }
+            })
+          } else {
+            return
+          }
+        })
+        evo2NewArr[i].appendChild(newEntry)
+      }
 
-      break;
+    break;
   }
   
 
@@ -900,12 +911,47 @@ function requestEvolutionInformation(pokemonIndex) {
   return newObj
 }
 
+function cleanOutChildren(childList = null) {
+  if(childList === null) {
+    cleanOutChildren([...evoEevee.children])
+    cleanOutChildren([...evo6.children])
+    cleanOutChildren([...evo5.children])
+    cleanOutChildren([...evo4.children])
+    cleanOutChildren([...evo3.children])
+    cleanOutChildren([...evo2.children])
+    cleanOutChildren([...evo1.children])
+  } else {
+    childList.forEach(child => {
+      if(child.id == "evolutionStage") {
+        [...child.children].forEach(c => {
+          child.removeChild(c)
+        })
+      }
+    })
+  }
+}
 
 
-
-function setBaseStatsDetails(textVal = "") {
-  let descNode = getDetailsValueContainer("stats")
-
+function setBaseStatsDetails(baseStats = "") {
+  console.log(baseStats)
+  for(let key of Object.keys(baseStats)) {
+    let tableElements = getTableElements(key,"id")
+    tableElements.forEach(el => {
+      //console.log(el.id)
+      if(el.id === "baseValue") {
+        el.textContent = baseStats[key]
+      } else if(el.id === "totalValue") {
+        let sum = 0
+        for(let keyVal of Object.keys(baseStats)) {
+          sum += Number.parseInt(baseStats[keyVal])
+        }
+        //console.log(sum)
+        el.textContent = sum
+        //console.log(typeof(sum))
+      }
+    })
+    //console.log(tableElements)
+  }
 }
 
 /**
@@ -945,6 +991,37 @@ function getDetailsValueContainer(dataName) {
       retNode = val;
   })
   return retNode;
+}
+
+function getTableElements(sectionId, attributeName, attributeValue = null) {
+  let retVal = []
+  let childList = getChildList(statsTable)
+  childList.forEach(child => {
+    //console.log(child.tagName)
+    if(child.tagName == "TBODY") {
+      let tBodyChildren = getChildList(child)
+      tBodyChildren.forEach(TBC => {
+        if(TBC.getAttribute("data-section").toLowerCase() === sectionId.toLowerCase()) {
+          let tbcList = getChildList(TBC)
+          tbcList.forEach(tbcChild => {
+            retVal.push(tbcChild)
+          })
+        }
+      })
+    } else if(child.tagName == "TFOOT") {
+      //console.log("Child:", child)
+      getChildList(child).forEach(footChild => {
+        if(footChild.id === "total") {
+          getChildList(footChild).forEach(fGC => {
+            if(fGC.id === "totalValue")
+            retVal.push(fGC)
+          })
+        }
+      })
+    }
+    
+  })
+  return retVal
 }
 
 function calculateTypeEffect(effectCode) {
@@ -991,6 +1068,10 @@ function getFirstUp(word) {
   text[0] = text[0].toUpperCase()
   text = text.join("")
   return text
+}
+
+function getChildList(nodeVal) {
+  return [...nodeVal.children]
 }
 
 function clearDetails() {
@@ -1091,6 +1172,10 @@ function makeSelectionVisible() {
 function showDetails(value) {
   //value is the pokemon card
 
+}
+
+function getEntryData() {
+  
 }
 
 /*TODO: clean up the code IMPORTANT!!!

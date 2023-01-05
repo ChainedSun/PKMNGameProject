@@ -710,8 +710,6 @@ body {
 
 .huge {
     font-size: 32px;
-    width: 100%;
-    border: 1px solid black;
 }
 
 hr {
@@ -851,12 +849,117 @@ hr {
     width: 32px;
 } */
 
+#arrowContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-
-.arrowToRight {
+.arrowToRight,
+.arrowToRightUp,
+.arrowToRightDown {
     width: 48px;
     background-size: cover;
 }
+
+.arrowToRightDown {
+    transform: rotate(45deg);
+}
+
+.arrowToRightUp {
+    transform: rotate(-45deg);
+}
+
+.transparentElement {
+    opacity: 0;
+}
+
+#statsTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#statsTable tr th,
+#statsTable tr td {
+    border: 2px solid black;
+    padding: 8px;
+}
+
+#statsTable th:not(#nameValue) {
+    width: 48px;
+    background-color: gray;
+}
+
+/* #statsTable tfoot {
+}
+
+#statsTable td {
+}
+*/
+#sliderValue {
+    padding: 4px !important;
+    width: 100%;
+} 
+
+#nameValue {
+    font-size: 16px;
+    width: auto;
+    max-height: 16px;
+}
+
+#total {
+    padding: 8px;
+    
+}
+
+#statsSlider {
+    height: 24px;
+    width: 100%;
+    padding: 2px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#statsSlider::-webkit-progress-bar {
+    background-color: #39f;
+    border:1px solid black;
+    border-radius: 16px;
+}
+
+#statsSlider::-webkit-progress-inner-element {
+    background-color: #66b;
+    border-radius: 16px;
+}
+
+#statsSlider::-webkit-progress-value {
+    border-radius: 16px;
+}
+
+#statsSlider.cat5::-webkit-progress-value {
+    background-color: rgb(1, 166, 172);
+    border-radius: 16px;
+}
+#statsSlider.cat4::-webkit-progress-value {
+    background-color: rgb(0, 255, 55);
+    border-radius: 16px;
+}
+#statsSlider.cat3::-webkit-progress-value {
+    background-color: rgb(169, 216, 0);
+    border-radius: 16px;
+}
+#statsSlider.cat2::-webkit-progress-value {
+    background-color: rgb(255, 194, 0);
+    border-radius: 16px;
+}
+#statsSlider.cat1::-webkit-progress-value {
+    background-color: rgb(117, 54, 2);
+    border-radius: 16px;
+}
+#statsSlider.cat0::-webkit-progress-value {
+    background-color: rgb(117, 1, 1);
+    border-radius: 16px;
+}
+
 
 
 .blink {
