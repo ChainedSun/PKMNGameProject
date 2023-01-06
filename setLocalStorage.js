@@ -12956,10 +12956,7 @@ export const pokemons = [
       "species": "Fish Pokémon",
       "description": "Because of its wretched appearance, most people pay it no attention, but there are some who collect Feebas—and Feebas alone!",
       "evolution": {
-        "next": [
-          ["350", "trade holding Prism Scale, or level up with max Beauty"]
-        ]
-      },
+        "next": ["350", "trade holding Prism Scale, or level up with max Beauty"]},
       "profile": {
         "height": "0.6 m",
         "weight": "7.4 kg",

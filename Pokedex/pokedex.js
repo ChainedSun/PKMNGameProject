@@ -1,3 +1,13 @@
+const statsNames = [
+  "HP",
+  "Attack",
+  "Defense",
+  "Sp. Attack",
+  "Sp. Defense",
+  "Speed"
+]
+
+
 const filterContainer = document.getElementById("typeListContainer");
 const pokemonList = document.getElementById("pokemonList");
 const imageFilePathLocal = "../Pokedex/pokemon-data.json-master/images/pokedex/thumbnails/"
@@ -19,6 +29,8 @@ const aOne = document.getElementById("a1")
 const aTwo = document.getElementById("a2")
 const hA = document.getElementById("ha")
 const evoContainers = document.querySelectorAll("#evolutionStageContainer")
+// const levelNumberInput = document.getElementById("levelNumber")
+// const levelSlider = document.getElementById("levelSlider")
 
 const evoEevee = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "eevee" || undefined)
 const evo6 = Array.prototype.find.call(evoContainers, element => element.getAttribute("data-type") === "6" || undefined)
@@ -166,6 +178,14 @@ function initializeStart() {
       })
     }
   })
+
+  // levelSlider.addEventListener("input", (event) => {
+  //   levelNumberInput.value = event.target.value
+  // })
+
+  // levelNumberInput.addEventListener("input", (event) => {
+  //   levelSlider.value = event.target.value
+  // })
   
 }
 
@@ -469,7 +489,7 @@ function openDetails(card) {
 }
 
 function populateDetails(card) {
-  console.log(typeof(card))
+  //console.log(typeof(card))
   if(typeof(card) === "object") {
     for(let c of card.children) {
       if(c.classList.contains("pokemonId")) {
@@ -740,7 +760,7 @@ function setEvolutionInfo(pokemonId, evoProfile = {}) {
   // let levelArr = []
   let imagesArr = []
   let type = 0
-  //console.log(evoProfile)
+  console.log(evoProfile)
   let firstEvo
   let nextEvo
   let lastEvo
@@ -933,25 +953,148 @@ function cleanOutChildren(childList = null) {
 
 
 function setBaseStatsDetails(baseStats = "") {
-  console.log(baseStats)
-  for(let key of Object.keys(baseStats)) {
-    let tableElements = getTableElements(key,"id")
-    tableElements.forEach(el => {
-      //console.log(el.id)
-      if(el.id === "baseValue") {
-        el.textContent = baseStats[key]
-      } else if(el.id === "totalValue") {
-        let sum = 0
-        for(let keyVal of Object.keys(baseStats)) {
-          sum += Number.parseInt(baseStats[keyVal])
+  console.log(baseStats == "")
+  if(!baseStats == "") {
+    for(let key of Object.keys(baseStats)) {
+      let tableElements = getTableElements(key,"id")
+      let minMaxStats = getMinMaxStatValue(baseStats[key], key)
+      tableElements.forEach(el => {
+        //console.log(el.id)
+        if(el.id === "baseValue") {
+          el.textContent = baseStats[key]
+        } else if(el.id === "totalValue") {
+          let sum = getTotalStats(baseStats)
+          //console.log(sum)
+          el.textContent = sum
+          //console.log(typeof(sum))
+        } 
+        
+        else if(el.id === "minValue") {
+          el.textContent = minMaxStats[0]
+        } 
+        
+        else if(el.id === "maxValue") {
+          el.textContent = minMaxStats[1]
+        } 
+        
+        else if(el.id === "sliderValue") {
+          let childNode = null;
+          [...el.children].forEach(child => {
+            if(child.id === "statsSlider") {
+              childNode = child
+            }
+          })
+          if(childNode) {
+            setSliderValue(childNode, baseStats[key])
+            //childNode.value = baseStats[key]
+          }
         }
-        //console.log(sum)
-        el.textContent = sum
-        //console.log(typeof(sum))
-      }
+      })
+      //console.log(tableElements)
+    }
+  } else {
+    //console.log("it was else")
+    statsNames.forEach(name => {
+      let tableElements = getTableElements(name, "id")
+      tableElements.forEach(element => {
+        if(element.id !== "nameValue" && element.id !== "sliderValue") {
+          element.textContent = ""
+        } else if(element.id === "sliderValue") {
+          let childNode = null;
+          [...element.children].forEach(child => {
+            if(child.id === "statsSlider") {
+              childNode = child
+            }
+            setSliderValue(child)
+          })
+        }
+      })
     })
-    //console.log(tableElements)
   }
+}
+
+function setSliderValue(sliderNode, value = 0) {
+  let classCat = 0
+  sliderNode.value = value
+  let percentValue = getStatsPercent(sliderNode.value)
+  //console.log(percentValue)
+  if(percentValue >= 80) {
+    classCat = 5
+  } else if(percentValue >= 50) {
+    classCat = 4
+
+  } else if(percentValue >= 25) {
+    classCat = 3
+
+  } else if(percentValue > 10) {
+    classCat = 2
+
+  } else if(percentValue <= 10) {
+    classCat = 1
+  }
+  removeSliderClasses(sliderNode, classCat)
+}
+
+function removeSliderClasses(sliderNode, notRemove) {
+  for(let i = 1; i <= 5; i++) {
+    if(i == notRemove) {
+      sliderNode.classList.add(`cat${i}`)
+    } else {
+      sliderNode.classList.remove(`cat${i}`)
+    }
+  }
+}
+
+
+function getMinMaxStatValue(statNumber, statName, typeValue = "both") {
+  let retValue
+  if(statName.toLowerCase() === "hp") {
+    retValue = calculateStats(statNumber, true)
+  } else {
+    retValue = calculateStats(statNumber)
+  }
+  switch(typeValue.toLowerCase()) {
+    case "min":
+      return retValue[0]
+    case "max":
+      return retValue[1]
+    case "both":
+      return retValue
+  }
+
+}
+
+function getTotalStats(statsProfile) {
+  let sum = 0
+  for(let keyVal of Object.keys(statsProfile)) {
+    sum += Number.parseInt(statsProfile[keyVal])
+  }
+  return sum
+}
+
+function calculateStats(statNumber, isItHP = false) {
+  let calculatedStats = []
+  let resultMin = 0
+  let resultMax = 0
+  const minEV = 0
+  const maxEV = 255
+  const minIV = 0
+  const maxIV = 31
+  if(isItHP) {
+    resultMin = Math.floor(0.01 * ((2 * statNumber + minIV + Math.floor(0.25 * minEV)) * 100) + 100 + 10)
+    resultMax = Math.floor(0.01 * ((2 * statNumber + maxIV + Math.floor(0.25 * maxEV)) * 100) + 100 + 10)
+  } else {
+    resultMin = Math.floor(((0.01 * (2 * statNumber + minIV + Math.floor(0.25 * minEV)) * 100) + 5) * 0.9)
+    resultMax = Math.floor(((0.01 * (2 * statNumber + maxIV + Math.floor(0.25 * maxEV)) * 100) + 5) * 1.1)
+  }
+
+  calculatedStats[0] = resultMin
+  calculatedStats[1] = resultMax
+  return calculatedStats
+}
+
+function getStatsPercent(statValue, maxValue = 180) {
+  return ((statValue * 100) / maxValue)
 }
 
 /**

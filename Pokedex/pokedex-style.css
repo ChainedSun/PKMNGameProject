@@ -877,12 +877,15 @@ hr {
 #statsTable {
     border-collapse: collapse;
     width: 100%;
+    background-color: rgb(230, 230, 230);
 }
 
 #statsTable tr th,
 #statsTable tr td {
     border: 2px solid black;
     padding: 8px;
+    height: 40px;
+    color: black;
 }
 
 #statsTable th:not(#nameValue) {
@@ -905,6 +908,7 @@ hr {
     font-size: 16px;
     width: auto;
     max-height: 16px;
+    font-weight: bolder;
 }
 
 #total {
@@ -921,45 +925,66 @@ hr {
 }
 
 #statsSlider::-webkit-progress-bar {
-    background-color: #39f;
-    border:1px solid black;
+    background-color: transparent;
     border-radius: 16px;
 }
 
 #statsSlider::-webkit-progress-inner-element {
-    background-color: #66b;
     border-radius: 16px;
 }
 
 #statsSlider::-webkit-progress-value {
-    border-radius: 16px;
+    background-color: #66b;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: width 0.2s, background-color 0.2s;
 }
 
 #statsSlider.cat5::-webkit-progress-value {
-    background-color: rgb(1, 166, 172);
-    border-radius: 16px;
+    background-color: #00c2b8;
 }
 #statsSlider.cat4::-webkit-progress-value {
-    background-color: rgb(0, 255, 55);
-    border-radius: 16px;
+    background-color: #00ff59;
 }
 #statsSlider.cat3::-webkit-progress-value {
-    background-color: rgb(169, 216, 0);
-    border-radius: 16px;
+    background-color: #8eca16;
 }
 #statsSlider.cat2::-webkit-progress-value {
-    background-color: rgb(255, 194, 0);
-    border-radius: 16px;
+    background-color: #ff5f15;
 }
 #statsSlider.cat1::-webkit-progress-value {
-    background-color: rgb(117, 54, 2);
-    border-radius: 16px;
-}
-#statsSlider.cat0::-webkit-progress-value {
-    background-color: rgb(117, 1, 1);
-    border-radius: 16px;
+    background-color: #c01919;
 }
 
+#levelValueContainer {
+    width: 100%;
+    display: flex;
+    padding-left: 16px;
+    padding-right: 128px;
+
+}
+
+#levelNumber {
+    width: 48px;
+    height: 32px;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+}
+
+#levelNumber::-webkit-inner-spin-button,
+#levelNumber::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0px;
+}
+
+#levelNumber::-webkit-textfield-decoration-container {
+    user-select: none;
+}
+
+#levelSlider {
+    width: 100%;
+}
 
 
 .blink {
