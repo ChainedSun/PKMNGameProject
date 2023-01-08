@@ -659,6 +659,11 @@ body {
 
 }
 
+#evoTypeContainer {
+    display: flex;
+    justify-content: center;
+}
+
 #effectValue {
     margin-top: -1px;
     background-color: white;
@@ -686,27 +691,9 @@ body {
     background-size: cover;
 }
 
-#evolutionStageContainer {
-    width: 100%;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
-#evolutionStage {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    border: 1px solid white;
-}
 
-#evolutionImage {
-    height: 100%;
-    width: 100%;
-}
+
 
 .huge {
     font-size: 32px;
@@ -937,7 +924,8 @@ hr {
     background-color: #66b;
     border: 1px solid black;
     border-radius: 8px;
-    transition: width 0.2s, background-color 0.2s;
+    transition: width 0.2s, background-color 0.3s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 #statsSlider.cat5::-webkit-progress-value {
@@ -985,6 +973,74 @@ hr {
 #levelSlider {
     width: 100%;
 }
+
+#evoTypeLabel {
+    text-align: center;
+    width: 100%;
+    padding: 2px;
+    margin: 0px;
+    color: white !important;
+}
+
+#evolutionStageContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#evoCardContainer {
+    border: 2px dashed black;
+    padding: 4px;
+}
+
+#evoTable {
+    width: auto;
+    height: 100%;
+    padding: 0px;
+    gap: space-around;
+    border: 2px dashed black;
+    justify-content: space-between;
+}
+
+#evoMethod {
+    width: 100%;
+}
+
+#evoPokemonName,
+.evoPokemonIndex {
+    margin: 2px;
+    color: blue !important;
+    background-color: gold;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+#arrow {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/66/66831.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#evoTypeContainer {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+#evoImage {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+#evoStage1,
+#evoStage2 {
+    display: grid;
+    margin-left: 32px;
+    grid-template-columns: repeat(auto-fill, auto);
+}
+
 
 
 .blink {

@@ -10492,7 +10492,7 @@ export const pokemons = [
       },
       "species": "Emotion Pokémon",
       "description": "Kirlia uses the horns on its head to amplify its psychokinetic power. When the Pokémon uses its power, the air around it becomes distorted, creating mirages of nonexistent scenery.",
-      "evolution": { "prev": ["280", "Level 20"], "next": ["282", "Level 30"] },
+      "evolution": { "prev": ["280", "Level 20"], "next": [["282", "Level 30"], ["475", "Use Dawn Stone, Male"]] },
       "profile": {
         "height": "0.8 m",
         "weight": "20.2 kg",
