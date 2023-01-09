@@ -829,6 +829,7 @@ function track() {
 function setEvolutionInfo(pokemonIndex = null) {
   cleanOutChildren(evoContainerOne, evoContainerTwo, evoContainerThree)
   let evolutionProfile = getEvolutionProfile(pokemonIndex)
+  //console.log(evolutionProfile)
   // if(Object.keys(evoProfile).length > 0) {
   //   evolutionContainers.forEach(container => {
   //     if(container.getAttribute("data-type") === "none") {
@@ -896,7 +897,72 @@ function setEvolutionInfo(pokemonIndex = null) {
   //     }
   //   })
   // }
+  if(evolutionProfile) {
+    
+    if(!isEmpty(evolutionProfile["base-pokemon"]) && !isEmpty(evolutionProfile["next-pokemon"]) && !isEmpty(evolutionProfile["last-pokemon"])) {
+      [...evolutionContainers].forEach(container => {
+        if(container.getAttribute("data-type") === "has-evolution") {
+          container.classList.remove("hidden")
+        } else {
+          container.classList.add("hidden")
+        }
+      })
+      //console.log(evolutionProfile["base-pokemon"])
+      evoContainerOne.appendChild(createEvolutionCards(evolutionProfile["base-pokemon"]))
+      //console.log(evoIsMoreThanOne(evolutionProfile["next-pokemon"]))
+      if(multiEvo(evolutionProfile["next-pokemon"])) {
+        evolutionProfile["next-pokemon"].forEach(pokemon => {
+          //let card = createEvolutionCards(pokemon)
+          evoContainerTwo.appendChild(createEvolutionCards(pokemon))
+        })
+      } else {
+        evoContainerTwo.appendChild(createEvolutionCards(evolutionProfile["next-pokemon"]))
+      }
+      
+      if(multiEvo(evolutionProfile["last-pokemon"])) {
+        evolutionProfile["last-pokemon"].forEach(pokemon => {
+          //let card = createEvolutionCards(pokemon)
+          evoContainerThree.appendChild(createEvolutionCards(pokemon))
+        })
+      } else {
+        evoContainerThree.appendChild(createEvolutionCards(evolutionProfile["last-pokemon"]))
+      }
+    } 
+    
+    else if(!isEmpty(evolutionProfile["base-pokemon"]) && !isEmpty(evolutionProfile["next-pokemon"]) && isEmpty(evolutionProfile["last-pokemon"])) {
+      [...evolutionContainers].forEach(container => {
+        if(container.getAttribute("data-type") === "has-evolution") {
+          container.classList.remove("hidden")
+        } else {
+          container.classList.add("hidden")
+        }
+      })
+      
+      evoContainerOne.appendChild(createEvolutionCards(evolutionProfile["base-pokemon"]))
 
+      if(multiEvo(evolutionProfile["next-pokemon"])) {
+        evolutionProfile["next-pokemon"].forEach(pokemon => {
+          //let card = createEvolutionCards(pokemon)
+          evoContainerTwo.appendChild(createEvolutionCards(pokemon))
+        })
+      } else {
+        evoContainerTwo.appendChild(createEvolutionCards(evolutionProfile["next-pokemon"]))
+      }
+
+    } else if(!isEmpty(evolutionProfile["base-pokemon"]) && isEmpty(evolutionProfile["next-pokemon"]) && isEmpty(evolutionProfile["last-pokemon"])) {
+      [...evolutionContainers].forEach(container => {
+        if(container.getAttribute("data-type") === "none") {
+          container.classList.remove("hidden")
+        } else {
+          container.classList.add("hidden")
+        }
+      })
+    }
+  }
+}
+
+function isEmpty(objectValue) {
+  return Object.keys(objectValue) < 1
 }
 
 function getEvolutionProfile(pokemonId) {
@@ -912,38 +978,42 @@ function getEvolutionProfile(pokemonId) {
     // console.log(basePokemon)
     let nextPokemon = {}
     let lastPokemon = {}
-    if(evoIsMoreThanOne(basePokemon.evolution.next)) {
-      let nextArr = []
-      basePokemon.evolution.next.forEach(nextEvo => {
-        nextArr.push(requestEvolutionInformation(nextEvo[0]))
-      })
-      nextPokemon = nextArr
-      // console.log(nextPokemon)
-      let lastArr = []
-      Object.keys(nextPokemon).forEach(key => {
-        if(nextPokemon[key].evolution.next) {
-          lastArr.push(requestEvolutionInformation(nextPokemon[key].evolution.next[0]))
-        }
-      })
-      if(!lastArr.length < 1) {
-        lastPokemon = lastArr
-      }
-    } else {
-      nextPokemon = requestEvolutionInformation(basePokemon.evolution.next[0])
-      // console.log(nextPokemon.evolution.next)
-      if(nextPokemon.evolution.next) {
-        if(evoIsMoreThanOne(nextPokemon.evolution.next)) {
-          let lastArr = []
-          nextPokemon.evolution.next.forEach(lastEvo => {
-            lastArr.push(requestEvolutionInformation(lastEvo[0]))
-          })
+    if(basePokemon.evolution.next) {
+      console.log(basePokemon.evolution.next)
+      if(evoIsMoreThanOne(basePokemon.evolution.next)) {
+        let nextArr = []
+        basePokemon.evolution.next.forEach(nextEvo => {
+          nextArr.push(requestEvolutionInformation(nextEvo[0]))
+        })
+        nextPokemon = nextArr
+        // console.log(nextPokemon)
+        let lastArr = []
+        Object.keys(nextPokemon).forEach(key => {
+          if(nextPokemon[key].evolution.next) {
+            lastArr.push(requestEvolutionInformation(nextPokemon[key].evolution.next[0]))
+          }
+        })
+        if(!lastArr.length < 1) {
           lastPokemon = lastArr
-        } else {
-          lastPokemon = requestEvolutionInformation(nextPokemon.evolution.next[0])
+        }
+      } 
+      else {
+        nextPokemon = requestEvolutionInformation(basePokemon.evolution.next[0])
+        //console.log(nextPokemon.evolution.next)
+        // if(evoIsMoreThanOne(nextPokemon)) {}
+        if(nextPokemon.evolution.next) {
+          if(evoIsMoreThanOne(nextPokemon.evolution.next)) {
+            let lastArr = []
+            nextPokemon.evolution.next.forEach(lastEvo => {
+              lastArr.push(requestEvolutionInformation(lastEvo[0]))
+            })
+            lastPokemon = lastArr
+          } else {
+            lastPokemon = requestEvolutionInformation(nextPokemon.evolution.next[0])
+          }
         }
       }
     }
-    
     evolutionProfile = {
       "base-pokemon": basePokemon || {},
       "next-pokemon": nextPokemon || {},
@@ -951,11 +1021,24 @@ function getEvolutionProfile(pokemonId) {
     }    
     // console.log(basePokemon?.name?.english ?? "Doesn't exist.", nextPokemon?.name?.english ?? "Doesn't exist.", lastPokemon?.name?.english ?? "Doesn't exist.")
   }
-  console.log(evolutionProfile)
+  //console.log(evolutionProfile)
   return evolutionProfile
 }
 
-function createEvolutionCards() {
+function createEvolutionCards(value) {
+  //console.log(value)
+  let pkID = value.id
+  let pkName = value.name.english
+  let pkType = value.type
+  let pkImage = evoImageFilePathLocal + value.id + imageFileExtension
+  let method
+  if((value.evolution.next && value.evolution.prev) || (!value.evolution.next && value.evolution.prev)) {
+    method = value.evolution.prev[1]
+  } else {
+    method = ""
+  }
+
+  return new EvolutionCard(pkID, pkName, method, pkImage, pkType)
   
 }
 
@@ -984,6 +1067,33 @@ function requestEvolutionInformation(pokemonIndex) {
   return newObj
 }
 
+function evoIsMoreThanOne(objValue) {
+  /*
+    objValue will always be an array, regardless if it's more than one or not
+    example:
+    one evolution => ["2", "Level 16"]
+    more than one => [["2", "Level 16"], ["3", "Level 32"]]
+
+  */
+  let retValue = false
+  console.log(objValue)
+  if(Array.isArray(objValue)) {
+    console.log("Array")
+    retValue = Array.isArray(objValue[0])?true:false
+  } 
+  else if(Object.prototype.toString.call(objValue) === "[object Object]") {
+    console.log("Object")
+    if(Object.keys(objValue).length >= 1) {
+      retValue = objValue.name ? false : true
+    }
+
+  }
+  return (retValue)
+}
+
+function multiEvo(value) {
+  return value.name? false:true
+}
 
 function setBaseStatsDetails(baseStats = "") {
   //console.log(baseStats == "")
@@ -1044,19 +1154,6 @@ function setBaseStatsDetails(baseStats = "") {
       })
     })
   }
-}
-
-
-function evoIsMoreThanOne(objValue) {
-  let retValue = false
-  objValue.forEach(element => {
-    if(Array.isArray(element)) {
-      retValue = true
-      return
-    }
-  })
-  //console.log(objValue, retValue)
-  return (retValue)
 }
 
 function setSliderValue(sliderNode, value = 0) {
