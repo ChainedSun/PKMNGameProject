@@ -20,6 +20,7 @@ class EvolutionCard {
     this.createImage(imageSource)
     this.createPokemonName(this.pokemonName)
     this.createType(this.type)
+    this.createMethod(this.evolutionMethod)
     return this.elementContainer
   }
 
@@ -65,6 +66,17 @@ class EvolutionCard {
       this.typeContainer.appendChild(this.typeLabel)
     }
     this.elementContainer.appendChild(this.typeContainer)
+  }
+
+  createMethod(methodValue) {
+    this.methodNode = document.createElement("p")
+    //this.methodNode.id = ""
+    if(methodValue === "") {
+      this.methodNode.textContent = "-------"
+    } else {
+      this.methodNode.textContent = methodValue
+    }
+      this.elementContainer.appendChild(this.methodNode)
   }
 
   getPokemonIndexString(indexVal) {
@@ -1093,6 +1105,10 @@ function evoIsMoreThanOne(objValue) {
 
 function multiEvo(value) {
   return value.name? false:true
+}
+
+function manageEvoDisplayContainers(evoType) {
+
 }
 
 function setBaseStatsDetails(baseStats = "") {
