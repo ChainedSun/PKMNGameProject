@@ -27,17 +27,11 @@
                     </div>
                 </div>
                 <hr class="hrTest">
-                <div id="pokemonList">
-                </div>
-                <hr class="hrTest">
+                
                 <div id="filterMenu">
                     <div id="typeListContainer"></div>
-                    <div id="filterParameters">
-                        <label for="singleType">Single Type</label>
-                        <input type="checkbox" name="mono" id="singleType">
-                        <label for="dualType">Dual Type</label>
-                        <input type="checkbox" name="duo" id="dualType">
-                    </div>
+                </div>
+                <div id="pokemonList">
                 </div>
             </div>
             <hr>
@@ -303,36 +297,14 @@
                     <div id="detailsValue" data-custom-data="evolution-details">
                         <div id="evolutionContainer">
                             <div id="evolutionStageContainer" class="" data-type="has-evolution">
-                                <!-- <table id="evoTable">
-                                    <tr>
-                                        <th>
-                                            1st evolution
-                                        </th>
-                                        <th>
-                                            2nd evolution
-                                        </th>
-                                        <th>
-                                            3rd evolution
-                                        </th>
-                                    </tr>
-                                    <tr id="pokemonCards">
-                                        <td id="evoStage0">
-                                        </td>
-                                        <td id="evoStage1">
-                                        </td>
-                                        <td id="evoStage2">
-                                        </td>
-                                    </tr>
-                                    <tr id="method">
-                                        <td id="method0"></td>
-                                        <td id="method1"></td>
-                                        <td id="method2"></td>
-                                    </tr>
-                                </table> -->
                                 <div id="evoStage0"></div>
-                                <div id="evoMethod" data-type="0-1"></div>
+                                <div id="evoMethod" data-type="0-1">
+                                    <div id="evoStageImage"></div>
+                                </div>
                                 <div id="evoStage1"></div>
-                                <div id="evoMethod" data-type="1-2"></div>
+                                <div id="evoMethod" data-type="1-2">
+                                    <div id="evoStageImage"></div>
+                                </div>
                                 <div id="evoStage2"></div>
                             </div>
                             <div id="evolutionStageContainer" class="hidden" data-type="none">

@@ -153,7 +153,10 @@ body {
     grid-template-columns: repeat(auto-fill, 160px);
     overflow-y: auto;
     overflow-x: hidden;
-    margin-right: 8px;
+    border: 2px solid black;
+    border-right: 0px;
+    margin-top: 8px;
+    margin-bottom: 48px;
 }
 
 
@@ -196,9 +199,10 @@ body {
 }
 
 .selected {
-    color:rgb(0, 255, 0);
+    background-color:rgb(0, 255, 0) !important;
     border: 1px solid rgb(0, 255, 0);
 }
+
 
 
 
@@ -991,56 +995,80 @@ hr {
 }
 
 #evoCardContainer {
-    border: 2px dashed black;
+    border: 2px solid black;
+    box-shadow: 0px 0px 5px 0px black;
+    border-radius: 8px;
+    max-width: 128px;
     padding: 4px;
     margin: 4px;
+    transition: border 0.2s;
 }
 
-#evoTable {
-    width: auto;
-    height: 100%;
-    padding: 0px;
-    gap: space-around;
-    border: 2px dashed black;
-    justify-content: space-between;
-}
-
-#evoMethod {
+.evoSelected {
+    border: 2px solid rgb(255, 255, 0) !important;
 }
 
 #evoPokemonName,
-.evoPokemonIndex {
+#evoPokemonIndex {
     margin: 2px;
-    color: blue !important;
-    background-color: rgb(0, 255, 200);
-    border: 1px solid black;
     padding: 2px;
     border-radius: 4px;
 }
 
-#arrow {
-    background-image: url(https://cdn-icons-png.flaticon.com/512/66/66831.png);
+#evoPokemonMethod,
+#evoPokemonName,
+#evoImage,
+#evoTypeLabel,
+#evoPokemonIndex {
+    user-select: none;
+}
+
+#evoPokemonMethod {
+    word-wrap: break-word;
+    font-size: 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+/* 
+#evoTypeContainer {
+    
+} 
+*/
+
+
+#evoImage {
+    padding: 8px;
+}
+
+#evoStageImage {
+    display: block;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Arrow_right.svg/1280px-Arrow_right.svg.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    width: 100%;
+    height: 100%;
 }
 
-#evoTypeContainer {
-    border: 1px solid black;
-    border-radius: 4px;
+#evoMethod {
+    width: 48px;
+    margin: 16px;
 }
 
-#evoImage {
-    border: 1px solid black;
-    border-radius: 4px;
-    padding: 8px;
+#evoStage0 {
+    margin: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    align-items: center;
 }
 
 #evoStage1,
 #evoStage2 {
     display: grid;
-    margin-left: 32px;
     grid-template-columns: repeat(3, auto);
+    justify-content: center;
 }
 
 

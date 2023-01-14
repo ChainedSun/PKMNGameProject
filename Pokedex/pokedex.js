@@ -15,19 +15,31 @@ class EvolutionCard {
     this.evolutionMethod = evolutionMethodText
     this.elementContainer = document.createElement("div")
     this.elementContainer.id = "evoCardContainer"
+    if (Array.isArray(this.type)) {
+      this.type.forEach(type => {
+        this.elementContainer.classList.add(type.toLowerCase())
+      })
+    } else {
+      this.elementContainer.classList.add(type.toLowerCase())
+    }
     this.elementContainer.setAttribute("data-index", this.pokemonIndex)
-    this.createIndex(this.pokemonIndex)
-    this.createImage(imageSource)
     this.createPokemonName(this.pokemonName)
+    this.createImage(imageSource)
+    this.createIndex(this.pokemonIndex)
     this.createType(this.type)
     this.createMethod(this.evolutionMethod)
+    
+    this.elementContainer.addEventListener("click", function(event) {
+      evoCardSelected(event.target)
+    })
+
     return this.elementContainer
   }
 
   createIndex(pokemonID) {
     this.index = document.createElement("p")
     this.index.textContent = this.getPokemonIndexString(pokemonID)
-    this.index.className = "evoPokemonIndex"
+    this.index.id = "evoPokemonIndex"
     this.elementContainer.appendChild(this.index)
   }
 
@@ -54,7 +66,6 @@ class EvolutionCard {
         this.typeLabel.className = type.toLowerCase()
         this.typeLabel.id = "evoTypeLabel"
         this.typeLabel.textContent = type
-        this.evoImage.classList.add(type.toLowerCase())
         this.typeContainer.appendChild(this.typeLabel)
       })
     } else {
@@ -62,7 +73,6 @@ class EvolutionCard {
       this.typeLabel.className = type.toLowerCase()
       this.typeLabel.id = "evoTypeLabel"
       this.typeLabel.textContent = type
-      this.evoImage.classList.add(type.toLowerCase())
       this.typeContainer.appendChild(this.typeLabel)
     }
     this.elementContainer.appendChild(this.typeContainer)
@@ -70,7 +80,7 @@ class EvolutionCard {
 
   createMethod(methodValue) {
     this.methodNode = document.createElement("p")
-    //this.methodNode.id = ""
+    this.methodNode.id = "evoPokemonMethod"
     if(methodValue === "") {
       this.methodNode.textContent = "-------"
     } else {
@@ -82,7 +92,7 @@ class EvolutionCard {
   getPokemonIndexString(indexVal) {
     indexVal = "" + indexVal
     this.retValue = ""
-    console.log(indexVal.length)
+    // console.log(indexVal.length)
     if(indexVal.length < 3) {
       if(indexVal.length < 2) {
         this.retValue = "#00" + indexVal
@@ -92,7 +102,114 @@ class EvolutionCard {
     } else {
       this.retValue = "#" + indexVal
     }
-    console.log(this.retValue)
+    // console.log(this.retValue)
+    return this.retValue
+  }
+
+}
+
+class PokemonCard {
+  constructor(pokemonIndex, pokemonName, pokemonImage, altImage, pokemonType) {
+    this.pokemonCard = document.createElement("div")
+    this.pokemonCard.id = "pokemonEntry"
+    this.nameValue = pokemonName
+    this.indexNumber = pokemonIndex
+    this.imageLink = pokemonImage
+    this.altImageValue = altImage
+    this.typeValue = pokemonType
+    if(Array.isArray(pokemonType)) {
+      pokemonType.forEach(type => {
+        this.pokemonCard.classList.add(type.toLowerCase())
+      })
+    } else if(typeof(pokemonType) === "string") {
+      this.pokemonCard.className = pokemonType.toLowerCase()
+    }
+
+    this.pokemonCard.addEventListener("click", function(event) {
+      pokemonCardSelected(event.target)
+    })
+    this.createPokemonName(this.nameValue)
+    this.createPokemonImage(this.imageLink, this.altLink)
+    this.createPokemonIndex(this.indexNumber)
+    this.createPokemonType(this.typeValue)
+
+
+    return this.pokemonCard
+  }
+
+  createPokemonName(value) {
+    this.pokemonName = document.createElement("p")
+    this.pokemonName.id = "cardName"
+    this.pokemonName.className = "cardName"
+    this.pokemonName.textContent = value
+    this.pokemonCard.appendChild(this.pokemonName)
+  }
+
+  createPokemonImage(image, altValue) {
+    this.pokemonImage = document.createElement("img")
+    this.pokemonImage.id = "pokemonImage"
+    fetch(image)
+      .then(response => {
+        if(response.ok) {
+          this.pokemonImage.src = image
+        }
+        else {
+          fetch(altValue)
+            .then(response => {
+              if(response.ok) {
+                this.pokemonImage.src = altValue
+              } else {
+                console.log(`Image was not found on path: ${altValue}`)
+              }
+            })
+        }
+      })
+      .catch(_error => {
+        console.log(`Image was not found on path: ${image}. \nImage is broken.`)
+      })
+
+    this.pokemonCard.appendChild(this.pokemonImage)
+    
+
+    
+    
+  }
+
+  createPokemonIndex(idNum) {
+    this.pokemonIndex = document.createElement("p")
+    this.pokemonIndex.id = "pokedexIndex"
+    this.pokemonIndex.className = "pokemonId"
+    this.pokemonIndex.textContent = this.getPokemonIndexString(idNum)
+    this.pokemonCard.appendChild(this.pokemonIndex)
+  }
+
+  createPokemonType(types) {
+    this.typeDiv = document.createElement("div")
+    this.typeDiv.className = "entryTypeContainer"
+    this.typeDiv.classList.add((types.length > 1)?"dualType":"singleType")
+    for(let i = 0; i < types.length; i++) {
+      this.newTypeDiv = document.createElement("div")
+      this.newTypeDiv.classList.add(types[i].toLowerCase(), (types.length > 1)?((i === 0)?"entryTypeLeft":"entryTypeRight"):"entryType")
+      this.newTypeDiv.appendChild(document.createTextNode(types[i]))
+      this.typeDiv.appendChild(this.newTypeDiv)
+    } 
+
+    this.pokemonCard.appendChild(this.typeDiv)
+
+  }
+  
+  getPokemonIndexString(indexVal) {
+    indexVal = "" + indexVal
+    this.retValue = ""
+    if(indexVal.length < 3) {
+      if(indexVal.length < 2) {
+        this.retValue = "#00" + indexVal
+      } else {
+        this.retValue = "#0" + indexVal
+      }
+    } else {
+      this.retValue = "#" + indexVal
+    }
     return this.retValue
   }
 
@@ -118,8 +235,6 @@ const detailsValues = document.querySelectorAll("#detailsValue")
 const aOne = document.getElementById("a1")
 const aTwo = document.getElementById("a2")
 const hA = document.getElementById("ha")
-// const levelNumberInput = document.getElementById("levelNumber")
-// const levelSlider = document.getElementById("levelSlider")
 const evolutionContainers = document.querySelectorAll("#evolutionStageContainer")
 const evoContainerOne = document.getElementById("evoStage0")
 const evoContainerTwo = document.getElementById("evoStage1")
@@ -157,82 +272,9 @@ function initializeStart() {
   }
 
   for(var p = 0; p < pokemons.length; p++) {
-    //console.log(pokemons[p]["name"]["english"])
-    let newDiv = document.createElement("div")
-    newDiv.addEventListener("click", function(event) {
-      pokemonCardSelected(event.target)
-    })
-    newDiv.id = "pokemonEntry"
-
-    let newImg = document.createElement("img")
-    newImg.id = "pokemonImage"
-
-    let idNum = pokemons[p]["id"]
-    let pokeName = pokemons[p]["name"]["english"]
-    let condition = idNum.toString().length
-    let fileName = ""
-    if(condition < 3 ) {
-      if(condition < 2) {
-        fileName = "00"
-      } else if(condition == 2) {
-        fileName = "0"
-      }
-    }
-
-    //let localLink = imageFilePathLocal + fileName + idNum + imageFileExtension
-    //newImg.src = imageFilePathLocal + fileName + idNum + imageFileExtension
-    let localLink = altImageFilePathLocal + pokeName + altImageFileExtension
-    fetch(localLink) 
-      .then(response => {
-        if(response.ok)
-          //newImg.src = altImageFilePathLocal + pokeName + altImageFileExtension
-          newImg.src = imageFilePathLocal + idNum + imageFileExtension
-        else{
-          console.log(`Image was not found on path: ${localLink}`)
-          newImg.src = imageFilePathLocal  + idNum + imageFileExtension
-        }
-      })
-
-      .catch(error => {
-        //console.log(`There was an error loading the image from path: ${localLink}`)
-      })
-    //newImg.src = altImageFilePathLocal + pokeName + altImageFileExtension
-    //newDiv.classList.add("notOwned")
-    let newId = document.createElement("p")
-    newId.id = "pokedexIndex"
-    newId.classList.add("pokemonId")
-    newId.textContent = ("#" + fileName + idNum)
-    let newEntryName = document.createElement("p")
-    newEntryName.classList.add("cardName")
-    newEntryName.id = "cardName"
-    newEntryName.textContent = pokemons[p]["name"]["english"]
-    //type on the bottom of the card
-    let newType = document.createElement("div")
-    newType.classList.add("entryTypeContainer")
-    let typeSize = pokemons[p]["type"].length
-    for(var t = 0; t < typeSize; t++) {
-      let newTypeDiv = document.createElement("div")
-      if(typeSize > 1) {
-        newType.classList.add("dualType")
-        if (t == 0) {
-          newTypeDiv.classList.add(pokemons[p]["type"][t].toLowerCase(), "entryTypeLeft")
-        } else {
-          newTypeDiv.classList.add(pokemons[p]["type"][t].toLowerCase(), "entryTypeRight")
-        }
-      } else {
-        newTypeDiv.classList.add(pokemons[p]["type"][t].toLowerCase(), "entryType")
-        newType.classList.add("singleType")
-      }
-      newTypeDiv.appendChild(document.createTextNode(pokemons[p]["type"][t]))
-      newDiv.classList.add(pokemons[p]["type"][t].toLowerCase())
-      newType.appendChild(newTypeDiv)
-    }
-
-    newDiv.appendChild(newEntryName)
-    newDiv.appendChild(newImg)
-    newDiv.appendChild(newId)
-    newDiv.appendChild(newType)
-    pokemonList.appendChild(newDiv)
+    let imageLink = imageFilePathLocal + pokemons[p].id + imageFileExtension
+    let altImageLink = altImageFilePathLocal + pokemons[p].id + imageFileExtension
+    pokemonList.appendChild(new PokemonCard(pokemons[p].id, pokemons[p].name.english, imageLink, altImageLink, pokemons[p].type))
   }
   searchBar.addEventListener("input", ()=> {
     searchPokemonEntries(searchBar.value)
@@ -262,15 +304,6 @@ function initializeStart() {
       })
     }
   })
-
-  // levelSlider.addEventListener("input", (event) => {
-  //   levelNumberInput.value = event.target.value
-  // })
-
-  // levelNumberInput.addEventListener("input", (event) => {
-  //   levelSlider.value = event.target.value
-  // })
-  
 }
 
 const pokemonEntries = document.querySelectorAll("#pokemonEntry")
@@ -343,16 +376,12 @@ function checkAllConditions(target, what, conType, [...condition]) {
   }
 }
 
-// resetButton.addEventListener("click", function(){
-//   deselectAllCards()
-// })
-
 function applyFilter(target = null) {
   if(target == null) {
 
   } else {
     let newFindNode = findMatchingNode(target, "filter", "id", "parent")
-    console.log(newFindNode)
+    //console.log(newFindNode)
     if(!(newFindNode == null)) {
       if(newFindNode.id == "filter") {
         let classes = [...newFindNode.classList]
@@ -419,7 +448,6 @@ function searchPokemonEntries(textValue) {
   let newString = textValue.split(";")
   let words = []
   let idNumbers = []
-  //console.log(newString)
   newString.forEach(word => {
     let sepWord = word.replace(/[ ,\\,/,>,<,:,",',`,!,@,#,$,%,^,&,*,(,),_,+,-,=]/g, "")
     sepWord = sepWord.split("")
@@ -431,44 +459,22 @@ function searchPokemonEntries(textValue) {
       text = text.join("")
       words.push(text)
     }
-    //console.log(num, typeof(num))
     num = num.join("")
     num = parseInt(num)
-    //console.log(Number.isNaN(num), num, typeof(num))
     if(Number.isNaN(num) === false) {
-      // num = num.join("")
-      // num = parseInt(num)
       idNumbers.push(num)
     }
     
   })
   if(words.length <= 0 && idNumbers.length <= 0) {
-    // console.log("AllVisible")
     makeSelectionVisible()
   } else {
     let newText = words.concat(idNumbers)
-    //console.log(newText)
     checkPokemonEntriesForSearching(newText)
   }
-  // if(text == "" && numbers == NaN) {
-  //  makeSelectionVisible()
-  // } else {
-  //   console.log(text, numbers)
-  //   for(let entry of pokemonEntries) {
-  //     checkPokemonEntriesForSearching(entry, text, numbers)
-  //   }
-  // }
 }
 
 function checkPokemonEntriesForSearching(textToMatch) {
-  //ill make the search input take comma separated entries and search for all matching cardsif(child.classList.contains("cardName")) 
-  // let pokeName = child.textContent.toLowerCase()
-  // if(pokeName.includes(word.toLowerCase())) {
-  //   //console.log(pokeName, text)
-  //   pEntry.classList.remove("searchHidden")
-  // } else {
-  //   pEntry.classList.add("searchHidden")
-  // }
   pokemonEntries.forEach(entry => {
     let childList = [...entry.children]
     let matchFound = false
@@ -484,22 +490,17 @@ function checkPokemonEntriesForSearching(textToMatch) {
     })
     entryName = entryName.textContent.toLowerCase()
     entryId = parseInt(entryId.textContent.replace("#",""))
-    //console.log(entryName, entryId)
     textToMatch.forEach(word=> {
       if(typeof(word) === "string") {
-        // console.log("Not a Number!")
         if(entryName.includes(word.toLowerCase())) {
           entry.classList.remove("searchHidden")
           matchFound = true
           return
         }
-          
       } else {
         if(typeof(word) === "number") {
-          // console.log("is a Number!")
           entryId = entryId.toString()
           word = word.toString()
-          // console.log(entryId, word)
           if(entryId.includes(word)) {
             entry.classList.remove("searchHidden")
             matchFound = true
@@ -511,13 +512,8 @@ function checkPokemonEntriesForSearching(textToMatch) {
     if(!matchFound) {
       entry.classList.add("searchHidden")
     } 
-    
-    
   })
-    
-  
 }
-
 
 function pokemonCardSelected(target) {
   let cardNode = findMatchingNode(target, "pokemonEntry")
@@ -535,6 +531,7 @@ function deselectAllCards() {
   for(let card of pokemonEntries) {
     card.classList.remove("entrySelected")
   }
+  deselectEvoCards()
   clearDetails()
   
 }
@@ -549,7 +546,6 @@ function deselectAllCards() {
 
 function findMatchingNode(node, matchValue, property = "id", relation = "parent" ) {
   let retVal;
-  //console.log(node)
   switch (relation) {
     case "parent":
       if(!(node == null || node.tagName == "HTML"))
@@ -566,23 +562,15 @@ function openDetails(card) {
   pokedexScreen.classList.add("active")
   detailsValueContainer.classList.add("active")
   nameDetailsContainer.classList.add("active")
-  //maybe open details and close when nothing is selected
-  //something like expanding the details page overtime and when fully expanded reveal items inside
-  //look into creating tabs
-  //have gifs and mega animation added on tabs
 }
 
 function populateDetails(card) {
-  //console.log(typeof(card))
   if(typeof(card) === "object") {
     for(let c of card.children) {
       if(c.classList.contains("pokemonId")) {
         let idVal = parseInt(c.textContent.replace("#", ""))
         for(let e of pokemons) {
           if(e.id === idVal) {
-            /*let dImg = document.getElementById("detailsImage")
-            let source = "../Pokedex/pokemon-data.json-master/images/ShinyGifs/" + e["name"]["english"] + ".gif"
-            dImg.src = source*/
             setPokedexImage(e.name.english, e.id)
             setDescription(e.description)
             setAbilityandType(e.type, e.profile.ability)
@@ -592,16 +580,25 @@ function populateDetails(card) {
             setBaseStatsDetails(e.base)
             setEvolutionInfo(e.id)
             nameDetails.textContent = e.name.english
+            evoCardSelected(e.id)
           }
         }
       }
     }
   } else if(typeof(card) === "number" || typeof(card) === "string") {
-    let newIndex
-    if(typeof(card) === "string") newIndex = Number.parseInt(card); else newIndex = card
+    for(let e of pokemons) {
+      if(e.id === card) {
+        setPokedexImage(e.name.english, e.id)
+        setDescription(e.description)
+        setAbilityandType(e.type, e.profile.ability)
+        let newProfile = e.profile
+        newProfile.species = e.species
+        setSpeciesDetails(newProfile)
+        setBaseStatsDetails(e.base)
+        nameDetails.textContent = e.name.english
+      }
+    }
   }
-  //fill details here with loops
-  //use the dexID to find the pokemon in the database
 }
 
 function setDescription(textDesc = "") {
@@ -654,37 +651,10 @@ function setAbilityandType(textType = "", abilityList = []) {
   aOne.textContent = abilityOne
   aTwo.textContent = abilityTwo
   hA.textContent = hiddenAbility
-  // if(!abilityList.some(Array.isArray)) {
-  //   if(!(abilityList.length < 1)) {
-  //     aOne.textContent = abilityList[0][0]
-  //     if(abilityList.length > 1) {
-  //       if(abilityList[1][1] == "true") {
-  //         aTwo.textContent = "-"
-  //         hA.textContent = abilityList[1][0]
-  //       } else {
-  //         aTwo.textContent = abilityList[1][0]
-  //         hA.textContent = abilityList[2][0]
-  //       }
-  //     } else {
-  //       aTwo.textContent = "-"
-  //       hA.textContent = "-"
-  //     }
-      
-  //   } else {
-  //     aOne.textContent = "-"
-  //     aTwo.textContent = "-"
-  //     hA.textContent = "-"
-  //   }
-  // } else {
-  //   aOne.textContent = abilityList[0]
-  // }
   let descNode = getDetailsValueContainer("ability")
   let containerChildren = [...descNode.children]
   let typeEffChart = {}
   let typeChartNode = null
-  // for(let i = 0; i < types.length; i++) {
-  //   typeEffChart[types[i]["english"]] = 0
-  // }
   types.forEach(t => {
     typeEffChart[t["english"]] = 0
   })
@@ -751,7 +721,6 @@ function setAbilityandType(textType = "", abilityList = []) {
             }
           })
 
-          //typeEffChart
         })
 
       }
@@ -760,10 +729,6 @@ function setAbilityandType(textType = "", abilityList = []) {
         let tDat = typeNodeChild.getAttribute("data-type-data")
         tDat = getFirstUp(tDat)
         let calcArr = calculateTypeEffect(typeEffChart[tDat])
-        // let typeNodeElements = [...typeNodeChild.children]
-        // for(let typeElement of typeNodeElements) {
-        //   console.log(typeElement)
-        // }
         for(let typeElement of [...typeNodeChild.children]) {
           if(typeElement.id == "effectValue") {
             let textNode = [...typeElement.children]
@@ -788,14 +753,9 @@ function setAbilityandType(textType = "", abilityList = []) {
       })
     }
   })
-
-  
-
-  // console.log(typeEffChart)
 }
 
 function setSpeciesDetails(profile = "") {
-  //let descNode = getDetailsValueContainer("spec")
   let speciesValue = document.getElementById("speciesValue")
   let heightValue = document.getElementById("heightValue")
   let weightValue = document.getElementById("weightValue")
@@ -839,101 +799,23 @@ function track() {
 }
 
 function setEvolutionInfo(pokemonIndex = null) {
+  let type = 0
   cleanOutChildren(evoContainerOne, evoContainerTwo, evoContainerThree)
   let evolutionProfile = getEvolutionProfile(pokemonIndex)
-  //console.log(evolutionProfile)
-  // if(Object.keys(evoProfile).length > 0) {
-  //   evolutionContainers.forEach(container => {
-  //     if(container.getAttribute("data-type") === "none") {
-  //       container.classList.add("hidden")
-  //     } else if(container.getAttribute("data-type") === "has-evolution") {
-  //       container.classList.remove("hidden")
-  //     }
-  //   })
-  //   //check evo profile to see which evolution it is
-  //   //first if means base/first evolution
-  //   if(evoProfile.next && !evoProfile.prev) {
-  //     //console.log(evoIsMoreThanOne(evoProfile["next"]))
-  //     if(evoIsMoreThanOne(evoProfile["next"])) {
-  //       let loopArr = [...evoProfile["next"]]
-  //       loopArr.forEach(entry => {
-  //         nextEvo.push(entry)
-  //       })
-  //       firstEvo = requestEvolutionInformation(nextEvo[0][0])
-  //       console.log(firstEvo, nextEvo)
-  //     } else {
-  //       nextEvo = requestEvolutionInformation(evoProfile["next"][0])
-  //       firstEvo = requestEvolutionInformation(nextEvo["prev"][0])
-  //       if(nextEvo.next) {
-  //         if(evoIsMoreThanOne(nextEvo["next"])) {
-  //           let loopArr = [...nextEvo["next"]]
-  //           loopArr.forEach(entry => {
-  //             lastEvo.push(entry)
-  //           })
-  //         } else {
-  //           lastEvo = requestEvolutionInformation(nextEvo["next"][0])
-  //         }
-  //       }
-        
-  //     }
-  //   } 
-  //   //second if means next or 2nd evolution
-  //   else if(evoProfile.next && evoProfile.prev) {
-  //     console.log("nextEvo")
-  //   }
-  //   //this here is last evolution
-  //   else if(!evoProfile.next && evoProfile.prev) {
-  //     console.log("lastEvo")
-  //   }
-
-  //   evoContainerOne.appendChild(new EvolutionCard(nextEvo["prev"][0], pokemons[nextEvo["prev"][0] - 1]["name"]["english"], nextEvo["prev"][1], pokemons[nextEvo["prev"][0] - 1]["image"]["thumbnail"], pokemons[nextEvo["prev"][0] - 1]["type"]))
-
-  //   evoContainerTwo.appendChild(new EvolutionCard(firstEvo["next"][0], pokemons[firstEvo["next"][0] - 1]["name"]["english"], firstEvo["next"][1], pokemons[firstEvo["next"][0] - 1]["image"]["thumbnail"], pokemons[firstEvo["next"][0] - 1]["type"]))
-
-  //   evoContainerThree.appendChild(new EvolutionCard(nextEvo["next"][0], pokemons[nextEvo["next"][0] - 1]["name"]["english"], nextEvo["next"][1], pokemons[nextEvo["next"][0] - 1]["image"]["thumbnail"], pokemons[nextEvo["next"][0] - 1]["type"]))
-
-  //   let evolutionMethods = document.querySelectorAll("#evoMethod")
-  //   let evoMethodOne = [...evolutionMethods].filter(element => element.getAttribute("data-type") === "0-1")
-  //   let evoMethodTwo = [...evolutionMethods].filter(element => element.getAttribute("data-type") === "1-2")
-
-  //   console.log(evoMethodOne, evoMethodTwo)
-  //   evoMethodOne.textContent = firstEvo["next"][1]
-  //   evoMethodTwo.textContent = nextEvo["next"][1]
-
-  // } else {
-  //   evolutionContainers.forEach(container => {
-  //     if(container.getAttribute("data-type") === "none") {
-  //       container.classList.remove("hidden")
-  //     } else if(container.getAttribute("data-type") === "has-evolution") {
-  //       container.classList.add("hidden")
-  //     }
-  //   })
-  // }
   if(evolutionProfile) {
     
     if(!isEmpty(evolutionProfile["base-pokemon"]) && !isEmpty(evolutionProfile["next-pokemon"]) && !isEmpty(evolutionProfile["last-pokemon"])) {
-      [...evolutionContainers].forEach(container => {
-        if(container.getAttribute("data-type") === "has-evolution") {
-          container.classList.remove("hidden")
-        } else {
-          container.classList.add("hidden")
-        }
-      })
-      //console.log(evolutionProfile["base-pokemon"])
+      type = 2;
       evoContainerOne.appendChild(createEvolutionCards(evolutionProfile["base-pokemon"]))
-      //console.log(evoIsMoreThanOne(evolutionProfile["next-pokemon"]))
       if(multiEvo(evolutionProfile["next-pokemon"])) {
         evolutionProfile["next-pokemon"].forEach(pokemon => {
-          //let card = createEvolutionCards(pokemon)
           evoContainerTwo.appendChild(createEvolutionCards(pokemon))
         })
       } else {
         evoContainerTwo.appendChild(createEvolutionCards(evolutionProfile["next-pokemon"]))
       }
-      
       if(multiEvo(evolutionProfile["last-pokemon"])) {
         evolutionProfile["last-pokemon"].forEach(pokemon => {
-          //let card = createEvolutionCards(pokemon)
           evoContainerThree.appendChild(createEvolutionCards(pokemon))
         })
       } else {
@@ -942,19 +824,10 @@ function setEvolutionInfo(pokemonIndex = null) {
     } 
     
     else if(!isEmpty(evolutionProfile["base-pokemon"]) && !isEmpty(evolutionProfile["next-pokemon"]) && isEmpty(evolutionProfile["last-pokemon"])) {
-      [...evolutionContainers].forEach(container => {
-        if(container.getAttribute("data-type") === "has-evolution") {
-          container.classList.remove("hidden")
-        } else {
-          container.classList.add("hidden")
-        }
-      })
-      
+      type = 1
       evoContainerOne.appendChild(createEvolutionCards(evolutionProfile["base-pokemon"]))
-
       if(multiEvo(evolutionProfile["next-pokemon"])) {
         evolutionProfile["next-pokemon"].forEach(pokemon => {
-          //let card = createEvolutionCards(pokemon)
           evoContainerTwo.appendChild(createEvolutionCards(pokemon))
         })
       } else {
@@ -971,6 +844,7 @@ function setEvolutionInfo(pokemonIndex = null) {
       })
     }
   }
+  manageEvoDisplayContainers(type)
 }
 
 function isEmpty(objectValue) {
@@ -991,7 +865,7 @@ function getEvolutionProfile(pokemonId) {
     let nextPokemon = {}
     let lastPokemon = {}
     if(basePokemon.evolution.next) {
-      console.log(basePokemon.evolution.next)
+      // console.log(basePokemon.evolution.next)
       if(evoIsMoreThanOne(basePokemon.evolution.next)) {
         let nextArr = []
         basePokemon.evolution.next.forEach(nextEvo => {
@@ -1038,7 +912,6 @@ function getEvolutionProfile(pokemonId) {
 }
 
 function createEvolutionCards(value) {
-  //console.log(value)
   let pkID = value.id
   let pkName = value.name.english
   let pkType = value.type
@@ -1080,21 +953,11 @@ function requestEvolutionInformation(pokemonIndex) {
 }
 
 function evoIsMoreThanOne(objValue) {
-  /*
-    objValue will always be an array, regardless if it's more than one or not
-    example:
-    one evolution => ["2", "Level 16"]
-    more than one => [["2", "Level 16"], ["3", "Level 32"]]
-
-  */
   let retValue = false
-  console.log(objValue)
   if(Array.isArray(objValue)) {
-    console.log("Array")
     retValue = Array.isArray(objValue[0])?true:false
   } 
   else if(Object.prototype.toString.call(objValue) === "[object Object]") {
-    console.log("Object")
     if(Object.keys(objValue).length >= 1) {
       retValue = objValue.name ? false : true
     }
@@ -1108,7 +971,97 @@ function multiEvo(value) {
 }
 
 function manageEvoDisplayContainers(evoType) {
+  let evoMethod = [...document.querySelectorAll("#evoMethod")]
+  switch(evoType) {
+    case 0:
+    [...evolutionContainers].forEach(container => {
+      if(container.getAttribute("data-type") === "has-evolution") {
+        container.classList.add("hidden")
+      } else {
+        container.classList.remove("hidden")
+      }
+    })
+      break;
+    case 1:
+      [...evolutionContainers].forEach(container => {
+        if(container.getAttribute("data-type") === "has-evolution") {
+          container.classList.remove("hidden")
+        } else {
+          container.classList.add("hidden")
+        }
+      })
+      evoMethod.forEach(method => {
+        if(method.getAttribute("data-type") === "0-1")
+          method.classList.remove("hidden")
+        else
+          method.classList.add("hidden")
+      })
+      break;
+    case 2:
+      [...evolutionContainers].forEach(container => {
+        if(container.getAttribute("data-type") === "has-evolution") {
+          container.classList.remove("hidden")
+        } else {
+          container.classList.add("hidden")
+        }
+      })
+      evoMethod.forEach(method => {
+          method.classList.remove("hidden")
+      })
+      break;
+  }
+}
 
+function evoCardSelected(evoCard) {
+  //gonna check here if details already has the pokemon details open so we dont create new ones
+  if(typeof(evoCard) === "object") {
+    let evoCardContainer = findMatchingNode(evoCard, "evoCardContainer")
+    deselectEvoCards(evoCardContainer)
+    let evoCardChildList = getChildList(evoCardContainer)
+    let pokemonIndex = -1
+    evoCardChildList.forEach(child => {
+      if(child.id === "evoPokemonIndex") {
+        openDetails(Number.parseInt(child.textContent.replace("#", "")))
+      }
+    })
+  } else if(typeof(evoCard) === "number") {
+    deselectEvoCards(getEvoCard(evoCard))
+  }
+}
+
+function getEvoCard(index) {
+  let evoCards = [...document.querySelectorAll("#evoCardContainer")]
+  let retCard = null
+  evoCards.forEach(card => {
+    getChildList(card).forEach(child => {
+      if(child.id === "evoPokemonIndex") {
+        let cardIndex = Number.parseInt(child.textContent.replace("#", ""))
+        if(cardIndex === index)
+          retCard = card
+      }
+    })
+  })
+  return retCard
+}
+
+function deselectEvoCards(node = null) {
+  if(node === null) {
+    let evoCards = [...document.querySelectorAll("#evoCardContainer")]
+    evoCards.forEach(card => {
+      card.classList.remove("evoSelected")
+    })
+  } else {
+    let evoCards = [...document.querySelectorAll("#evoCardContainer")]
+    evoCards.forEach(card => {
+      if(!(card === node)){
+        card.classList.remove("evoSelected")
+      }
+      else {
+        card.classList.add("evoSelected")
+      }
+      
+    })
+  }
 }
 
 function setBaseStatsDetails(baseStats = "") {
@@ -1176,7 +1129,6 @@ function setSliderValue(sliderNode, value = 0) {
   let classCat = 0
   sliderNode.value = value
   let percentValue = getStatsPercent(sliderNode.value)
-  //console.log(percentValue)
   if(percentValue >= 80) {
     classCat = 5
   } else if(percentValue >= 50) {
@@ -1299,7 +1251,6 @@ function getTableElements(sectionId, attributeName, attributeValue = null) {
   let retVal = []
   let childList = getChildList(statsTable)
   childList.forEach(child => {
-    //console.log(child.tagName)
     if(child.tagName == "TBODY") {
       let tBodyChildren = getChildList(child)
       tBodyChildren.forEach(TBC => {
@@ -1311,7 +1262,6 @@ function getTableElements(sectionId, attributeName, attributeValue = null) {
         }
       })
     } else if(child.tagName == "TFOOT") {
-      //console.log("Child:", child)
       getChildList(child).forEach(footChild => {
         if(footChild.id === "total") {
           getChildList(footChild).forEach(fGC => {
@@ -1382,17 +1332,6 @@ function clearDetails() {
   detailsImages.forEach(element=>{
     element.src = ""
   })
-  // detailsValues.forEach(val => {
-  //   let c = [...val.children]
-  //   if (!(c.length < 1)) {
-  //     c.forEach(child => {
-  //       if(child.id == "textValue")
-  //         child.textContent = ""
-  //     })
-  //   }
-  //   else
-  //     val.textContent = ""
-  // })
   setDescription()
   setAbilityandType()
   setBaseStatsDetails()
@@ -1471,14 +1410,6 @@ function makeSelectionVisible() {
   }
 }
 
-function showDetails(value) {
-  //value is the pokemon card
-
-}
-
-function getEntryData() {
-  
-}
 
 /*TODO: clean up the code IMPORTANT!!!
 clean up the evo cards, maybe create a whole new type for them
