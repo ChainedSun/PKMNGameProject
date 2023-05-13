@@ -20383,7 +20383,7 @@ export const pokemons = [
       },
       "species": "Zen Charm Pokémon",
       "description": "When it sleeps, it pulls its limbs into its body and its internal fire goes down to 1,100 degrees Fahrenheit.",
-      "evolution": { "next": ["555", "use Ice Stone"] },
+      "evolution": { "next": ["555", "Level 35"] },
       "profile": {
         "height": "0.6 m",
         "weight": "37.5 kg",
@@ -20419,7 +20419,7 @@ export const pokemons = [
       },
       "species": "Blazing Pokémon",
       "description": "Its internal fire burns at 2,500 degrees Fahrenheit, making enough power that it can destroy a dump truck with one punch.",
-      "evolution": { "prev": ["554", "use Ice Stone"] },
+      "evolution": { "prev": ["554", "Level 35"] },
       "profile": {
         "height": "1.3 m",
         "weight": "92.9 kg",

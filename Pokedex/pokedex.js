@@ -272,7 +272,8 @@ function initializeStart() {
   }
 
   for(var p = 0; p < pokemons.length; p++) {
-    let imageLink = imageFilePathLocal + pokemons[p].id + imageFileExtension
+    let imageLink = pokemons[p].image.hires
+    // let imageLink = imageFilePathLocal + pokemons[p].id + imageFileExtension
     let altImageLink = altImageFilePathLocal + pokemons[p].id + imageFileExtension
     pokemonList.appendChild(new PokemonCard(pokemons[p].id, pokemons[p].name.english, imageLink, altImageLink, pokemons[p].type))
   }
@@ -915,12 +916,17 @@ function createEvolutionCards(value) {
   let pkID = value.id
   let pkName = value.name.english
   let pkType = value.type
-  let pkImage = evoImageFilePathLocal + value.id + imageFileExtension
-  let method
+  let getImageLink = () => {
+    let foundPokemon = pokemons.find(pokemon => pokemon.id == value.id);
+    if (foundPokemon) {
+      return foundPokemon.image.thumbnail;
+    }
+    return '';
+  }
+  let pkImage = getImageLink()
+  let method = ""
   if((value.evolution.next && value.evolution.prev) || (!value.evolution.next && value.evolution.prev)) {
     method = value.evolution.prev[1]
-  } else {
-    method = ""
   }
 
   return new EvolutionCard(pkID, pkName, method, pkImage, pkType)
@@ -1351,10 +1357,19 @@ function setPokedexImage(nameVal, idVal) {
   let megaImage
   let femaleImage
   */
-  detailsImages.forEach((img)=>{
+
+  let getImageLink = () => {
+    let foundPokemon = pokemons.find(pokemon => pokemon.id == idVal);
+    if (foundPokemon) {
+      return foundPokemon.image.hires;
+    }
+    return '';
+  }
+  detailsImages.forEach((img) => {
     let newDat = img.getAttribute("data-custom-data")
     if(newDat == "normal") {
-      img.src = "../Pokedex/pokemon-data.json-master/images/pokedex/hires/" + idVal + ".png"
+      img.src = getImageLink()
+      // img.src = "../Pokedex/pokemon-data.json-master/images/pokedex/hires/" + idVal + ".png"
     } 
     /*
     else if(newDat == "shiny") {
