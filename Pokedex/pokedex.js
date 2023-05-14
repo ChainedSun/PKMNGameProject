@@ -108,8 +108,10 @@ class EvolutionCard {
 
 }
 
+let ownedCardDefault = true
+
 class PokemonCard {
-  constructor(pokemonIndex, pokemonName, pokemonImage, altImage, pokemonType) {
+  constructor(pokemonIndex, pokemonName, pokemonImage, altImage, pokemonType, owned = ownedCardDefault) {
     this.pokemonCard = document.createElement("div")
     this.pokemonCard.id = "pokemonEntry"
     this.nameValue = pokemonName
@@ -125,6 +127,12 @@ class PokemonCard {
       this.pokemonCard.className = pokemonType.toLowerCase()
     }
 
+    if (!owned) {
+      this.pokemonCard.classList.add("notOwned")
+    } else {
+      this.pokemonCard.classList.remove("notOwned")
+    }
+
     this.pokemonCard.addEventListener("click", function(event) {
       pokemonCardSelected(event.target)
     })
@@ -132,6 +140,7 @@ class PokemonCard {
     this.createPokemonImage(this.imageLink, this.altLink)
     this.createPokemonIndex(this.indexNumber)
     this.createPokemonType(this.typeValue)
+    this.createOwnedRibbon()
 
 
     return this.pokemonCard
@@ -211,6 +220,13 @@ class PokemonCard {
       this.retValue = "#" + indexVal
     }
     return this.retValue
+  }
+
+  createOwnedRibbon() {
+    let ownedRibbon = document.createElement("div")
+    ownedRibbon.id = "ribbon"
+    ownedRibbon.className = "not-owned"
+    this.pokemonCard.appendChild(ownedRibbon)
   }
 
 }
@@ -804,7 +820,9 @@ function setEvolutionInfo(pokemonIndex = null) {
   cleanOutChildren(evoContainerOne, evoContainerTwo, evoContainerThree)
   let evolutionProfile = getEvolutionProfile(pokemonIndex)
   if(evolutionProfile) {
-    
+    //--------------------------------------------------------------
+    //At first here we check if the pokemon has 3 forms in total
+    //--------------------------------------------------------------
     if(!isEmpty(evolutionProfile["base-pokemon"]) && !isEmpty(evolutionProfile["next-pokemon"]) && !isEmpty(evolutionProfile["last-pokemon"])) {
       type = 2;
       evoContainerOne.appendChild(createEvolutionCards(evolutionProfile["base-pokemon"]))
@@ -812,18 +830,22 @@ function setEvolutionInfo(pokemonIndex = null) {
         evolutionProfile["next-pokemon"].forEach(pokemon => {
           evoContainerTwo.appendChild(createEvolutionCards(pokemon))
         })
-      } else {
+      }
+      else {
         evoContainerTwo.appendChild(createEvolutionCards(evolutionProfile["next-pokemon"]))
       }
       if(multiEvo(evolutionProfile["last-pokemon"])) {
         evolutionProfile["last-pokemon"].forEach(pokemon => {
           evoContainerThree.appendChild(createEvolutionCards(pokemon))
         })
-      } else {
+      }
+      else {
         evoContainerThree.appendChild(createEvolutionCards(evolutionProfile["last-pokemon"]))
       }
     } 
-    
+    //--------------------------------------------------------------
+    //Here we check if it has only 2 forms
+    //--------------------------------------------------------------
     else if(!isEmpty(evolutionProfile["base-pokemon"]) && !isEmpty(evolutionProfile["next-pokemon"]) && isEmpty(evolutionProfile["last-pokemon"])) {
       type = 1
       evoContainerOne.appendChild(createEvolutionCards(evolutionProfile["base-pokemon"]))
@@ -835,7 +857,11 @@ function setEvolutionInfo(pokemonIndex = null) {
         evoContainerTwo.appendChild(createEvolutionCards(evolutionProfile["next-pokemon"]))
       }
 
-    } else if(!isEmpty(evolutionProfile["base-pokemon"]) && isEmpty(evolutionProfile["next-pokemon"]) && isEmpty(evolutionProfile["last-pokemon"])) {
+    } 
+    //--------------------------------------------------------------
+    //And the last line is to check if it has only 1 form/has no evolutions
+    //--------------------------------------------------------------
+    else if(!isEmpty(evolutionProfile["base-pokemon"]) && isEmpty(evolutionProfile["next-pokemon"]) && isEmpty(evolutionProfile["last-pokemon"])) {
       [...evolutionContainers].forEach(container => {
         if(container.getAttribute("data-type") === "none") {
           container.classList.remove("hidden")

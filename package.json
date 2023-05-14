@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "httpserver": "^0.3.0"
-  }
+  },
+  "name": "pkmngameproject",
+  "version": "1.0.0",
+  "description": "\"Pokemon based browser project for educational purposes.\"",
+  "main": "Main.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChainedSun/PKMNGameProject.git"
+  },
+  "author": "Vlatko Jovanovski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChainedSun/PKMNGameProject/issues"
+  },
+  "homepage": "https://github.com/ChainedSun/PKMNGameProject#readme"
 }
