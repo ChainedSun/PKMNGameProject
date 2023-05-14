@@ -1,0 +1,18 @@
+#arrowContainer {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+
+#arrowContainer:hover .svg-1,
+#arrowContainer:hover .path-1,
+#arrowContainer:hover .path-2 {
+    fill: yellow;
+}
+
+#arrowContainer .svg-1,
+#arrowContainer .path-1,
+#arrowContainer .path-2 {
+    transition: fill 0.1s ease;
+    fill: black;
+}

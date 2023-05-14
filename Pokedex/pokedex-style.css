@@ -59,7 +59,7 @@
     background-color: var(--scroll-thumb-color-hover);
 }
 
-header {
+#headerContainer {
     background-color: rgb(117, 26, 20);
     border-radius: 16px 16px 0 0;
     width: 100%;
@@ -97,6 +97,7 @@ body {
 .hrTest {
     width: 100%;
 }
+
 
 #searchField {
     height: auto;
@@ -296,7 +297,7 @@ body {
 }
 
 .seen {
-    background-color: rgb(200, 200, 0) !important;
+    background-color: rgb(255, 255, 0) !important;
 }
 
 .owned {

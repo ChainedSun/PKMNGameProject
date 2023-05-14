@@ -258,6 +258,10 @@ const evoContainerThree = document.getElementById("evoStage2")
 
 const statsTable = document.getElementById("statsTable")
 
+const backButtonContainer = document.getElementById("headerContainer")
+
+const mainMenu = "../Main.html"
+
 import { types } from "../setLocalStorage.js";
 import { pokemons } from "../setLocalStorage.js";
 var selectedTypes = []
@@ -271,6 +275,7 @@ initializeStart()
 
 function initializeStart() {
   
+  const backButton = new BackButton("Back to main menu.", backButtonContainer, mainMenu)
 
   for(var i = 0; i < types.length; i++) {
     let newDiv = document.createElement("div")

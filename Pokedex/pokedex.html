@@ -14,7 +14,9 @@
     </head>
     <body>
         <script src="../setLocalStorage.js" type="module" async></script>
-        <header><center>Pokedex</center></header>
+        <div id="headerContainer">            
+            <header><center>Pokedex</center></header>
+        </div>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -279,13 +281,13 @@
                                     <th>Gender: </th>
                                     <td id="genderValue">
                                         <div id="maleImageContainer">
-                                            <img id="maleSymbol" src="../Pokedex/pokemon-data.json-master/images/pokedex/360_F_120103906_MNhlpXOPI3xKidkvnhAhMWc7MwfktVf6-removebg-preview.png" alt="" title="">
+                                            <img id="maleSymbol" src="../Pokedex/pokemon-data.json-master/images/details-screen/male-symbol.png" alt="" title="">
                                             <span id="maleValue">NA</span>
                                         </div>
                                         <progress id="genderProgress" value="50" max="100">
                                         </progress>
                                         <div id="femaleImageContainer">
-                                            <img id="femaleSymbol" src="../Pokedex/pokemon-data.json-master/images/pokedex/360_F_137694239_ihbs4kHd2w3HC3KipODkBDfhltbjwwLV-removebg-preview.png" alt="" title="">
+                                            <img id="femaleSymbol" src="../Pokedex/pokemon-data.json-master/images/details-screen/female-symbol.png" alt="" title="">
                                             <span id="femaleValue">NA</span>
                                         </div>
                                     </td>
@@ -402,6 +404,7 @@
             
         </div>
         <script src="pokedex.js" type="module" async defer></script>
+        <script src="../back-button.js"></script>
     </body>
 </html>
 
