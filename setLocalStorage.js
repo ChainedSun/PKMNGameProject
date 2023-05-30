@@ -9,7 +9,7 @@ const defaultPlayerProfile = {
 }
 
 
-export const types = [{
+const types = [{
     "english": "Normal",
     "chinese": "一般",
     "japanese": "ノーマル",
@@ -154,7 +154,7 @@ export const types = [{
     "no_effect_against": []
 }
 ];
-export const pokemons = [
+const pokemons = [
     {
       "id": 1,
       "name": {
@@ -29529,13 +29529,5 @@ export const pokemons = [
 
 //initializeStart();
 
-function initializeStart() {
-    let ty = JSON.stringify(types, null, "\t")
-    let po = JSON.stringify(pokemons, null, "\t")
-    localStorage.setItem("types", ty)
-    localStorage.setItem("pokemons", po)
-    console.log(localStorage.getItem("types"))
-    console.log(localStorage.getItem("pokemons"))
-}
 
 

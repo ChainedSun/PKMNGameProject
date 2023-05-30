@@ -262,8 +262,8 @@ const backButtonContainer = document.getElementById("headerContainer")
 
 const mainMenu = "../Main.html"
 
-import { types } from "../setLocalStorage.js";
-import { pokemons } from "../setLocalStorage.js";
+// import { types } from "../setLocalStorage.js";
+// import { pokemons } from "../setLocalStorage.js";
 var selectedTypes = []
 var shinyModeValue = "off"
 
