@@ -1,0 +1,209 @@
+:root {
+    --card-height: 224px;
+    --anim-dur: 3s;
+    --h-offset:0px;
+    --v-offset:0px;
+    --blur-rad:4px;
+    --spread-rad:8px;
+    background-color: rgb(10, 10, 10);
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: rgba(255, 0, 0, 0.333);
+    font-size: 64px;
+}
+
+#headerContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    vertical-align: center;
+}
+
+#mainContentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+#gameContainer {
+    /* border: 1px solid white; */
+    justify-content: center;
+    align-items: center;
+}
+
+#gachaGameContainer {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-auto-rows: auto;
+    gap: 32px;
+}
+
+#gachaCardContainer {
+    width: 160px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[class~="cardBackImg"] {
+    width: 100%;
+    height: var(--card-height);
+    object-fit: contain;
+}
+
+.pkmImg {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    max-width: none;
+    vertical-align: middle;
+    background-size: auto;
+    object-fit: contain;
+}
+
+.pkmImgContainer {
+    height: 128px;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.toBack {
+    animation: toBack 0.5s ease-in forwards;
+
+}
+
+.toFront {
+    animation: toFront 0.5s ease-out forwards;
+}
+
+.pkmId,
+.pkmName {
+    text-align: center;
+    vertical-align: center;
+    margin: 8px;
+    background-color: rgba(0, 0, 0, 0.655);
+    padding: 4px 0px 4px 0px;
+}
+
+[class~="none"] {
+    background-color: rgb(153, 152, 152);
+}
+
+#pokemonContainer {
+    display: flex;
+    flex-direction: column;
+    height: var(--card-height);
+    width: 100%;
+    padding: 0px 4px 0px 4px;
+    gap: 4px;
+    border-radius: 8px;
+}
+
+[class~="glow"] {
+    animation: rotateShadow var(--anim-dur) infinite linear;
+}
+
+[class~="hidden"] {
+    display: none !important;
+}
+
+@keyframes rotateShadow {
+    0% {
+      box-shadow: 
+      var(--h-offset) 
+      var(--v-offset) 
+      var(--blur-rad) 
+      var(--spread-rad) 
+      red;
+    }
+    14% {
+      box-shadow: 
+      var(--h-offset) 
+      var(--v-offset) 
+      var(--blur-rad) 
+      var(--spread-rad) 
+      orange;
+    }
+    28% {
+      box-shadow: 
+      var(--h-offset) 
+      var(--v-offset) 
+      var(--blur-rad) 
+      var(--spread-rad) 
+      yellow;
+    }
+    42% {
+      box-shadow: 
+      var(--h-offset) 
+      var(--v-offset) 
+      var(--blur-rad) 
+      var(--spread-rad) 
+      green;
+    }
+    57% {
+      box-shadow: 
+      var(--h-offset) 
+      var(--v-offset) 
+      var(--blur-rad) 
+      var(--spread-rad) 
+      blue;
+    }
+    71% {
+      box-shadow: 
+      var(--h-offset) 
+      var(--v-offset) 
+      var(--blur-rad) 
+      var(--spread-rad) 
+      indigo;
+    }
+    85% {
+      box-shadow: 
+      var(--h-offset) 
+      var(--v-offset) 
+      var(--blur-rad) 
+      var(--spread-rad) 
+      violet;
+    }
+    100% {
+      box-shadow: 
+      var(--h-offset) 
+      var(--v-offset) 
+      var(--blur-rad) 
+      var(--spread-rad) 
+      red;
+    }
+  }
+
+@keyframes toBack {
+    0% {
+        transform:rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(90deg);
+    }  
+}
+
+@keyframes toFront {
+    0% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+
+

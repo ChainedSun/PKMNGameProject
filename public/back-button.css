@@ -1,0 +1,39 @@
+:root {
+    --fill-color-default: black;
+    --fill-color-alt: white;
+    --highlight-color-default: yellow;
+    --highlight-color-alt: green;
+}
+
+
+#arrowContainer {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+
+#arrowContainer:hover .svg-1,
+#arrowContainer:hover .path-1,
+#arrowContainer:hover .path-2 {
+    fill: var(--highlight-color-default);
+}
+
+#arrowContainer .svg-1,
+#arrowContainer .path-1,
+#arrowContainer .path-2 {
+    transition: fill 0.1s ease;
+    fill: var(--fill-color-default);
+}
+
+#arrowContainer:hover .svg-1.alt,
+#arrowContainer:hover .path-1.alt,
+#arrowContainer:hover .path-2.alt {
+    fill: var(--highlight-color-alt);
+}
+
+#arrowContainer .svg-1.alt,
+#arrowContainer .path-1.alt,
+#arrowContainer .path-2.alt {
+    transition: fill 0.1s ease;
+    fill: var(--fill-color-alt);
+}

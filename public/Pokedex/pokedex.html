@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pokedex</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="pokedex-style.css">
+        <link rel="stylesheet" href="../types.css">
+    </head>
+    <body>
+        <!-- <script src="../setLocalStorage.js" type="module" async></script> -->
+        <div id="headerContainer">            
+            <header><center>Pokedex</center></header>
+        </div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="ListContainer">
+            <div id="pokemonListContainer">
+                <div id="searchMenu">
+                    <p>Search Menu</p>
+                    <div id="searchField">
+                        <input type="text" autocomplete="off" name="search" id="searchInput" placeholder="Search by ID or name. Search multiple pokemons using ';'. Ex. Bulbasaur;Charmander;3">
+                    </div>
+                </div>
+                <hr class="hrTest">
+                
+                <div id="filterMenu">
+                    <div id="typeListContainer"></div>
+                </div>
+                <div id="pokemonList">
+                </div>
+            </div>
+            <hr>
+            <div id="detailsWindow">
+                <div class="pokemonName" id="nameDetailsContainer">
+                    <p class="nameP" id="nameDetails"></p>
+                    <div class="pokedexLightIndicator" id="pokedexLightIndicator"></div>
+                </div>
+                <div id="screenAndControls">
+                    <div class="pokedexScreenFrame" id="pokedexScreenFrame">
+                        <div class="sBTC">
+                            <button class="shinyButton hidden" id="shinyMode"></button>
+                        </div>
+                        <div class="pokedexScreen" id="pokedexScreen">
+                            <img id="detailsImage" data-custom-data="normal" class="" src="">
+                            <img id="detailsImage" data-custom-data="shiny" class="" src="">
+                            <img id="detailsImage" data-custom-data="normal-animated" class="" src="">
+                            <img id="detailsImage" data-custom-data="shiny-animated" class="" src="">
+                            <img id="detailsImage" data-custom-data="mega" class="" src="">
+                            <img id="detailsImage" data-custom-data="female" class="" src="">
+                        </div>
+                    </div>
+                    <div id="detailsButtonContainer">
+                        <div id="detailsTypeButtonContainer">
+                            <button id="detailsType" class="" data-custom-data="description-details">
+                                Description
+                            </button>
+                            <button id="detailsType" class="" data-custom-data="abilities-and-type-data">
+                                Ability/Type
+                            </button>
+                            <button id="detailsType" class="" data-custom-data="species-details">
+                                Species
+                            </button>
+                            <button id="detailsType" class="activeTab" data-custom-data="evolution-details">
+                                Evolution Details
+                            </button>
+                            <button id="detailsType" class="" data-custom-data="stats-details">
+                                Stats
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="detailsValueContainer">
+                    <div id="detailsValue" data-custom-data="description-details">
+                        <p id="textValue"></p>
+                    </div>
+                    <div id="detailsValue" data-custom-data="abilities-and-type-data">
+                        <label>Abilities</label>
+                        <hr>
+                        <div id="abilityTable">
+                            <div id="normalAbility">
+                                <p>Normal Aility:</p>
+                                <div id="abilityContainer">
+                                    <p id="a1"></p>
+                                    <p id="a2"></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div id="hiddenAbility">
+                                <p>Hidden Ability:</p>
+                                <p id="ha"></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="pokemonType">
+                            <label>Pokemon Type</label>
+                            <div class="typeContainer" id="typeContainer">
+                                <div id="type1" class="hidden">
+                                    <p id="typeText"></p>
+                                </div>
+                                <div id="type2" class="hidden">
+                                    <p id="typeText"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="typeChart">
+                            <div id="typeEntry" data-type-data="normal">
+                                <div id="typeBox" class="normal">
+                                    <p id="typeName">NOR</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="fire">
+                                <div id="typeBox" class="fire">
+                                    <p id="typeName">FIR</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="water">
+                                <div id="typeBox" class="water">
+                                    <p id="typeName">WAT</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="electric">
+                                <div id="typeBox" class="electric">
+                                    <p id="typeName">ELE</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="grass">
+                                <div id="typeBox" class="grass">
+                                    <p id="typeName">GRA</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="ice">
+                                <div id="typeBox" class="ice">
+                                    <p id="typeName">ICE</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="fighting">
+                                <div id="typeBox" class="fighting">
+                                    <p id="typeName">FIG</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="poison">
+                                <div id="typeBox" class="poison">
+                                    <p id="typeName">POI</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="ground">
+                                <div id="typeBox" class="ground">
+                                    <p id="typeName">GRO</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="flying">
+                                <div id="typeBox" class="flying">
+                                    <p id="typeName">FLY</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="psychic">
+                                <div id="typeBox" class="psychic">
+                                    <p id="typeName">PSY</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="bug">
+                                <div id="typeBox" class="bug">
+                                    <p id="typeName">BUG</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="rock">
+                                <div id="typeBox" class="rock">
+                                    <p id="typeName">ROC</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="ghost">
+                                <div id="typeBox" class="ghost">
+                                    <p id="typeName">GHO</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="dragon">
+                                <div id="typeBox" class="dragon">
+                                    <p id="typeName">DRA</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="dark">
+                                <div id="typeBox" class="dark">
+                                    <p id="typeName">DAR</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="steel">
+                                <div id="typeBox" class="steel">
+                                    <p id="typeName">STE</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                            <div id="typeEntry" data-type-data="fairy">
+                                <div id="typeBox" class="fairy">
+                                    <p id="typeName">FAI</p>
+                                </div>
+                                <div id="effectValue" class="" title="">
+                                    <p id="text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="detailsValue" data-custom-data="species-details">
+                        <div id="profile">
+                            <table>
+                                <tr>
+                                    <th>Species: </th>
+                                    <td id="speciesValue"></td>
+                                </tr>
+                                <tr>
+                                    <th>Height: </th>
+                                    <td id="heightValue"></td>
+                                </tr>
+                                <tr>
+                                    <th>Weight: </th>
+                                    <td id="weightValue"></td>
+                                </tr>
+                                <tr>
+                                    <th>Egg: </th>
+                                    <td id="eggValue"></td>
+                                </tr>
+                                <tr>
+                                    <th>Gender: </th>
+                                    <td id="genderValue">
+                                        <div id="maleImageContainer">
+                                            <img id="maleSymbol" src="../Pokedex/pokemon-data.json-master/images/details-screen/male-symbol.png" alt="" title="">
+                                            <span id="maleValue">NA</span>
+                                        </div>
+                                        <progress id="genderProgress" value="50" max="100">
+                                        </progress>
+                                        <div id="femaleImageContainer">
+                                            <img id="femaleSymbol" src="../Pokedex/pokemon-data.json-master/images/details-screen/female-symbol.png" alt="" title="">
+                                            <span id="femaleValue">NA</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                            </table> <!--Check online for a table tutorial-->
+                        </div>
+                    </div>
+                    <div id="detailsValue" data-custom-data="evolution-details">
+                        <div id="evolutionContainer">
+                            <div id="evolutionStageContainer" class="" data-type="has-evolution">
+                                <div id="evoStage0"></div>
+                                <div id="evoMethod" data-type="0-1">
+                                    <div id="evoStageImage"></div>
+                                </div>
+                                <div id="evoStage1"></div>
+                                <div id="evoMethod" data-type="1-2">
+                                    <div id="evoStageImage"></div>
+                                </div>
+                                <div id="evoStage2"></div>
+                            </div>
+                            <div id="evolutionStageContainer" class="hidden" data-type="none">
+                                <p class="huge">No Evolution</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="detailsValue" data-custom-data="stats-details">
+                        <table id="statsTable">
+                            <thead>
+                                <tr>
+                                    <th class="statsTH">Stats</th>
+                                    <th class="statsTH">Base</th>
+                                    <th class="statsTH">Value</th>
+                                    <th class="statsTH">Min</th>
+                                    <th class="statsTH">Max</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-section="Hp">
+                                    <th id="nameValue" data-stat-name="HP">HP</th>
+                                    <td id="baseValue"></td>
+                                    <td id="sliderValue">
+                                        <progress id="statsSlider" value="0" max="180">
+                                        </progress>
+                                    </td>
+                                    <td id="minValue"></td>
+                                    <td id="maxValue"></td>
+                                </tr>
+                                <tr data-section="Attack">
+                                    <th id="nameValue" data-stat-name="Attack">Attack</th>
+                                    <td id="baseValue"></td>
+                                    <td id="sliderValue">
+                                        <progress id="statsSlider" value="0" max="180">
+                                        </progress>
+                                    </td>
+                                    <td id="minValue"></td>
+                                    <td id="maxValue"></td>
+                                </tr>
+                                <tr data-section="Defense">
+                                    <th id="nameValue" data-stat-name="Defense">Defense</th>
+                                    <td id="baseValue"></td>
+                                    <td id="sliderValue">
+                                        <progress id="statsSlider" value="0" max="180">
+                                        </progress>
+                                    </td>
+                                    <td id="minValue"></td>
+                                    <td id="maxValue"></td>
+                                </tr>
+                                <tr data-section="Sp. Attack">
+                                    <th id="nameValue" data-stat-name="Sp. Attack">Sp. Atk</th>
+                                    <td id="baseValue"></td>
+                                    <td id="sliderValue">
+                                        <progress id="statsSlider" value="0" max="180">
+                                        </progress>
+                                    </td>
+                                    <td id="minValue"></td>
+                                    <td id="maxValue"></td>
+                                </tr>
+                                <tr data-section="Sp. Defense">
+                                    <th id="nameValue" data-stat-name="Sp. Defense">Sp. Def</th>
+                                    <td id="baseValue"></td>
+                                    <td id="sliderValue">
+                                        <progress id="statsSlider" value="0" max="180">
+                                        </progress>
+                                    </td>
+                                    <td id="minValue"></td>
+                                    <td id="maxValue"></td>
+                                </tr>
+                                <tr data-section="Speed">
+                                    <th id="nameValue" data-stat-name="Speed">Speed</th>
+                                    <td id="baseValue"></td>
+                                    <td id="sliderValue">
+                                        <progress id="statsSlider" class="" value="0" max="180">
+                                        </progress>
+                                    </td>
+                                    <td id="minValue"></td>
+                                    <td id="maxValue"></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr id="total">
+                                    <td id="nameValue">Total</td>
+                                    <td id="totalValue" colspan=""></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <!-- <div id="levelValueContainer">
+                            <input type="number" name="Level" id="levelNumber" value="1">
+                            <input type="range" name="LevelSlider" id="levelSlider" min="1" max="100" value="1">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script src="../setLocalStorage.js"></script>
+        <script src="../back-button.js"></script>
+        <script src="pokedex.js" type="module" async defer></script>
+    </body>
+</html>
+
+
+
